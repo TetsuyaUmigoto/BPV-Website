@@ -8,4 +8,3 @@ require 'libs/view.php';
 require 'libs/model.php';
 require 'libs/database.php';
 $site = new Router();
-?>
