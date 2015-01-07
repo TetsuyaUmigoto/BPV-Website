@@ -1,22 +1,25 @@
 .wrap{
 	margin:0 auto;
-	width:1200px;
+	max-width:1200px;
 }
-.logo{
+/*header*/ 
+.header{
 	background-color:red;
 	height:60px;
 	margin: 0 auto;
 	margin-top:40px;
 }
+/* voorpagina */
 
-.naam{
+/* overzicht pagina, zoek pagina*/
+/* bedrijfspagina*/
+.naambedrijf{
 	background-color:green;
 	width:calc(50% - 5px);
 	height:200px ;
 	margin-top:60px;
 	display: inline-block;
 }
-
 .sterren{
 	background-color:yellow;
 	width:calc(50% - 5px);
@@ -30,7 +33,6 @@
 	height:600px ;
 	margin-top:0px;
 	display: inline-block;
-
 }
 .maps{
 	background-color:blue;
@@ -38,16 +40,14 @@
 	height:600px ;
 	margin-top:0px;
 	display: inline-block;
-
 }
-.com{
+.commentaar{
 	background-color:orange;
 	width:50%;
 	height:600px;
 	margin-top:60px;	
 	display: inline-block;
 }
-
 .ster{
 	background-color:black;
 	width:calc(50% - 5px);
@@ -59,6 +59,17 @@
 	background-color:lime;
 	width:calc(50% - 5px);
 	height:400px ;
-	
 	display: inline-block;
 }
+/* docentenpagina */
+/* studentenpagina*/
+/* pok-aanvraag*/
+.vraag{
+	background-color: green;
+}
+.antwoord{
+	background-color: yellow;
+	width: x;
+	height:;
+}
+/*footer*/
