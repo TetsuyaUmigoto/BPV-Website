@@ -14,9 +14,9 @@ class Crawler extends Controller {
     }
 
     function curl() {
-        if(isset($_POST['number']) && $_POST['richting'] == "ecabo"){
-            if($_POST['number'] == ""){
-                header("location: ".URL."crawler");
+        if (isset($_POST['number']) && $_POST['richting'] == "ecabo") {
+            if ($_POST['number'] == "") {
+                header("location: " . URL . "crawler");
             }
             include 'external/simple_html_dom.php';
             $html = new simple_html_dom();
@@ -26,8 +26,8 @@ class Crawler extends Controller {
             foreach ($html->find('.content-holder') as $element) {
                 $returnval = $element;
             }
-            if(isset($returnval->children) == null){
-                header("location: ".URL."crawler");
+            if (isset($returnval->children) == null) {
+                header("location: " . URL . "crawler");
             }
             $test = $returnval->children(0);
             $test .= $returnval->children(2);
@@ -35,9 +35,9 @@ class Crawler extends Controller {
             $test .= $returnval->children(8);
             $this->view->data = $test;
             $this->view->render('crawler');
-        }else if(isset($_POST['number']) && $_POST['richting'] == "goc"){
+        } else if (isset($_POST['number']) && $_POST['richting'] == "goc") {
             $this->view->render('crawler');
-            echo "JE KUT!";
+            echo "goc!";
         }
     }
 
