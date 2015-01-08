@@ -7,9 +7,10 @@
 </head>
 <body>
 	<div class="wrap">
-		<div class="header">start</div>
-		<div class="vraag">vraag</div>
-		<div class="antwoord">antwoord</div>
+		<div class="header">start <p></p></div>
+		<div class="vraag">vraag <p></p></div>
+		<div class="antwoord">antwoord <p></p></div>
+		<div class="footer">footer</div>
 	</div>
 </body>
 </html>

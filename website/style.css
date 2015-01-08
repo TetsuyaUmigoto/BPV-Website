@@ -1,75 +1,142 @@
 .wrap{
 	margin:0 auto;
-	max-width:1200px;
-}
+	max-width:1200px;}
+body{
+	font-family: 'Open Sans', sans-serif;}
 /*header*/ 
 .header{
-	background-color:red;
+	background-color:#C9C9C9;
 	height:60px;
-	margin: 0 auto;
-	margin-top:40px;
-}
+	margin: 40px  auto;
+	color:black;
+	font-size:; }}
+h1{
+	font-size:32px;
+	font-weight:300;}}
+p{}
+.logo img, .header img{
+	width: 136px;
+	height: 45px;}
 /* voorpagina */
-
+.logo{
+	display: inline-block;}
+.inloggen{
+	display: inline-block;
+	border:2px black solid;}
+.stage{
+	display: inline-block;
+	border:2px black solid;}
+.menu{
+	background-color: lime;}
+.doel{
+	background-color: green;
+	margin-top: 40px;
+	height:400px;}
 /* overzicht pagina, zoek pagina*/
+.zoek{
+	background-color:#91002C;
+	width: 25%;
+	float: left;
+	height: 500px;}
+.bedrijf{
+	width: 70%;
+	float: right;
+	height: 500px;
+	background-color: beige;}
+.bedrijf1{
+	background-color: green;
+	height:50px;}
+.bedrijf2{
+	background-color: white;
+	height: 50px;
+	margin-top:0px;}
 /* bedrijfspagina*/
 .naambedrijf{
 	background-color:green;
 	width:calc(50% - 5px);
 	height:200px ;
 	margin-top:60px;
-	display: inline-block;
-}
+	display: inline-block;}
 .sterren{
 	background-color:yellow;
 	width:calc(50% - 5px);
 	height:200px ;
 	margin-top:60px;
-	display: inline-block;
-}
+	display: inline-block;}
 .info{
 	background-color:pink;
 	width:calc(50% - 5px);
 	height:600px ;
 	margin-top:0px;
-	display: inline-block;
-}
+	display: inline-block;}
 .maps{
 	background-color:blue;
 	width:calc(50% - 5px);
 	height:600px ;
 	margin-top:0px;
-	display: inline-block;
-}
+	display: inline-block;}
 .commentaar{
 	background-color:orange;
 	width:50%;
 	height:600px;
 	margin-top:60px;	
-	display: inline-block;
-}
+	display: inline-block;}}
 .ster{
-	background-color:black;
+	background-color:gray;
 	width:calc(50% - 5px);
 	height:200px ;
 	margin-top:0px;
-	display: inline-block;
-}
+	display: inline-block;}}
 .eigencommentaar{
 	background-color:lime;
-	width:calc(50% - 5px);
-	height:400px ;
+	height:350px ;
 	display: inline-block;
-}
+	width:calc(50% - 5px);
+	top:1310px;
+	margin:0 right;
+	position: absolute;
+	}}
 /* docentenpagina */
+
 /* studentenpagina*/
+.student{
+	background-color: gray;
+	width: 48%;
+	height: 400px;
+	display: inline-block;}
+.gegevens{
+	background-color: red;
+	width: 48%;
+	height: 400px;
+	display: inline-block;
+	}
+.link{
+		background-color: hotpink;
+		width:48%;
+		height: 60px;
+		display: inline-block;
+		margin-top: 40px;}
+.uitloggen{
+	background-color: pink;
+	width: 48%;
+	height:60px;
+	margin-top: 40px;
+	display: inline-block;	}
 /* pok-aanvraag*/
 .vraag{
 	background-color: green;
-}
+	margin:0 auto;
+	width: 49%;
+	height: 500px;
+	display: inline-block;}
 .antwoord{
 	background-color: yellow;
-	width: x;
-	height:;
-}
+	margin:0 auto;
+	width:49%;
+	height:500px;
+	display: inline-block;}
 /*footer*/
+.footer{
+	background-color:  #C9C9C9;
+	height:60px;
+	margin: 50px auto;}
