@@ -9,7 +9,7 @@ body{
 	height:60px;
 	margin: 40px  auto;
 	color:black;
-	font-size:; }
+	font-size: 20px; }
 h1{
 	font-size:32px;
 	font-weight:300;}
@@ -80,13 +80,13 @@ p{}
 	width:50%;
 	height:600px;
 	margin-top:60px;	
-	display: inline-block;}}
+	display: inline-block;}
 .ster{
 	background-color:gray;
 	width:calc(50% - 5px);
 	height:200px ;
 	margin-top:0px;
-	display: inline-block;}}
+	display: inline-block;}
 .eigencommentaar{
 	background-color:lime;
 	height:350px ;
@@ -95,7 +95,7 @@ p{}
 	top:1310px;
 	margin:0 right;
 	position: absolute;
-	}}
+	}
 /* docentenpagina */
 
 /* studentenpagina*/
