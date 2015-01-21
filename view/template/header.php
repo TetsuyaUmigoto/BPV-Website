@@ -13,6 +13,13 @@
     </head>
     <body>
         <div class='container'>
-            <div id='header'>
-                <a class='head-link' href="<?php echo URL ?>crawler"><div class='col-md-1-link'>crawler</div></a>
-            </div>
+            <div class='nav-header'>
+                <a class="head-link" href="<?php echo URL ?>index"><div class="col-md-1-link">Home</div></a>
+                <a class="head-link" href="<?php echo URL ?>voorpagina"><div class="col-md-1-link">Voorpagina</div></a>
+                <a class="head-link" href="<?php echo URL ?>overzicht"><div class="col-md-1-link">Overzicht</div></a>
+                <a class="head-link" href="<?php echo URL ?>pok"><div class="col-md-1-link">POK</div></a>
+                <a class="head-link" href="<?php echo URL ?>studenten"><div class="col-md-1-link">Studenten</div></a>
+                <a class="head-link" href="<?php echo URL ?>studenten_1"><div class="col-md-1-link">Studenten_1</div></a>
+                <a class="head-link" href="<?php echo URL ?>bedrijf"><div class="col-md-1-link">Bedrijf</div></a>
+                <a class="head-link" href="<?php echo URL ?>crawler"><div class="col-md-1-link">Crawler</div></a>
+            </div><br>
