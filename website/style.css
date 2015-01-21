@@ -95,8 +95,13 @@ p{}
 	top:1310px;
 	margin:0 right;
 	position: absolute;
-	}}
+	}
 /* docentenpagina */
+ .hoi1{
+	background-color: green;
+	}
+ .nee{
+	background-color: blue;}
 
 /* studentenpagina*/
 .student{
