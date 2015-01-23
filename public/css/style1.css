@@ -93,7 +93,7 @@ p{}
     display: inline-block;
     width:calc(50% - 5px);
     top:1310px;
-    margin:0 right;
+    margin:0 ;
     position: absolute;
 }
 /* docentenpagina */

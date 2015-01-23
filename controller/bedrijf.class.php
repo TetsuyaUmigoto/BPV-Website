@@ -13,4 +13,8 @@ class Bedrijf extends Controller {
         $this->view->render('bedrijf');
     }
 
+    function postComment() {
+        $this->model->postComment();
+    }
+
 }
