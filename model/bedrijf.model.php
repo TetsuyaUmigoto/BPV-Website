@@ -16,5 +16,11 @@ class Bedrijf_Model extends Model {
         ));
         header("location: ".URL."bedrijf");
     }
+    
+    function showComment() {
+        $sth = $this->dbh->prepare("SELECT * FROM comments");
+        $sth->execute();
+        return $sth->fetchall();
+    }
 
 }

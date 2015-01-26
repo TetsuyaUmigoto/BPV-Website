@@ -53,48 +53,53 @@ p{}
 /* bedrijfspagina*/
 .naambedrijf{
     background-color:green;
-    width:calc(50% - 5px);
+    float: right;
+    width: 50%;
     height:200px ;
     margin-top:60px;
     display: inline-block;}
 .sterren{
     background-color:yellow;
-    width:calc(50% - 5px);
+    float: right;
+    width: 50%;
     height:200px ;
     margin-top:60px;
     display: inline-block;}
 .info{
     background-color:pink;
-    width:calc(50% - 5px);
+    float: left;
+    width: 50%;
     height:600px ;
     margin-top:0px;
     display: inline-block;}
 .maps{
     background-color:blue;
-    width:calc(50% - 5px);
+    float: right;
+    width: 50%;
     height:600px ;
     margin-top:0px;
     display: inline-block;}
 .commentaar{
     background-color:orange;
+    float: right;
     width:50%;
-    height:600px;
-    margin-top:60px;	
+    height:400px;	
     display: inline-block;}
 .ster{
     background-color:gray;
-    width:calc(50% - 5px);
+    width: 50%;
+    float: right;
     height:200px ;
     margin-top:0px;
-    display: inline-block;}
+    float: left;
+    display: inline-block;
+}
 .eigencommentaar{
     background-color:lime;
-    height:350px ;
+    height:200px ;
     display: inline-block;
-    width:calc(50% - 5px);
-    top:1310px;
-    margin:0 ;
-    position: absolute;
+    width: 50%;
+    float: right;
 }
 /* docentenpagina */
 
@@ -140,3 +145,4 @@ p{}
     background-color:  #C9C9C9;
     height:60px;
     margin: 50px auto;}
+
