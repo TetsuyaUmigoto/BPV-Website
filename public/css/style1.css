@@ -1,21 +1,21 @@
 .wrap{
-    margin:0 auto;
-    max-width:1200px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 body{
     font-family: 'Open Sans', sans-serif;
 }
 /*header*/ 
 .header{
-    background-color:#C9C9C9;
-    height:60px;
+    background-color: #C9C9C9;
+    height: 60px;
     margin: 40px  auto;
-    color:black;
+    color: black;
     font-size: 20px;
 }
 h1{
-    font-size:32px;
-    font-weight:300;
+    font-size: 32px;
+    font-weight: 300;
 }
 p{}
 .logo img, .header img{
@@ -28,11 +28,11 @@ p{}
 }
 .inloggen{
     display: inline-block;
-    border:2px black solid;
+    border: 2px black solid;
 }
 .stage{
     display: inline-block;
-    border:2px black solid;
+    border: 2px black solid;
 }
 .menu{
     background-color: lime;
@@ -40,11 +40,11 @@ p{}
 .doel{
     background-color: green;
     margin-top: 40px;
-    height:400px;
+    height: 400px;
 }
 /* overzicht pagina, zoek pagina*/
 .zoek{
-    background-color:#91002C;
+    background-color: #91002C;
     width: 25%;
     float: left;
     height: 500px;
@@ -62,60 +62,60 @@ p{}
 .bedrijf2{
     background-color: white;
     height: 50px;
-    margin-top:0px;
+    margin-top: 0px;
 }
 /* bedrijfspagina*/
 .naambedrijf{
-    background-color:green;
+    background-color: green;
     float: right;
     width: 50%;
-    height:200px ;
-    margin-top:60px;
+    height: 200px ;
+    margin-top: 60px;
     display: inline-block;
 }
 .sterren{
-    background-color:yellow;
+    background-color: yellow;
     float: right;
     width: 50%;
-    height:200px ;
-    margin-top:60px;
+    height: 200px ;
+    margin-top: 60px;
     display: inline-block;
 }
 .info{
-    background-color:pink;
+    background-color: pink;
     float: left;
     width: 50%;
-    height:600px ;
-    margin-top:0px;
+    height: 600px ;
+    margin-top: 0px;
     display: inline-block;
 }
 .maps{
-    background-color:blue;
+    background-color: blue;
     float: right;
     width: 50%;
-    height:600px ;
-    margin-top:0px;
+    height: 600px ;
+    margin-top: 0px;
     display: inline-block;
 }
 .commentaar{
-    background-color:orange;
+    background-color: orange;
     float: right;
-    width:50%;
-    height:400px;	
+    width: 50%;
+    height: 400px;	
     display: inline-block;
 }
 .ster{
-    background-color:gray;
+    background-color: gray;
     width: 50%;
     float: right;
-    height:200px ;
-    margin-top:0px;
+    height: 200px;
+    margin-top: 0px;
     float: left;
     display: inline-block;
 }
 .eigencommentaar{
     background-color:lime;
-    height:200px ;
+    height: 200px;
     display: inline-block;
     width: 50%;
     float: right;
@@ -137,7 +137,7 @@ p{}
 }
 .link{
     background-color: hotpink;
-    width:48%;
+    width: 48%;
     height: 60px;
     display: inline-block;
     margin-top: 40px;
@@ -145,28 +145,28 @@ p{}
 .uitloggen{
     background-color: pink;
     width: 48%;
-    height:60px;
+    height: 60px;
     margin-top: 40px;
     display: inline-block;
 }
 /* pok-aanvraag*/
 .vraag{
     background-color: green;
-    margin:0 auto;
+    margin: 0 auto;
     width: 49%;
     height: 500px;
     display: inline-block;
 }
 .antwoord{
     background-color: yellow;
-    margin:0 auto;
-    width:49%;
-    height:500px;
+    margin: 0 auto;
+    width: 49%;
+    height: 500px;
     display: inline-block;
 }
 /*footer*/
 .footer{
-    background-color:  #C9C9C9;
-    height:60px;
+    background-color: #C9C9C9;
+    height: 60px;
     margin: 50px auto;
 }

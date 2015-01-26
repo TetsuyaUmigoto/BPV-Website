@@ -24,7 +24,7 @@
         if (isset($this->comments)) {
             foreach ($this->comments as $row) {
                 echo
-                "<tr>
+                    "<tr>
                         <td>" . $row['comment_id'] . "</td>
                         <td>" . $row['leerlingnummer'] . "</td>
                         <td>" . $row['comment'] . "</td>
