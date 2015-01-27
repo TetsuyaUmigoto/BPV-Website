@@ -5,6 +5,10 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+.bedrijf-comments-test{
+    margin-top: 20px;
+    background-color: gray;
+}
 /*header*/ 
 .header{
     background-color: #C9C9C9;

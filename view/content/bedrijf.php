@@ -7,6 +7,8 @@
     <div class="ster"><p>ster</p></div>
     <div class="eigencommentaar"><p>eigencommentaar</p></div>
 
+    
+    <div class="bedrijf-comments-test">
     <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
         LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
         Comment:<input type='text' class='form-control' name='comment'>
@@ -34,4 +36,5 @@
         }
         ?>
     </table>
+    </div>
 </div>
