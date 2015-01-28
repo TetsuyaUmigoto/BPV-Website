@@ -11,14 +11,6 @@ body{
     margin-top: 20px;
     background-color: gray;
 }
-/*header*/ 
-.header{
-    background-color: #C9C9C9;
-    height: 60px;
-    margin: 40px  auto;
-    color: black;
-    font-size: 20px;
-}
 h1{
     font-size: 32px;
     font-weight: 300;
@@ -29,20 +21,6 @@ p{}
     height: 45px;
 }
 /* voorpagina */
-.logo{
-    display: inline-block;
-}
-.inloggen{
-    display: inline-block;
-    border: 2px black solid;
-}
-.stage{
-    display: inline-block;
-    border: 2px black solid;
-}
-.menu{
-    background-color: lime;
-}
 .doel{
     background-color: green;
     margin-top: 40px;
