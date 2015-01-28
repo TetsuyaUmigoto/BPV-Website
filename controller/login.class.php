@@ -4,7 +4,16 @@ class Login extends Controller{
 
     public function __construct(){
 	parent::__construct();
+        $this->view->title = 'Login';
+        $this->view->style = 'bootstrap';
+        $this->view->altStyle = 'style1';
     }
+    
+    
+    public function index() {
+        $this->view->render('login');
+    }
+
 
     public function userLogin(){
 	// get input from users
