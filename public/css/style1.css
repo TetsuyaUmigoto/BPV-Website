@@ -135,9 +135,9 @@ p{}
 }
 /* pok-aanvraag*/
 .pok{
-    background-color: green;
+    background-color: lime;
     margin: 0 auto;
-    height: 500px;
+    width:1200;
     display: inline-block;
 }
 
