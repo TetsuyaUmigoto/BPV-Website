@@ -22,4 +22,4 @@
                 <a class="head-link" href="<?php echo URL ?>leraren"><div class="col-md-1-link">Leraren</div></a>
                 <a class="head-link" href="<?php echo URL ?>bedrijf"><div class="col-md-1-link">Bedrijf</div></a>
                 <a class="head-link" href="<?php echo URL ?>crawler"><div class="col-md-1-link">Crawler</div></a>
-            </div><br>
+            </div><br> 
