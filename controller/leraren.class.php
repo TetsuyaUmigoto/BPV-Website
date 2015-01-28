@@ -10,7 +10,13 @@ class Leraren extends Controller {
     }
 
     function index() {
+        $agenda = $this->model->showCaldav();
+        $this->view->agenda = $agenda;
         $this->view->render('leraren');
+    }
+
+    function caldav() {
+        $this->model->caldav();
     }
 
 }
