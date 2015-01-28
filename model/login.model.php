@@ -17,9 +17,9 @@ class Login_Model extends Model
     public function userLogin()
     {
         // check database for a match
-        $sth = $this->dbh->prepare('SELECT * FROM users WHERE username = :username AND password = MD5(:password)');
+        $sth = $this->dbh->prepare('SELECT * FROM studenten WHERE voornaam = :voornaam AND wachtwoord = MD5(:password)');
         $sth->execute(array(
-            ':username' => $_POST['username'],
+            ':voornaam' => $_POST['username'],
             ':password' => $_POST['password']
             ));
 
@@ -27,20 +27,19 @@ class Login_Model extends Model
 
         if($count > 0)
         {
-            $sth = $this->dbh->prepare("SELECT * FROM users WHERE username = :username");
+            $sth = $this->dbh->prepare("SELECT * FROM studenten WHERE voornaam = :voornaam");
             $sth->execute(array(
-                ':username' => $_POST['username']
+                ':voornaam' => $_POST['username']
                 ));
 
             foreach($sth as $row)
             {
-                $row['role'];
-                $row['user_id'];
+                $row['leerlingnummer'];
             }
 
-            Session::set('username', $_POST['username']);
-            Session::set('user_id', $row['user_id']);
-            Session::set('role', $row['role']);
+            Session::set('voornaam', $_POST['username']);
+            Session::set('user_id', $row['leerlingnummer']);
+            //Session::set('role', $row['role']);
 
             header('location: '.URL.'index');
         }
@@ -53,9 +52,9 @@ class Login_Model extends Model
 	
     public function userCreate()
     {
-        $sth = $this->dbh->prepare('SELECT * FROM users WHERE username = :username');
+        $sth = $this->dbh->prepare('SELECT * FROM users WHERE voornaam = :username');
         $sth->execute(array(
-            ':username' => $_POST['username'],
+            ':voornaam' => $_POST['username'],
             ));
 		
         $count =  $sth->rowCount();
