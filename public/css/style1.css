@@ -134,20 +134,13 @@ p{}
     display: inline-block;
 }
 /* pok-aanvraag*/
-.vraag{
+.pok{
     background-color: green;
     margin: 0 auto;
-    width: 49%;
     height: 500px;
     display: inline-block;
 }
-.antwoord{
-    background-color: yellow;
-    margin: 0 auto;
-    width: 49%;
-    height: 500px;
-    display: inline-block;
-}
+
 /*footer*/
 .footer{
     background-color: #C9C9C9;
