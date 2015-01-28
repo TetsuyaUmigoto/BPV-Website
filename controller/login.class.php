@@ -19,9 +19,11 @@ class Login extends Controller{
 	// get input from users
 	$username = str_replace(' ', '', $_POST['username']);
 	$password = $_POST['password'];
+        
 
 	// check input for empty fields
-	if(empty($username) OR empty($password)){ // check input fields
+	if(empty($username) || empty($password)){ // check input fields
+            echo $username . $password;
 	    echo '&nbsp All fields are required, acces denied!<br>';
 	    $this->redirect();
 	}else{
