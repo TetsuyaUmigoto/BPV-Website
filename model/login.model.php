@@ -14,48 +14,94 @@ class Login_Model extends Model {
 
     public function userLogin() {
         // check database for a match
-        $sth = $this->dbh->prepare('SELECT * FROM studenten WHERE voornaam = :voornaam AND wachtwoord = MD5(:password)');
+        switch ($_POST['type']) {
+            case "0":
+                $sth = $this->dbh->prepare('SELECT * FROM studenten WHERE leerlingnummer = :leerlingnummer AND wachtwoord = MD5(:password)');
+                $sth->execute(array(
+                    ':leerlingnummer' => $_POST['username'],
+                    ':password' => $_POST['password']
+                ));
+
+                $count = $sth->rowCount();
+
+                if ($count > 0) {
+                    $sth = $this->dbh->prepare("SELECT * FROM studenten WHERE leerlingnummer = :leerlingnummer");
+                    $sth->execute(array(
+                        ':leerlingnummer' => $_POST['username']
+                    ));
+
+                    foreach ($sth as $row) {
+                       $username = $row['leerlingnummer'];
+                    }
+                } else {
+                    echo '&nbsp No match!<br>';
+                    $this->redirect();
+                }
+                break;
+            case 1:
+                $sth = $this->dbh->prepare('SELECT * FROM leraren WHERE id = :username AND wachtwoord = MD5(:password)');
+                $sth->execute(array(
+                    ':username' => $_POST['username'],
+                    ':password' => $_POST['password']
+                ));
+
+                $count = $sth->rowCount();
+
+                if ($count > 0) {
+                    $sth = $this->dbh->prepare("SELECT * FROM leraren WHERE id = :username");
+                    $sth->execute(array(
+                        ':username' => $_POST['username']
+                    ));
+
+                    foreach ($sth as $row) {
+                       $username = $row['id'];
+                    }
+                } else {
+                    echo '&nbsp No match!<br>';
+                    $this->redirect();
+                }
+                break;
+            case 2:
+                $sth = $this->dbh->prepare('SELECT * FROM bedrijven WHERE bedrijf_id = :username AND wachtwoord = MD5(:password)');
+                $sth->execute(array(
+                    ':username' => $_POST['username'],
+                    ':password' => $_POST['password']
+                ));
+
+                $count = $sth->rowCount();
+
+                if ($count > 0) {
+                    $sth = $this->dbh->prepare("SELECT * FROM bedrijven WHERE bedrijf_id = :username");
+                    $sth->execute(array(
+                        ':username' => $_POST['username']
+                    ));
+
+                    foreach ($sth as $row) {
+                       $username = $row['bedrijf_id'];
+                    }
+                } else {
+                    echo '&nbsp No match!<br>';
+                    $this->redirect();
+                }
+                break;
+                
+        }
+        
+        Session::set('user_id', $username);
+        Session::set('role', $_POST['type']);
+
+        header('location: ' . URL . 'index');
+    }
+
+    public function userCreate() {
+        $sth = $this->dbh->prepare('SELECT * FROM users WHERE voornaam = :username');
         $sth->execute(array(
             ':voornaam' => $_POST['username'],
-            ':password' => $_POST['password']
         ));
 
         $count = $sth->rowCount();
 
-        if($count > 0)
-        {
-            $sth = $this->dbh->prepare("SELECT * FROM studenten WHERE voornaam = :voornaam");
-            $sth->execute(array(
-                ':voornaam' => $_POST['username']
-                ));
-
-            foreach($sth as $row)
-            {
-                $row['leerlingnummer'];
-            }
-
-            Session::set('voornaam', $_POST['username']);
-            Session::set('user_id', $row['leerlingnummer']);
-            //Session::set('role', $row['role']);
-
-            header('location: ' . URL . 'index');
-        } else {
-            echo '&nbsp No match!<br>';
-            $this->redirect();
-        }
-    }
-	
-    public function userCreate()
-    {
-        $sth = $this->dbh->prepare('SELECT * FROM users WHERE voornaam = :username');
-        $sth->execute(array(
-            ':voornaam' => $_POST['username'],
-            ));
-		
-        $count =  $sth->rowCount();
-		
-        if($count > 0)
-        {
+        if ($count > 0) {
             echo '&nbsp Username already in use.';
             $this->redirect();
         } else {
