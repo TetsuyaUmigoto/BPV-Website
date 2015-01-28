@@ -16,4 +16,10 @@ class Leraren_Model extends Model {
         ));
         header("location: ".URL."leraren");
     }
+    
+    function showCaldav() {
+        $sth = $this->dbh->prepare("SELECT * FROM calender");
+        $sth->execute();
+        return $sth->fetchall();
+    }
 }

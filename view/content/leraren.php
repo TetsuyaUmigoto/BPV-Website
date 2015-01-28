@@ -22,7 +22,7 @@
                 "<tr>
                     <td>" . $row['leerlingnummer'] . "</td>
                     <td>" . $row['afspraak'] . "</td>
-                    <td>" . $row['timestap'] . "</td>
+                    <td>" . $row['timestamp'] . "</td>
                 </tr>";
         }
     }
