@@ -19,7 +19,7 @@
                 <a class="head-link" href="<?php echo URL ?>overzicht"><div class="col-md-1-link">Overzicht</div></a>
                 <a class="head-link" href="<?php echo URL ?>pok"><div class="col-md-1-link">POK</div></a>
                 <a class="head-link" href="<?php echo URL ?>studenten"><div class="col-md-1-link">Studenten</div></a>
-                <a class="head-link" href="<?php echo URL ?>studenten_1"><div class="col-md-1-link">Studenten_1</div></a>
+                <a class="head-link" href="<?php echo URL ?>leraren"><div class="col-md-1-link">Leraren</div></a>
                 <a class="head-link" href="<?php echo URL ?>bedrijf"><div class="col-md-1-link">Bedrijf</div></a>
                 <a class="head-link" href="<?php echo URL ?>crawler"><div class="col-md-1-link">Crawler</div></a>
             </div><br> 

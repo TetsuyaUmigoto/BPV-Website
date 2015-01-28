@@ -7,34 +7,33 @@
     <div class="ster"><p>ster</p></div>
     <div class="eigencommentaar"><p>eigencommentaar</p></div>
 
-    
     <div class="bedrijf-comments-test">
-    <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
-        LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
-        Comment:<input type='text' class='form-control' name='comment'>
-        Rating:<input type='text' class='form-control' name='rating'>
-        <input type='submit' class='btn btn-primary' value='Comment!'>
-    </form>
-    <table class="table">
-        <tr>
-            <td>Comment ID</td>
-            <td>LeerlingNummer</td>
-            <td>Comment</td>
-            <td>Rating</td>
-        </tr>
-        <?php
-        if (isset($this->comments)) {
-            foreach ($this->comments as $row) {
-                echo
-                    "<tr>
-                        <td>" . $row['comment_id'] . "</td>
-                        <td>" . $row['leerlingnummer'] . "</td>
-                        <td>" . $row['comment'] . "</td>
-                        <td>" . $row['rating'] . "</td>
-                    </tr>";
+        <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
+            LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
+            Comment:<input type='text' class='form-control' name='comment'>
+            Rating:<input type='text' class='form-control' name='rating'>
+            <input type='submit' class='btn btn-primary' value='Comment!'>
+        </form>
+        <table class="table">
+            <tr>
+                <td>Comment ID</td>
+                <td>LeerlingNummer</td>
+                <td>Comment</td>
+                <td>Rating</td>
+            </tr>
+            <?php
+            if (isset($this->comments)) {
+                foreach ($this->comments as $row) {
+                    echo
+                        "<tr>
+                            <td>" . $row['comment_id'] . "</td>
+                            <td>" . $row['leerlingnummer'] . "</td>
+                            <td>" . $row['comment'] . "</td>
+                            <td>" . $row['rating'] . "</td>
+                        </tr>";
+                }
             }
-        }
-        ?>
-    </table>
+            ?>
+        </table>
     </div>
 </div>
