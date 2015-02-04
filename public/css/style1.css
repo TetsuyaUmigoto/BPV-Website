@@ -137,13 +137,11 @@ p{}
 .pok{
     background-color: lime;
     margin: 0 auto;
-    width:1200;
+    width: 1200px;
     display: inline-block;
 }
 
 /*footer*/
-.footer{
-    background-color: #C9C9C9;
-    height: 60px;
-    margin: 50px auto;
+#footer{
+    clear: both;
 }
