@@ -29,15 +29,16 @@ p{}
 /* overzicht pagina, zoek pagina*/
 .zoek{
     background-color: #91002C;
-    width: 25%;
-    float: left;
+    width: 15%;
     height: 500px;
+    display: inline-block;
 }
 .bedrijf{
     width: 70%;
-    float: right;
+    margin-left: 2%;
     height: 500px;
     background-color: beige;
+    display: inline-block;
 }
 .bedrijf1{
     background-color: green;
