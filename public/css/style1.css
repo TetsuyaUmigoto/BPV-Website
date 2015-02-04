@@ -50,25 +50,21 @@ p{}
     margin-top: 0px;
 }
 /* bedrijfspagina*/
+
 .naambedrijf{
     background-color: green;
-    float: right;
     width: 50%;
     height: 200px ;
-    margin-top: 60px;
     display: inline-block;
 }
 .sterren{
     background-color: yellow;
-    float: right;
     width: 50%;
     height: 200px ;
-    margin-top: 60px;
     display: inline-block;
 }
 .info{
     background-color: pink;
-    float: left;
     width: 50%;
     height: 600px ;
     margin-top: 0px;
@@ -76,7 +72,6 @@ p{}
 }
 .maps{
     background-color: blue;
-    float: right;
     width: 50%;
     height: 600px ;
     margin-top: 0px;
@@ -84,7 +79,6 @@ p{}
 }
 .commentaar{
     background-color: orange;
-    float: right;
     width: 50%;
     height: 400px;	
     display: inline-block;
@@ -92,10 +86,8 @@ p{}
 .ster{
     background-color: gray;
     width: 50%;
-    float: right;
     height: 200px;
     margin-top: 0px;
-    float: left;
     display: inline-block;
 }
 .eigencommentaar{
@@ -103,7 +95,6 @@ p{}
     height: 200px;
     display: inline-block;
     width: 50%;
-    float: right;
 }
 /* docentenpagina */
 
