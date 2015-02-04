@@ -16,10 +16,10 @@ class Controller {
             $this->model = new $modelname;
         }
     }
-    
-    public function loginCheck($name){
-        if(!isset($_SESSION['user_id']) && $name !== "login"){
-          header("location: " . URL . "login");
+
+    public function loginCheck($name) {
+        if (!isset($_SESSION['user_id']) && $name !== 'login') {
+            header("location: " . URL);
         }
     }
 
