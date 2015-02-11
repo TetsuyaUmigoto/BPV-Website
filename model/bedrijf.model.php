@@ -22,5 +22,10 @@ class Bedrijf_Model extends Model {
         $sth->execute();
         return $sth->fetchall();
     }
-
+    
+    function getBedrijfInfo($id){
+        $sth = $this->dbh->prepare("SELECT * FROM bedrijven WHERE bedrijf_id = '" . $id . "'");
+        $sth->execute();
+        return $sth->fetchall();
+    }
 }
