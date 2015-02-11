@@ -11,7 +11,7 @@
         <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
             LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
             Comment:<input type='text' class='form-control' name='comment'>
-            Rating:<span class="rating">
+            Rating:<br><span class="rating">
 				<input type="radio" class="rating-input"
 					id="rating-input-1-5" name="rating-input-1">
 				<label for="rating-input-1-5" class="rating-star"></label>
