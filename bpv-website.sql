@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 28 jan 2015 om 15:40
+-- Gegenereerd op: 11 feb 2015 om 15:23
 -- Serverversie: 5.6.20
 -- PHP-versie: 5.5.15
 
@@ -32,15 +32,26 @@ CREATE TABLE IF NOT EXISTS `bedrijven` (
   `soort` int(1) NOT NULL,
   `wachtwoord` varchar(256) NOT NULL,
   `bedrijf_naam` varchar(25) NOT NULL,
-  `omschrijving` varchar(500) NOT NULL
+  `omschrijving` varchar(500) NOT NULL,
+  `Adres` varchar(50) NOT NULL,
+  `Postcode` varchar(7) NOT NULL,
+  `Plaats` varchar(50) NOT NULL,
+  `Telefoonnummer` int(11) NOT NULL,
+  `Website` varchar(50) NOT NULL,
+  `Contactpersoon_telefoon` int(10) NOT NULL,
+  `Concactpersoon_email` varchar(30) NOT NULL,
+  `Praktijkbegeleider` varchar(30) NOT NULL,
+  `Praktijkbegeleider_telefoon` int(10) NOT NULL,
+  `kenniscentrum` varchar(10) NOT NULL,
+  `Bedrijfscode_van_accreditatie` int(20) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `bedrijven`
 --
 
-INSERT INTO `bedrijven` (`bedrijf_id`, `ref_nummer`, `soort`, `wachtwoord`, `bedrijf_naam`, `omschrijving`) VALUES
-(1, 0, 0, '098f6bcd4621d373cade4e832627b4f6', '', '');
+INSERT INTO `bedrijven` (`bedrijf_id`, `ref_nummer`, `soort`, `wachtwoord`, `bedrijf_naam`, `omschrijving`, `Adres`, `Postcode`, `Plaats`, `Telefoonnummer`, `Website`, `Contactpersoon_telefoon`, `Concactpersoon_email`, `Praktijkbegeleider`, `Praktijkbegeleider_telefoon`, `kenniscentrum`, `Bedrijfscode_van_accreditatie`) VALUES
+(1, 9812355, 0, '098f6bcd4621d373cade4e832627b4f6', '!CL Web', '', 'Winthontlaan 200 ', '3526 KV', 'Utrecht', 308506080, '', 308506080, 'info@clweb.nl ', 'C. Loosjes ', 308506080, '', 0);
 
 -- --------------------------------------------------------
 
@@ -66,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `leerlingnummer` int(11) NOT NULL,
   `comment` varchar(500) NOT NULL,
   `rating` int(1) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -167,7 +178,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT voor een tabel `comments`
 --
 ALTER TABLE `comments`
-MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT voor een tabel `leraren`
 --
