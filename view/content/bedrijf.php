@@ -1,11 +1,18 @@
 <div class="wrap">
-    <div class="naambedrijf"><p>naam bedrijf</p></div>
-    <div class="sterren"><p>ster</p></div>
-    <div class="info"><p>info</p></div>
-    <div class="maps"><p>maps</p></div>
-    <div class="commentaar"><p>commentaar</p></div>
-    <div class="ster"><p>ster</p></div>
-    <div class="eigencommentaar"><p>eigen commentaar</p></div>
+    <?php
+    if (isset($this->info)) {
+        foreach ($this->info as $info) {
+            ?>
+            <div class="naambedrijf"><p><?php $info['bedrijf_naam'] ?></p></div>
+            <div class="sterren"><p>ster</p></div>
+            <div class="info"><p><?php $info['omschrijving'] ?></p></div>
+            <div class="maps"><p>maps</p></div>
+            <div class="commentaar"><p>commentaar</p></div>
+            <div class="ster"><p>ster</p></div>
+            <?php
+        }
+    }
+    ?>
 
     <div class="bedrijf-comments-test">
         <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
@@ -25,7 +32,7 @@
             if (isset($this->comments)) {
                 foreach ($this->comments as $row) {
                     echo
-                        "<tr>
+                    "<tr>
                             <td>" . $row['comment_id'] . "</td>
                             <td>" . $row['leerlingnummer'] . "</td>
                             <td>" . $row['comment'] . "</td>
