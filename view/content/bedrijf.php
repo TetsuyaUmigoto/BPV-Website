@@ -5,7 +5,7 @@
     <div class="maps"><p>maps</p></div>
     <div class="commentaar"><p>commentaar</p></div>
     <div class="ster"><p>ster</p></div>
-    <div class="eigencommentaar"><p>eigencommentaar</p></div>
+    <div class="eigencommentaar"><p>eigen commentaar</p></div>
 
     <div class="bedrijf-comments-test">
         <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
