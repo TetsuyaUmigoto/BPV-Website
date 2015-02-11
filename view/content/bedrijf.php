@@ -20,20 +20,20 @@
             Comment:<input type='text' class='form-control' name='comment'>
             Rating:<br><span class="rating">
 				<input type="radio" class="rating-input"
-					id="rating-input-1-5" name="rating-input-1">
-				<label for="rating-input-1-5" class="rating-star"></label>
+					id="rating-input-5" name="rating-input-5">
+				<label for="rating-input-5" class="rating-star"></label>
 				<input type="radio" class="rating-input"
-					id="rating-input-1-4" name="rating-input-1">
-				<label for="rating-input-1-4" class="rating-star"></label>
+					id="rating-input-4" name="rating-input-4">
+				<label for="rating-input-4" class="rating-star"></label>
 				<input type="radio" class="rating-input"
-					id="rating-input-1-3" name="rating-input-1">
-				<label for="rating-input-1-3" class="rating-star"></label>
+					id="rating-input-3" name="rating-input-3">
+				<label for="rating-input-3" class="rating-star"></label>
 				<input type="radio" class="rating-input"
-					id="rating-input-1-2" name="rating-input-1">
-				<label for="rating-input-1-2" class="rating-star"></label>
+					id="rating-input-2" name="rating-input-2">
+				<label for="rating-input-2" class="rating-star"></label>
 				<input type="radio" class="rating-input"
-					id="rating-input-1-1" name="rating-input-1">
-				<label for="rating-input-1-1" class="rating-star"></label>
+					id="rating-input-1" name="rating-input-1">
+				<label for="rating-input-1" class="rating-star"></label>
 			</span>
             <input type='submit' class='btn btn-primary' value='Comment!'>
         </form>
