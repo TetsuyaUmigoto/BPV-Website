@@ -16,6 +16,11 @@ class Bedrijf extends Controller {
         $this->view->render('bedrijf');
     }
 
+    function showBedrijf($id) {
+        $bedrijfInfo = $this->model->getBedrijfInfo($id);
+        $this->view->info = $bedrijfInfo;
+    }
+
     function postComment() {
         $this->model->postComment();
     }

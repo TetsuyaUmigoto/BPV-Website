@@ -10,6 +10,8 @@ class Overzicht extends Controller {
     }
 
     function index() {
+        $bedrijven = $this->model->getBedrijven();
+        $this->view->bedrijfList = $bedrijven;
         $this->view->render('overzicht');
     }
 
