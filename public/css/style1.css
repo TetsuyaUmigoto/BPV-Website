@@ -74,6 +74,7 @@ p{}
       }
       .rating-star {        
           display: block;
+          background-color: none;
           float: right;        
           width: 16px;
           height: 16px;
