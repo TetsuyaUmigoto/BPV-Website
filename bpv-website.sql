@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 11 feb 2015 om 15:23
+-- Gegenereerd op: 18 feb 2015 om 15:06
 -- Serverversie: 5.6.20
 -- PHP-versie: 5.5.15
 
@@ -74,10 +74,25 @@ CREATE TABLE IF NOT EXISTS `calender` (
 
 CREATE TABLE IF NOT EXISTS `comments` (
 `comment_id` int(11) NOT NULL,
+  `bedrijf_id` int(11) NOT NULL,
   `leerlingnummer` int(11) NOT NULL,
   `comment` varchar(500) NOT NULL,
   `rating` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `comments`
+--
+
+INSERT INTO `comments` (`comment_id`, `bedrijf_id`, `leerlingnummer`, `comment`, `rating`) VALUES
+(1, 1, 124523, 'asdfgh', 0),
+(2, 0, 123456, 'asdfghgfdsa', 0),
+(3, 1, 321, 'testtser', 0),
+(4, 1, 1234, 'testttredfgfdfgfrgbfgfr', 0),
+(5, 1, 123456789, 'ratingtest', 0),
+(6, 1, 2345432, 'extratest', 2),
+(7, 0, 0, '', 4),
+(8, 0, 0, '', 4);
 
 -- --------------------------------------------------------
 
@@ -125,6 +140,29 @@ CREATE TABLE IF NOT EXISTS `studenten` (
 INSERT INTO `studenten` (`leerlingnummer`, `voornaam`, `achternaam`, `wachtwoord`, `email`, `geboortedatum`, `telefoonnummer`, `klas`, `leraar_id`) VALUES
 (0, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', '', '2015-01-28 13:31:12', 0, '', 0),
 (1, 'jonas', '', '098f6bcd4621d373cade4e832627b4f6', '', '2015-01-28 14:23:01', 0, '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `studenten_extern`
+--
+
+CREATE TABLE IF NOT EXISTS `studenten_extern` (
+  `studentnummer` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `middle_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `class_code` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `studenten_extern`
+--
+
+INSERT INTO `studenten_extern` (`studentnummer`, `email`, `first_name`, `middle_name`, `last_name`, `password`, `class_code`) VALUES
+(0, 'jonasmuilwijk@gmail.com', 'Jonas', '', 'Muilwijk', '', 'ZCM-IT14A2');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -178,7 +216,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT voor een tabel `comments`
 --
 ALTER TABLE `comments`
-MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT voor een tabel `leraren`
 --

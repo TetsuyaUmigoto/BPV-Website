@@ -10,6 +10,8 @@ class Studenten extends Controller {
     }
 
     function index() {
+        $studentInfo = $this->model->getStudentInfo($_SESSION['user_id']);
+        $this->view->studentInfo = $studentInfo;
         $this->view->render('studenten');
     }
 
