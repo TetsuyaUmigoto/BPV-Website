@@ -1,3 +1,3 @@
-<div class="wrap">
-    <div class="doel">doel site</div>
+<div id="wrap">
+    <div id="doel">doel site</div>
 </div>

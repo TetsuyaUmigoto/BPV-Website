@@ -1,6 +1,6 @@
 <div class="wrap">
-    <div class="zoek"> <p>zoekbalk</p> </div>
-    <div class="bedrijf">
+    <div id="zoek"> <p>zoekbalk</p> </div>
+    <div id="bedrijf">
         <table id="overzichtBedrijven">
             <thead>
                 <td>

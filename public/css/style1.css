@@ -1,4 +1,4 @@
-.wrap{
+#wrap{
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -21,34 +21,26 @@ p{}
     height: 45px;
 }
 /* voorpagina */
-.doel{
+#doel{
     background-color: green;
     margin-top: 40px;
     height: 400px;
 }
 /* overzicht pagina, zoek pagina*/
-.zoek{
+#zoek{
     background-color: #91002C;
     width: 15%;
     height: 500px;
     display: inline-block;
 }
-.bedrijf{
+#bedrijf{
     width: 70%;
     margin-left: 2%;
     height: 500px;
     background-color: beige;
     display: inline-block;
 }
-.bedrijf1{
-    background-color: green;
-    height:50px;
-}
-.bedrijf2{
-    background-color: white;
-    height: 50px;
-    margin-top: 0px;
-}
+
 /* bedrijfspagina*/
 
 .bedrijfInfo{
@@ -85,26 +77,26 @@ p{}
 /* docentenpagina */
 
 /* studentenpagina*/
-.student{
+#student{
     background-color: gray;
     width: 48%;
     height: 400px;
     display: inline-block;
 }
-.gegevens{
+#gegevens{
     background-color: red;
     width: 48%;
     height: 400px;
     display: inline-block;
 }
-.link{
+#link{
     background-color: hotpink;
     width: 48%;
     height: 60px;
     display: inline-block;
     margin-top: 40px;
 }
-.uitloggen{
+#uitloggen{
     background-color: pink;
     width: 48%;
     height: 60px;
@@ -112,7 +104,7 @@ p{}
     display: inline-block;
 }
 /* pok-aanvraag*/
-.pok{
+#pok{
     background-color: lime;
     margin: 0 auto;
     width: 1200px;
