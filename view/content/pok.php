@@ -51,13 +51,19 @@ if(!isset($_POST['number'])){
     echo
 	"<div>
 	    <form action=". URL ."pok/crawl method='post'>
-		Ecabo nummer:<input type='text' name='number'>
+		Ecabo nummer: <input type='text' name='number'>
 	    </form>
 	</div>";
 }else{
+    print_r($this->data);
     echo
 	"<div>
-	    <form action=''
+	    <form action=". URL ."pok/crawl method='post'>
+		<input type='text' name='number'>
+		<input type='text' name='number'>
+		<input type='text' name='number'>
+		<input type='text' name='number'>
+		<input type='text' name='number'>
 	</div>";
 }
 

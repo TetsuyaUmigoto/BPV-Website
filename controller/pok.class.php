@@ -14,9 +14,9 @@ class Pok extends Controller {
     }
     
     function crawl() {
-        if (isset($_POST['number']) && $_POST['richting'] == "ecabo") {
+        if(isset($_POST['number'])){
             if ($_POST['number'] == "") {
-                header("location: " . URL . "crawler");
+                header("location: " . URL . "pok");
             }
             include 'external/simple_html_dom.php';
             $html = new simple_html_dom();
@@ -27,14 +27,14 @@ class Pok extends Controller {
                 $returnval = $element;
             }
             if (isset($returnval->children) == null) {
-                header("location: " . URL . "crawler");
+                header("location: " . URL . "pok");
             }
             $test = $returnval->children(0);
             $test .= $returnval->children(2);
             $test .= $returnval->children(4);
             $test .= $returnval->children(8);
             $this->view->data = $test;
-            $this->view->render('crawler');
+            $this->view->render('pok');
         }
     }
 
