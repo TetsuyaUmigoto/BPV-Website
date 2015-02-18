@@ -3,12 +3,12 @@
     if (isset($this->info)) {
         foreach ($this->info as $info) {
             ?>
-            <div class="naambedrijf"><p><?php echo $info['bedrijf_naam'] ?></p></div>
-            <div class="sterren"><p>ster</p></div>
-            <div class="info"><p><?php echo $info['omschrijving'] ?></p></div>
-            <div class="maps"><p>maps</p></div>
-            <div class="commentaar"><p>commentaar</p></div>
-            <div class="ster"><p>ster</p></div>
+            <div class="bedrijfInfo"><p><?php echo $info['bedrijf_naam'] ?></p></div>
+            <div class="bedrijfInfo"><p>ster</p></div>
+            <div class="bedrijfInfo"><p><?php echo $info['omschrijving'] ?></p></div>
+            <div class="bedrijfInfo"><p>maps</p></div>
+            <div class="bedrijfInfo"><p>commentaar</p></div>
+            <div class="bedrijfInfo"><p>ster</p></div>
             <?php
         }
     }
