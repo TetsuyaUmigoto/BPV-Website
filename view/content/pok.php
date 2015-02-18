@@ -75,21 +75,21 @@ if(!isset($_POST['number'])){
 		    <tr><td>Kenniscentrum:</td><td><input class='form-control' type='text' name='bedrijfKenniscentrum' value='".$this->bedrijfKennisCentrum."'></td></tr>
 		    <tr><td>Bedrijfscode van accreditatie:</td><td><input class='form-control' type='text' name='bedrijfBedrijfscode' value='".$this->bedrijfCode."'></td></tr>
 		<tr><td><b>Student gegevens:</b></tr></td>
-		    Naam: <input type='text' name='studentNaam'><br>
-		    Studentnummer: <input type='text' name='studentNummer'><br>
-		    Klascode: <input type='text' name='studentKlas'><br>
-		    Opleidingsnaam: <input type='text' name='studentOpleiding'><br>
-		    Crebonummer Opleiding: <input type='text' name='studentCrebonummerOpleiding'><br>
-		    BOL/BBL: <input type='text' name='studentRichting'><br>
-		    Inleverdatum: <input type='text' name='studentInleverdatum'><br>
+		    <tr><td>Naam:</td><td><input class='form-control' type='text' name='studentNaam'></td></tr>
+		    <tr><td>Studentnummer:</td><td><input class='form-control' type='text' name='studentNummer'></td></tr>
+		    <tr><td>Klascode:</td><td><input class='form-control' type='text' name='studentKlas'></td></tr>
+		    <tr><td>Opleidingsnaam:</td><td><input class='form-control' type='text' name='studentOpleiding'></td></tr>
+		    <tr><td>Crebonummer Opleiding:</td><td><input class='form-control' type='text' name='studentCrebonummerOpleiding'></td></tr>
+		    <tr><td>BOL/BBL:</td><td><input class='form-control' type='text' name='studentRichting'></td></tr>
+		    <tr><td>Inleverdatum:</td><td><input class='form-control' type='text' name='studentInleverdatum'></td></tr>
 
-		    BPV-Coördinator: <input type='text' name='bpvCoordinator'><br>
-		    Stagebegeleider Landstede: <input type='text' name='bpvBegeleider'><br>
-		    BPV-periode (data): <input type='text' name='bpvPeriode'><br>
-		    Aantal sbu’s: <input type='text' name='bpvSbu'><br>
-		    Brinnummer: <input type='text' name='bpvBrin'><br>
-		    Crebonummer: <input type='text' name='bpvCrebo'><br>
-		    Opmerkingen: <input type='text' name='bpvOpmerking'><br>
+		    <tr><td>BPV-Coördinator:</td><td><input class='form-control' type='text' name='bpvCoordinator'></td></tr>
+		    <tr><td>Stagebegeleider Landstede:</td><td><input class='form-control' type='text' name='bpvBegeleider'></td></tr>
+		    <tr><td>BPV-periode (data):</td><td><input class='form-control' type='text' name='bpvPeriode'></td></tr>
+		    <tr><td>Aantal sbu’s:</td><td><input class='form-control' type='text' name='bpvSbu'></td></tr>
+		    <tr><td>Brinnummer:</td><td><input class='form-control' type='text' name='bpvBrin'></td></tr>
+		    <tr><td>Crebonummer:</td><td><input class='form-control' type='text' name='bpvCrebo'></td></tr>
+		    <tr><td>Opmerkingen:</td><td><input class='form-control' type='text' name='bpvOpmerking'></td></tr>
 		</form>
 	    </table>
 	</div>";
