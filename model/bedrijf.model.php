@@ -12,7 +12,7 @@ class Bedrijf_Model extends Model {
         $sth->execute(array(
             ':leerlingnummer' => $_POST['leerlingnummer'],
             ':comment' => $_POST['comment'],
-            ':rating' => $_POST['rating']
+            ':rating' => $_POST['rating-input-1']
         ));
         header("location: ".URL."bedrijf");
     }
