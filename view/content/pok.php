@@ -50,6 +50,7 @@
 if(!isset($_POST['number'])){
     echo
 	"<div>
+	    Test nummer: 9812355<br>
 	    <form action=". URL ."pok/crawl method='post'>
 		Ecabo nummer: <input type='text' name='number'>
 	    </form>
@@ -59,11 +60,11 @@ if(!isset($_POST['number'])){
     echo
 	"<div>
 	    <form action=". URL ."pok/crawl method='post'>
-		<input type='text' name='number'>
-		<input type='text' name='number'>
-		<input type='text' name='number'>
-		<input type='text' name='number'>
-		<input type='text' name='number'>
+		<input type='text' name='number'><br>
+		<input type='text' name='number'><br>
+		<input type='text' name='number'><br>
+		<input type='text' name='number'><br>
+		<input type='text' name='number'><br>
 	</div>";
 }
 
