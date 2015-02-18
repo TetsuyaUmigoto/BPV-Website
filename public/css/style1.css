@@ -42,6 +42,18 @@ p{}
 }
 
 /* bedrijfspagina*/
+#infoWrapper{
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#gebruikerComments{
+    display: inline-block;
+    width: 500px;
+    margin-left: 200px;
+    vertical-align: top;
+}
 
 .bedrijfInfo{
     

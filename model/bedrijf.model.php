@@ -7,18 +7,19 @@ class Bedrijf_Model extends Model {
     }
 
     function postComment() {
-        $sth = $this->dbh->prepare("INSERT INTO comments (comment_id, leerlingnummer, comment, rating)
-        VALUES (NULL, :leerlingnummer, :comment, :rating )");
+        $sth = $this->dbh->prepare("INSERT INTO comments (comment_id, bedrijf_id, leerlingnummer, comment, rating)
+        VALUES (NULL, :bedrijf_id, :leerlingnummer, :comment, :rating )");
         $sth->execute(array(
             ':leerlingnummer' => $_POST['leerlingnummer'],
             ':comment' => $_POST['comment'],
-            ':rating' => $_POST['rating-input-1']
+            ':rating' => $_POST['rating'],
+            ':bedrijf_id' => $_POST['bedrijf_id']
         ));
-        header("location: ".URL."bedrijf");
+        header("location: ".URL."bedrijf/showBedrijf/" . $_POST['bedrijf_id']);
     }
     
-    function showComment() {
-        $sth = $this->dbh->prepare("SELECT * FROM comments");
+    function showComment($id) {
+        $sth = $this->dbh->prepare("SELECT * FROM comments WHERE bedrijf_id = '" . $id . "'");
         $sth->execute();
         return $sth->fetchall();
     }
