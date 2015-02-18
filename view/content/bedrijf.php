@@ -1,4 +1,4 @@
-<div class="wrap">
+<div id="wrap">
     <?php
     if (isset($this->info)) {
         foreach ($this->info as $info) {

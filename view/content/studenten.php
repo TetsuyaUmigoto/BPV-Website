@@ -1,6 +1,6 @@
-<div class="wrap">
-    <div class="gegevens">gegevens</div>
-    <div class="bedrijf">bedrijf</div>
-    <div class="link">www.newdeveloper.nl</div>
-    <div class="uitloggen">uitloggen</div>
+<div id="wrap">
+    <div id="gegevens">gegevens</div>
+    <div id="bedrijf">bedrijf</div>
+    <div id="link">www.newdeveloper.nl</div>
+    <div id="uitloggen">uitloggen</div>
 </div>

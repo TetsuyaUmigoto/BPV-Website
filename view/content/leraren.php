@@ -7,7 +7,7 @@
     Tijd:<input type='text' class='form-control' name='tijd'>
     <input type='submit' class='btn btn-primary' value='Create!'>
 </form>
-<table class="table">
+<table id="table">
     <tr>
         <td>LeerlingNummer</td>
         <td>Afspraak</td>
