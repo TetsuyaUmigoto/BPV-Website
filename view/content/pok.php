@@ -52,19 +52,46 @@ if(!isset($_POST['number'])){
 	"<div>
 	    Test nummer: 9812355<br>
 	    <form action=". URL ."pok/crawl method='post'>
-		Ecabo nummer: <input type='text' name='number'>
+		Ecabo relatie nummer: <input type='text' name='number'>
 	    </form>
 	</div>";
 }else{
-    print_r($this->data);
     echo
 	"<div>
-	    <form action=". URL ."pok/crawl method='post'>
-		<input type='text' name='number'><br>
-		<input type='text' name='number'><br>
-		<input type='text' name='number'><br>
-		<input type='text' name='number'><br>
-		<input type='text' name='number'><br>
+	    <table class='table'>
+		<tr><td><b>Bedrijfsgegevens:</b></tr></td>
+		<form action=". URL ."pok/crawl method='post'>
+		    <tr><td>Bedrijfsnaam:</td><td><input class='form-control' type='text' name='bedrijfNaam' value='".$this->bedrijfNaam."'></td></tr>
+		    <tr><td>Adres:</td><td><input class='form-control' type='text' name='bedrijfAdres' value='".$this->bedrijfAdres."'></td></tr>
+		    <tr><td>Postcode:</td><td><input class='form-control' type='text' name='bedrijfPostcode' value='".$this->bedrijfPostcode."'></td></tr>
+		    <tr><td>Plaats:</td><td><input class='form-control' type='text' name='bedrijfPlaats' value='".$this->bedrijfPlaats."'></td></tr>
+		    <tr><td>Telefoonnummer:</td><td><input class='form-control' type='text' name='bedrijfTelefoon' value='".$this->bedrijfTelefoon."'></td></tr>
+		    <tr><td>Website:</td><td><input class='form-control' type='text' name='bedrijfWebsite' value='".$this->bedrijfWebsite."'></td></tr>
+		    <tr><td>Contactpersoon + voorletter(s)(bekend bij kenniscentrum/ teken bevoegd:</td><td><input class='form-control' type='text' name='bedrijfContactpersoon' value='".$this->bedrijfContactPersoon."'></td></tr>
+		    <tr><td>Contactpersoon telefoon:</td><td><input class='form-control' type='text' name='bedrijfContactpersoonTelefoon' value='".$this->bedrijfContactPersoonTelefoon."'></td></tr>
+		    <tr><td>Contactpersoon @-mail:</td><td><input class='form-control' type='text' name='bedrijfContactpersoonEmail' value='".$this->bedrijfContactPersoonEmail."'></td></tr>
+		    <tr><td>Praktijkbegeleider + voorletter(s):</td><td><input class='form-control' type='text' name='bedrijfPraktijkbegeleider' value='".$this->bedrijfPraktijkBegeleider."'></td></tr>
+		    <tr><td>Praktijkbegeleider telefoon:</td><td><input class='form-control' type='text' name='bedrijfPraktijkbegeleiderTelefoon' value='".$this->bedrijfPraktijkBegeleiderTelefoon."'></td></tr>
+		    <tr><td>Kenniscentrum:</td><td><input class='form-control' type='text' name='bedrijfKenniscentrum' value='".$this->bedrijfKennisCentrum."'></td></tr>
+		    <tr><td>Bedrijfscode van accreditatie:</td><td><input class='form-control' type='text' name='bedrijfBedrijfscode' value='".$this->bedrijfCode."'></td></tr>
+		<tr><td><b>Student gegevens:</b></tr></td>
+		    Naam: <input type='text' name='studentNaam'><br>
+		    Studentnummer: <input type='text' name='studentNummer'><br>
+		    Klascode: <input type='text' name='studentKlas'><br>
+		    Opleidingsnaam: <input type='text' name='studentOpleiding'><br>
+		    Crebonummer Opleiding: <input type='text' name='studentCrebonummerOpleiding'><br>
+		    BOL/BBL: <input type='text' name='studentRichting'><br>
+		    Inleverdatum: <input type='text' name='studentInleverdatum'><br>
+
+		    BPV-Coördinator: <input type='text' name='bpvCoordinator'><br>
+		    Stagebegeleider Landstede: <input type='text' name='bpvBegeleider'><br>
+		    BPV-periode (data): <input type='text' name='bpvPeriode'><br>
+		    Aantal sbu’s: <input type='text' name='bpvSbu'><br>
+		    Brinnummer: <input type='text' name='bpvBrin'><br>
+		    Crebonummer: <input type='text' name='bpvCrebo'><br>
+		    Opmerkingen: <input type='text' name='bpvOpmerking'><br>
+		</form>
+	    </table>
 	</div>";
 }
 
