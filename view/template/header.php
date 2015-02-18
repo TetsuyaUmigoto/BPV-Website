@@ -14,6 +14,7 @@
     <body>
         <div class='container'>
             <div class='nav-header'>
+                <!-- knopjes -->
                 <a class="head-link" href="<?php echo URL ?>index"><div class="col-md-1-link">Home</div></a>
                 <a class="head-link" href="<?php echo URL ?>voorpagina"><div class="col-md-1-link">Voorpagina</div></a>
                 <a class="head-link" href="<?php echo URL ?>overzicht"><div class="col-md-1-link">Overzicht</div></a>
