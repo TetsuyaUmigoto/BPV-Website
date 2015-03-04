@@ -1800,6 +1800,12 @@ pre code {
         background:black;
         height: 82px;
     }
+    #loguit {
+        background-color: red;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+    }
     #footer {
         margin-top: 10px;
     }
