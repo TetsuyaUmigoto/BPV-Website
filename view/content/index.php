@@ -1,5 +1,5 @@
 <?php
-
+/*
 print_r($_SESSION);
 
 if (!isset($_SESSION['user_id'])) {
@@ -22,5 +22,5 @@ if (!isset($_SESSION['user_id'])) {
             </form>";
 } else {
     echo "<br /><a href='" . URL . "login/UserLogout'>Log Uit</a>";
-}
+} */
 ?>

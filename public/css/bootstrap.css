@@ -5,7 +5,9 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-//lol
+
+/*header*/
+
 html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
@@ -1389,10 +1391,8 @@ pre code {
     overflow-y: scroll;
 }
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+            display:inline-block;
+
 }
 @media (min-width: 768px) {
     .container {
@@ -1779,7 +1779,7 @@ pre code {
     .col-md-1-link {
         text-align: center;
         font-weight: bold;
-        background-color: blue;
+        background-color: black;
         width: 12.5%;
     }
     .head-link {
@@ -1789,7 +1789,7 @@ pre code {
         opacity: 0.5;
     }
     .nav-header {
-        margin: 20px 0px 30px 0px;
+        background:black;
     }
     #footer {
         margin-top: 10px;
