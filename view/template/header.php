@@ -45,7 +45,7 @@ if (!isset($_SESSION['user_id'])) {
                 <input type='submit' value='Login' />
             </form>";
 } else {
-    echo "<br /><a href='" . URL . "login/UserLogout>Log Uit</a>";
+    echo "<br /><a href='" . URL . "login/UserLogout'>Log Uit</a>";
 } 
 ?>
 </div>
