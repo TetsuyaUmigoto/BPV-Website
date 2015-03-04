@@ -1392,7 +1392,6 @@ pre code {
 }
 .container {
             display:inline-block;
-
 }
 @media (min-width: 768px) {
     .container {
@@ -1782,8 +1781,12 @@ pre code {
         background-color: black;
         width: 12.5%;
     }
+    .andere{
+        display: inline-block;
+    }
     .head-link {
         color: white !important;
+        display: inline-block;
     }
     .head-link:hover {
         opacity: 0.5;

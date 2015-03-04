@@ -12,18 +12,16 @@
         </title>
     </head>
     <body>
-        <div class='container'>
+        <div class='container' style="width:100%;">
             <div class='nav-header'>
                 <!-- knopjes -->
-                <a class="head-link" href="<?php echo URL ?>index"><div class="col-md-1-link">Home</div></a>
+                <div class="head-link"><img src="<?php echo URL ?>public/img/logo2.png" alt=""></div>
                 <a class="head-link" href="<?php echo URL ?>voorpagina"><div class="col-md-1-link">Voorpagina</div></a>
                 <a class="head-link" href="<?php echo URL ?>overzicht"><div class="col-md-1-link">Overzicht</div></a>
-                <a class="head-link" href="<?php echo URL ?>pok"><div class="col-md-1-link">POK</div></a>
                 <a class="head-link" href="<?php echo URL ?>studenten"><div class="col-md-1-link">Studenten</div></a>
                 <a class="head-link" href="<?php echo URL ?>leraren"><div class="col-md-1-link">Leraren</div></a>
-                <a class="head-link" href="<?php echo URL ?>bedrijf"><div class="col-md-1-link">Bedrijf</div></a>
                 <a class="head-link" href="<?php echo URL ?>crawler"><div class="col-md-1-link">Crawler</div></a>
-                <?php
+                <div class="andere"><?php 
 print_r($_SESSION);
 
 if (!isset($_SESSION['user_id'])) {
@@ -48,6 +46,9 @@ if (!isset($_SESSION['user_id'])) {
             </form>";
 } else {
     echo "<br /><a href='" . URL . "login/UserLogout'>Log Uit</a>";
-}
+} 
 ?>
+</div>
+
+                
            </div> </div><br> 
