@@ -1790,6 +1790,9 @@ pre code {
         color: white !important;
         display: inline-block;
     }
+    .head-link:first-child:hover {
+        opacity: 1;
+    }
     .head-link:hover {
         opacity: 0.5;
     }
