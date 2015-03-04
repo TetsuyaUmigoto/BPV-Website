@@ -74,7 +74,7 @@ class Pok extends Controller {
 		$this->view->bedrijfPraktijkBegeleiderTelefoon = strip_tags($bedrijfPraktijkBegeleiderTelefoon);
 		$this->view->bedrijfKennisCentrum = strip_tags($bedrijfKennisCentrum);
 		$this->view->bedrijfCode = strip_tags($bedrijfCode);
-
+                $this->view->studentData = $this->model->studentGegevens();
 		$this->view->render('pok');
 	    }
 	}else if($_POST['goc']){
