@@ -12,7 +12,7 @@
         </title>
     </head>
     <body>
-        <div class='container'>
+        <div class='container' style="width:100%;">
             <div class='nav-header'>
                 <!-- knopjes -->
                 <a class="head-link" href="<?php echo URL ?>voorpagina"><div class="col-md-1-link">Voorpagina</div></a>
