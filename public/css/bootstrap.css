@@ -1795,6 +1795,7 @@ pre code {
     }
     .nav-header {
         background:black;
+        height: 82px;
     }
     #footer {
         margin-top: 10px;
