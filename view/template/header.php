@@ -15,6 +15,7 @@
         <div class='container' style="width:100%;">
             <div class='nav-header'>
                 <!-- knopjes -->
+                <div class="head-link"><img src="<?php echo URL ?>public/img/logo2.png" alt=""></div>
                 <a class="head-link" href="<?php echo URL ?>voorpagina"><div class="col-md-1-link">Voorpagina</div></a>
                 <a class="head-link" href="<?php echo URL ?>overzicht"><div class="col-md-1-link">Overzicht</div></a>
                 <a class="head-link" href="<?php echo URL ?>studenten"><div class="col-md-1-link">Studenten</div></a>
