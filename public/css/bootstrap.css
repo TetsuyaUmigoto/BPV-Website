@@ -1787,6 +1787,8 @@ pre code {
         left: 80%;
     }
     .head-link {
+        display: block;
+        padding: 5px;
         color: white !important;
         display: inline-block;
     }
