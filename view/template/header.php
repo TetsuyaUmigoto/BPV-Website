@@ -28,7 +28,7 @@ if (!isset($_SESSION['user_id'])) {
     echo
     "<form id='loginForm' method='post' action='" . URL . "login/userLogin'>
                 <input type='text' name='username' /> 
-                <select name='type'>
+                <select id='keuze' name='type'>
                     <option value='0'>
                         Leerling
                     </option> 
@@ -42,7 +42,7 @@ if (!isset($_SESSION['user_id'])) {
                 <br>
                 <input type='password' name='password'>
                 
-                <input type='submit' value='Login' />
+                <input id='login' type='submit' value='Login' />
             </form>";
 } else {
     echo "<br /><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";

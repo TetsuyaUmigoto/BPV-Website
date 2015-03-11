@@ -1800,6 +1800,20 @@ pre code {
         background:black;
         height: 82px;
     }
+    #keuze {
+        background-color: red;
+        border: none;
+        color: white;
+        
+    }
+    #login {
+        background-color: red;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        
+    }
     #loguit {
         background-color: red;
         padding: 5px;
