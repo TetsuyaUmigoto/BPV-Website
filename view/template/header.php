@@ -11,7 +11,7 @@
             <?php echo $this->title; ?>
         </title>
     </head>
-    <body>
+    <body
         <div class='container' style="width:100%;">
             <div class='nav-header'>
                 <!-- knopjes -->
