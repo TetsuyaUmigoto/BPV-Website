@@ -16,7 +16,6 @@ h1{
     font-weight: 300;
 }
 
-p{}
 .logo img, .header img{
     width: 136px;
     height: 45px;
@@ -56,9 +55,7 @@ p{}
     vertical-align: top;
 }
 
-.bedrijfInfo{
-    
-}
+.bedrijfInfo{}
 .sterren{
     background-color: yellow;
     width: 50%;
