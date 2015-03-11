@@ -63,15 +63,6 @@ CREATE TABLE IF NOT EXISTS `pokaanvraag` (
 INSERT INTO `pokaanvraag` (`leerlingnummer`, `bedrijfNaam`, `bedrijfAdres`, `bedrijfPostcode`, `bedrijfPlaats`, `bedrijfTelefoon`, `bedrijfWebsite`, `bedrijfContactPersoon`, `bedrijfContactPersoonTelefoon`, `bedrijfContactPersoonEmail`, `bedrijfPraktijkBegeleider`, `bedrijfPraktijkBegeleiderTelefoon`, `bedrijfKennisCentrum`, `bedrijfCode`, `studentNaam`, `studentKlas`, `studentOpleiding`, `studentCreboNummerOpleiding`, `studentRichting`, `studentInleverdatum`, `bpvCoordinator`, `bpvBegeleider`, `bpvPeriode`, `bpvSbu`, `bpvBrin`, `bpvCrebo`, `bpvOpmerking`) VALUES
 (1, '!CL Web', 'Winthontlaan 200 ', '3526 KV', 'UTRECHT', 2147483647, '  ', 'Dhr. C. (Cyril) Loosjes ', 2147483647, ' info@clweb.nlÂ ', 'Dhr. C. (Cyril) Loosjes ', 2147483647, '', '', 'jonas ', '', '', '', '', '', '', '', '', 0, '', '', '');
 
---
--- Indexen voor geëxporteerde tabellen
---
-
---
--- Indexen voor tabel `pokaanvraag`
---
-ALTER TABLE `pokaanvraag`
- ADD PRIMARY KEY (`leerlingnummer`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
