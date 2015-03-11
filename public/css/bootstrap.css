@@ -1783,7 +1783,7 @@ pre code {
     }
     .andere{
         display: inline-block;
-        position: fixed;
+        position: absolute;
         left: 80%;
     }
     .head-link {
