@@ -10,7 +10,9 @@ class Leraren extends Controller {
     }
 
     function index() {
+        $leerlingen = $this->model->getAlliedLeerlingen($_SESSION["user_id"]);
         $agenda = $this->model->showCaldav();
+        $this->view->leerlingen = $leerlingen;
         $this->view->agenda = $agenda;
         $this->view->render('leraren');
     }

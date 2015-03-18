@@ -7,22 +7,63 @@
     Tijd:<input type='text' class='form-control' name='tijd'>
     <input type='submit' class='btn btn-primary' value='Create!'>
 </form>
-<table id="table">
-    <tr>
-        <td>LeerlingNummer</td>
-        <td>Afspraak</td>
-        <td>Tijd</td>
-    </tr>
-    <?php
-    if (isset($this->agenda)) {
-        foreach ($this->agenda as $row) {
+
+<div id="leerlingen">
+    <table id="leerlingTable">
+        <thead>
+        <td>
+            Leerlingnummer
+        </td>
+        <td>
+            Naam
+        </td>
+        <td>
+            Klas
+        </td>
+        <td>
+            Pokstatus
+        </td>
+        </thead>
+        <tbody>
+            <?php
+                foreach($this->leerlingen as $leerling){
+                    echo "
+                        <tr>
+                            <td>
+                                " . $leerling['leerlingnummer'] . "
+                            </td>
+                            <td>
+                                " . $leerling['voornaam'] . " " . $leerling['achternaam'] . "
+                            </td>
+                            <td>
+                                " . $leerling['klas'] . "
+                            </td>
+                            <td>
+                                " . $leerling['pokStatus'] . "
+                            </td>
+                        </tr>";
+                }
+            ?>
+            </tbody>
+            </table>
+            </div>
+
+            <table id="table">
+            <tr>
+            <td>LeerlingNummer</td>
+            <td>Afspraak</td>
+            <td>Tijd</td>
+            </tr>
+            <?php
+            if (isset($this->agenda)) {
+            foreach ($this->agenda as $row) {
             echo
-                "<tr>
+            "<tr>
                     <td>" . $row['leerlingnummer'] . "</td>
                     <td>" . $row['afspraak'] . "</td>
                     <td>" . $row['timestamp'] . "</td>
                 </tr>";
-        }
-    }
-    ?>
-</table>
+            }
+            }
+            ?>
+    </table>

@@ -11,6 +11,8 @@ class Studenten extends Controller {
 
     function index() {
         $studentInfo = $this->model->getStudentInfo($_SESSION['user_id']);
+        $pokInfo = $this->model->getPokInfo($_SESSION['user_id']);
+        $this->view->pokInfo = $pokInfo;
         $this->view->studentInfo = $studentInfo;
         $this->view->render('studenten');
     }

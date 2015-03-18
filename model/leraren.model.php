@@ -6,6 +6,14 @@ class Leraren_Model extends Model {
         parent::__construct();
     }
 
+    public function getAlliedLeerlingen($id) {
+        $sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer"
+                . " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
+                . " WHERE leraar_id = " . $id . " ORDER BY pokaanvraag.id DESC LIMIT 1");
+        $sth->execute();
+        return $sth->fetchall();
+    }
+    
     function caldav(){
         $sth = $this->dbh->prepare("INSERT INTO calender (id, timestamp, afspraak, leerlingnummer)
         VALUES (NULL, :timestamp, :afspraak, :leerlingnummer )");

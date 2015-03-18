@@ -12,5 +12,11 @@ class Studenten_Model extends Model {
         return $sth->fetchall();
  }
 
+    public function getPokInfo($id){
+        $sth = $this->dbh->prepare('SELECT * FROM pokaanvraag WHERE leerlingnummer = "' . $id . '"');
+        $sth->execute();
+        return $sth->fetchall();
+    }
+ 
 }
 

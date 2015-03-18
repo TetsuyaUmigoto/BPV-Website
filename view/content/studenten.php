@@ -66,6 +66,16 @@
             </tr>
         </table>
     </div>
+    <div id="pokAanvragen">
+        POK-aanvragen:<br />
+        <?php
+            foreach($this->pokInfo as $pokInfo){
+                $pokInfo = $this->pokInfo[0];
+                
+                echo "Bedrijf: " . $pokInfo["bedrijfNaam"] . "<br />Status: " . $pokInfo["pokStatus"];
+            }
+        ?>
+    </div>
     <div id="bedrijf">bedrijf</div>
     <div id="link">www.newdeveloper.nl</div>
     <div id="uitloggen">uitloggen</div>
