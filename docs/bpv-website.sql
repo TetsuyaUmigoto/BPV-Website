@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 18 feb 2015 om 15:06
+-- Gegenereerd op: 18 mrt 2015 om 10:19
 -- Serverversie: 5.6.20
 -- PHP-versie: 5.5.15
 
@@ -118,6 +118,51 @@ INSERT INTO `leraren` (`id`, `voornaam`, `achternaam`, `wachtwoord`, `email`) VA
 -- --------------------------------------------------------
 
 --
+-- Tabelstructuur voor tabel `pokaanvraag`
+--
+
+CREATE TABLE IF NOT EXISTS `pokaanvraag` (
+`id` int(11) NOT NULL,
+  `leerlingnummer` int(11) NOT NULL,
+  `bedrijfNaam` varchar(50) NOT NULL,
+  `bedrijfAdres` varchar(50) NOT NULL,
+  `bedrijfPostcode` varchar(10) NOT NULL,
+  `bedrijfPlaats` varchar(50) NOT NULL,
+  `bedrijfTelefoon` int(20) NOT NULL,
+  `bedrijfWebsite` varchar(50) NOT NULL,
+  `bedrijfContactPersoon` varchar(50) NOT NULL,
+  `bedrijfContactPersoonTelefoon` int(20) NOT NULL,
+  `bedrijfContactPersoonEmail` varchar(50) NOT NULL,
+  `bedrijfPraktijkBegeleider` varchar(50) NOT NULL,
+  `bedrijfPraktijkBegeleiderTelefoon` int(20) NOT NULL,
+  `bedrijfKennisCentrum` varchar(50) NOT NULL,
+  `bedrijfCode` varchar(20) NOT NULL,
+  `studentNaam` varchar(50) NOT NULL,
+  `studentKlas` varchar(20) NOT NULL,
+  `studentOpleiding` varchar(50) NOT NULL,
+  `studentCreboNummerOpleiding` varchar(20) NOT NULL,
+  `studentRichting` varchar(50) NOT NULL,
+  `studentInleverdatum` varchar(50) NOT NULL,
+  `bpvCoordinator` varchar(50) NOT NULL,
+  `bpvBegeleider` varchar(50) NOT NULL,
+  `bpvPeriode` varchar(20) NOT NULL,
+  `bpvSbu` int(11) NOT NULL,
+  `bpvBrin` varchar(20) NOT NULL,
+  `bpvCrebo` varchar(20) NOT NULL,
+  `bpvOpmerking` varchar(500) NOT NULL,
+  `pokStatus` int(2) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `pokaanvraag`
+--
+
+INSERT INTO `pokaanvraag` (`id`, `leerlingnummer`, `bedrijfNaam`, `bedrijfAdres`, `bedrijfPostcode`, `bedrijfPlaats`, `bedrijfTelefoon`, `bedrijfWebsite`, `bedrijfContactPersoon`, `bedrijfContactPersoonTelefoon`, `bedrijfContactPersoonEmail`, `bedrijfPraktijkBegeleider`, `bedrijfPraktijkBegeleiderTelefoon`, `bedrijfKennisCentrum`, `bedrijfCode`, `studentNaam`, `studentKlas`, `studentOpleiding`, `studentCreboNummerOpleiding`, `studentRichting`, `studentInleverdatum`, `bpvCoordinator`, `bpvBegeleider`, `bpvPeriode`, `bpvSbu`, `bpvBrin`, `bpvCrebo`, `bpvOpmerking`, `pokStatus`) VALUES
+(1, 1, '1-zero-1', 'Ilsham road 5 ', 'TQ1 2JG', 'Devon', 44, ' http://www.1-zero-1.co.uk ', 'Dhr. C. Thompson ', 0, ' chris@1-zero-1.co.ukÂ ', 'Dhr. C. Thompson ', 0, '', '', 'jonas ', '', '', '', '', '', '', '', '', 0, '', '', '', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Tabelstructuur voor tabel `studenten`
 --
 
@@ -138,8 +183,8 @@ CREATE TABLE IF NOT EXISTS `studenten` (
 --
 
 INSERT INTO `studenten` (`leerlingnummer`, `voornaam`, `achternaam`, `wachtwoord`, `email`, `geboortedatum`, `telefoonnummer`, `klas`, `leraar_id`) VALUES
-(0, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', '', '2015-01-28 13:31:12', 0, '', 0),
-(1, 'jonas', '', '098f6bcd4621d373cade4e832627b4f6', '', '2015-01-28 14:23:01', 0, '', 0);
+(0, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', '', '2015-03-18 08:55:28', 0, 'IT13A', 1),
+(1, 'jonas', '', '098f6bcd4621d373cade4e832627b4f6', '', '2015-03-18 08:55:31', 0, 'IT13A', 0);
 
 -- --------------------------------------------------------
 
@@ -193,6 +238,12 @@ ALTER TABLE `leraren`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `pokaanvraag`
+--
+ALTER TABLE `pokaanvraag`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexen voor tabel `studenten`
 --
 ALTER TABLE `studenten`
@@ -221,6 +272,11 @@ MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT voor een tabel `leraren`
 --
 ALTER TABLE `leraren`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT voor een tabel `pokaanvraag`
+--
+ALTER TABLE `pokaanvraag`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
