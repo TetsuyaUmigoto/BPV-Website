@@ -29,16 +29,18 @@ h1{
 }
 /* overzicht pagina, zoek pagina*/
 #zoek{
+    display: inline-block;
+    float: left;
     background-color: #91002C;
-    width: 100px;
+    width: 20%;
     height: 500px;
 }
 #bedrijf{
-    width: 1300px;
-    margin-left: 5px;
+    display: inline-block;
+    width: 80%;
     height: 500px;
     background-color: white;
-    border-top: 50px solid black;
+    //border-top: 50px solid black;
 }
 
 /* bedrijfspagina*/
