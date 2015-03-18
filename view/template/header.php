@@ -15,40 +15,52 @@
         <div class='container' style="width:100%;">
             <div class='nav-header'>
                 <!-- knopjes -->
-                <div class="head-link"><img src="<?php echo URL ?>public/img/logo2.png" alt=""></div>
-                <a class="head-link" href="<?php echo URL ?>voorpagina"><div class="col-md-1-link">Voorpagina</div></a>
-                <a class="head-link" href="<?php echo URL ?>overzicht"><div class="col-md-1-link">Overzicht</div></a>
-                <a class="head-link" href="<?php echo URL ?>studenten"><div class="col-md-1-link">Studenten</div></a>
-                <a class="head-link" href="<?php echo URL ?>leraren"><div class="col-md-1-link">Leraren</div></a>
-                <a class="head-link" href="<?php echo URL ?>crawler"><div class="col-md-1-link">Crawler</div></a>
-                <div class="andere"><?php 
+                <div class="head-link">
+		    <img src="<?php echo URL ?>public/img/logo2.png" alt="">
+		</div>
+		<?php
+		    if(isset($_SESSION['user_id']) && $_SESSION['role'] == 0) {
+			echo"
+			    <a class='head-link' href='".URL."voorpagina'><div class='col-md-1-link'>Voorpagina</div></a>
+			    <a class='head-link' href='".URL."overzicht'><div class='col-md-1-link'>Overzicht</div></a>
+			    <a class='head-link' href='".URL."studenten'><div class='col-md-1-link'>Studenten</div></a>
+			    <div class='andere'>";
+		    }else if(isset($_SESSION['user_id']) && $_SESSION['role'] == 1){
+			echo"
+			    <a class='head-link' href='".URL."voorpagina'><div class='col-md-1-link'>Voorpagina</div></a>
+			    <a class='head-link' href='".URL."overzicht'><div class='col-md-1-link'>Overzicht</div></a>
+			    <a class='head-link' href='".URL."studenten'><div class='col-md-1-link'>Studenten</div></a>
+			    <a class='head-link' href='".URL."leraren'><div class='col-md-1-link'>Leraren</div></a>
+			    <div class='andere'>";
+		    }else{
+			echo"
+			    <a class='head-link' href='".URL."voorpagina'><div class='col-md-1-link'>Voorpagina</div></a>
+			    <div class='andere'>";
+		    }
+                
 print_r($_SESSION);
-
 if (!isset($_SESSION['user_id'])) {
     echo
-    "<form id='loginForm' method='post' action='" . URL . "login/userLogin'>
-                <input type='text' name='username' /> 
-                <select id='keuze' name='type'>
-                    <option value='0'>
-                        Leerling
-                    </option> 
-                    <option value='1'>
-                        Leraar
-                    </option>
-                    <option value='2'>
-                        Bedrijf
-                    </option>
-                </select>
-                <br>
-                <input type='password' name='password'>
-                
-                <input id='login' type='submit' value='Login' />
-            </form>";
+	"<form id='loginForm' method='post' action='" . URL . "login/userLogin'>
+            <input type='text' name='username' />
+            <select id='keuze' name='type'>
+		<option value='0'>
+		    Leerling
+		</option>
+		<option value='1'>
+		    Leraar
+                </option>
+                <option value='2'>
+                    Bedrijf
+                </option>
+            </select><br>
+            <input type='password' name='password'>
+            <input id='login' type='submit' value='Login' />
+        </form>";
 } else {
-    echo "<br /><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";
-} 
+    echo 
+	"<br /><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";
+}
 ?>
-</div>
-
-           
-           </div> </div><br> 
+		</div>
+	    </div>
