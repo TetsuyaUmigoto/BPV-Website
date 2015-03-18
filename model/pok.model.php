@@ -39,6 +39,15 @@ class Pok_Model extends Model{
             ':bpvBrin' => $_POST['bpvBrin'], ':bpvCrebo' => $_POST['bpvCrebo'],
             ':bpvOpmerking' => $_POST['bpvOpmerking']
         ));
+	
+	$sth = $this->dbh->prepare("INSERT INTO bedrijven (bedrijf_id, ref_nummer, soort, bedrijf_naam, Adres, Postcode, Plaats, Telefoonnummer, Website, Contactpersoon_telefoon,
+				    Contactpersoon_email, Praktijkbegeleider, Praktijkbegeleider_telefoon)
+				    VALUES (NULL, :ref_nummer, :soort, :bedrijf_naam, :Adres, :Postcode, :Plaats, :Telefoonnummer, :Website, :Contactpersoon_telefoon,
+				    :Contactpersoon_email, :Praktijkbegeleider, :Praktijkbegeleider_telefoon)");
+	$sth->execute(array(
+	    ':ref_nummer' => $_POST['number'],
+	));
+	
 	header('location: '.URL.'studenten');
     }
 
