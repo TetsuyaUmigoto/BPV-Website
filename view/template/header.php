@@ -33,7 +33,6 @@
 			    <div class='andere'>";
 		    }else{
 			echo"
-			    <a class='head-link' href='".URL."voorpagina'><div class='col-md-1-link'>Voorpagina</div></a>
 			    <div class='andere'>";
 		    }
                 

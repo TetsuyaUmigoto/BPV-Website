@@ -90,6 +90,8 @@ if(isset($this->ecabo)){
 		    <tr><td>Brinnummer:</td><td><input class='form-control' type='text' name='bpvBrin'></td></tr>
 		    <tr><td>Crebonummer:</td><td><input class='form-control' type='text' name='bpvCrebo'></td></tr>
 		    <tr><td>Opmerkingen:</td><td><input class='form-control' type='text' name='bpvOpmerking'></td></tr>
+		    <input type='hidden' name='nummer' value='".$_POST['number']."'>
+		    <input type='hidden' name='soort' value='0'>
                     <tr><td><input class='form-control' type='submit' name='pokAanvraag' value='Pok Aanvraag'></td></tr>
 		</form>
 	    </table>

@@ -45,9 +45,14 @@ class Pok_Model extends Model{
 				    VALUES (NULL, :ref_nummer, :soort, :bedrijf_naam, :Adres, :Postcode, :Plaats, :Telefoonnummer, :Website, :Contactpersoon_telefoon,
 				    :Contactpersoon_email, :Praktijkbegeleider, :Praktijkbegeleider_telefoon)");
 	$sth->execute(array(
-	    ':ref_nummer' => $_POST['number'],
+	    ':ref_nummer' => $_POST['nummer'], ':soort' => $_POST['soort'],
+	    ':bedrijf_naam' => $_POST['bedrijfNaam'], ':Adres' => $_POST['bedrijfAdres'],
+	    ':Postcode' => $_POST['bedrijfPostcode'], ':Plaats' => $_POST['bedrijfPlaats'],
+	    ':Telefoonnummer' => $_POST['bedrijfTelefoon'], ':Website' => $_POST['bedrijfWebsite'],
+	    ':Contactpersoon_telefoon' => $_POST['bedrijfContactpersoonTelefoon'], ':Contactpersoon_email' => $_POST['bedrijfContactpersoonEmail'],
+	    ':Praktijkbegeleider' => $_POST['bedrijfPraktijkbegeleider'], ':Praktijkbegeleider_telefoon' => $_POST['bedrijfPraktijkbegeleiderTelefoon']
 	));
-	
+
 	header('location: '.URL.'studenten');
     }
 
