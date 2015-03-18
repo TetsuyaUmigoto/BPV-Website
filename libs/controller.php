@@ -18,8 +18,8 @@ class Controller {
     }
 
     public function loginCheck($name) {
-        if (!isset($_SESSION['user_id']) && $name !== 'login') {
-            header("location: " . URL);
+        if (!isset($_SESSION['user_id']) && $name !== 'voorpagina') {
+            header("location: " . URL . "voorpagina");
         }
     }
 
