@@ -16,5 +16,9 @@ class Studenten extends Controller {
         $this->view->studentInfo = $studentInfo;
         $this->view->render('studenten');
     }
+    
+    function pokAnnuleren(){
+	$this->model->pokAnnuleren();
+    }
 
 }

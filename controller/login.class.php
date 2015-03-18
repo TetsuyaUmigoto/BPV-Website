@@ -25,7 +25,6 @@ class Login extends Controller{
 	if(empty($username) || empty($password)){ // check input fields
             echo $username . $password;
 	    echo '&nbsp All fields are required, acces denied!<br>';
-	    $this->redirect();
 	}else{
 	    // send user input to model
 	    $this->model->userLogin();

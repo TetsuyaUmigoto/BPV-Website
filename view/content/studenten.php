@@ -1,9 +1,9 @@
 <div id="wrap">
-    <?php 
+    <?php
         $studentInfo = $this->studentInfo[0];
     ?>
     <div id="gegevens">
-        <table>
+        <table class='table'>
             <tr>
                 <td>
                     Leerlingnummer
@@ -32,6 +32,14 @@
                     <?php
                         echo $studentInfo["email"];
                     ?>
+                </td>
+            </tr>
+	    <tr>
+                <td>
+                    Website
+                </td>
+                <td>
+                    <a href='http://<?php echo $studentInfo["voornaam"][0].$studentInfo["achternaam"];?>.newdeveloper.nl' target='_blank'><?php echo $studentInfo["voornaam"][0].$studentInfo["achternaam"];?>.newdeveloper.nl</a><br>
                 </td>
             </tr>
             <tr>
@@ -67,16 +75,19 @@
         </table>
     </div>
     <div id="pokAanvragen">
-        POK-aanvragen:<br />
+        <h3>POK-aanvragen:</h3><br />
         <?php
-            foreach($this->pokInfo as $pokInfo){
+	    if(isset($this->pokInfo[0])){
+		foreach($this->pokInfo as $pokInfo){
                 $pokInfo = $this->pokInfo[0];
-                
-                echo "Bedrijf: " . $pokInfo["bedrijfNaam"] . "<br />Status: " . $pokInfo["pokStatus"];
-            }
-        ?>
+                echo 
+		    "Bedrijf: " . $pokInfo["bedrijfNaam"] . "<br />Status: " . $pokInfo["pokStatus"]."<br>".
+		    "<a href='".URL."studenten/pokAnnuleren'>Pok Aanvraag Annuleren</a>";
+		}
+	    }else{
+		echo"
+		    <a href='".URL."pok'>Pok Aanvragen</a>";
+	    }
+	?>
     </div>
-    <div id="bedrijf">bedrijf</div>
-    <div id="link">www.newdeveloper.nl</div>
-    <div id="uitloggen">uitloggen</div>
 </div>

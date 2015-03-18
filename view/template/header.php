@@ -12,7 +12,7 @@
         </title>
     </head>
     <body
-        <div class='container' style="width:100%;">
+        <div class='container'>
             <div class='nav-header'>
                 <!-- knopjes -->
                 <div class="head-link">
@@ -29,7 +29,6 @@
 			echo"
 			    <a class='head-link' href='".URL."voorpagina'><div class='col-md-1-link'>Voorpagina</div></a>
 			    <a class='head-link' href='".URL."overzicht'><div class='col-md-1-link'>Overzicht</div></a>
-			    <a class='head-link' href='".URL."studenten'><div class='col-md-1-link'>Studenten</div></a>
 			    <a class='head-link' href='".URL."leraren'><div class='col-md-1-link'>Leraren</div></a>
 			    <div class='andere'>";
 		    }else{

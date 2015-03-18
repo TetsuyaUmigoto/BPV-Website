@@ -39,6 +39,7 @@ class Pok_Model extends Model{
             ':bpvBrin' => $_POST['bpvBrin'], ':bpvCrebo' => $_POST['bpvCrebo'],
             ':bpvOpmerking' => $_POST['bpvOpmerking']
         ));
+	header('location: '.URL.'studenten');
     }
 
 }
