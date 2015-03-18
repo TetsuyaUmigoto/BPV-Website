@@ -4,6 +4,7 @@
 }
 body{
     font-family: 'Open Sans', sans-serif;
+    background: url(../img/Header-3.jpg); 
 }
 .bedrijf-comments-test{
     float: left;
@@ -16,7 +17,6 @@ h1{
     font-weight: 300;
 }
 
-p{}
 .logo img, .header img{
     width: 136px;
     height: 45px;
@@ -30,16 +30,15 @@ p{}
 /* overzicht pagina, zoek pagina*/
 #zoek{
     background-color: #91002C;
-    width: 15%;
+    width: 100px;
     height: 500px;
-    display: inline-block;
 }
 #bedrijf{
-    width: 70%;
-    margin-left: 2%;
+    width: 1300px;
+    margin-left: 5px;
     height: 500px;
-    background-color: beige;
-    display: inline-block;
+    background-color: white;
+    border-top: 50px solid black;
 }
 
 /* bedrijfspagina*/
@@ -56,9 +55,7 @@ p{}
     vertical-align: top;
 }
 
-.bedrijfInfo{
-    
-}
+.bedrijfInfo{}
 .sterren{
     background-color: yellow;
     width: 50%;

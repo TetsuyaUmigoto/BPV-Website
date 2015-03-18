@@ -906,7 +906,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333;
+    color: red;
     background-color: #fff;
 }
 input,
@@ -1783,10 +1783,12 @@ pre code {
     }
     .andere{
         display: inline-block;
-        position: fixed;
+        position: absolute;
         left: 80%;
     }
     .head-link {
+        display: block;
+        padding: 5px;
         color: white !important;
         display: inline-block;
     }
@@ -1800,8 +1802,21 @@ pre code {
         background:black;
         height: 82px;
     }
+    #keuze {
+        background-color: black;
+        border: none;
+        color: white;   
+    }
+    #login {
+        background-color: #e30613;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        
+    }
     #loguit {
-        background-color: red;
+        background-color: #e30613;
         padding: 5px;
         border-radius: 5px;
         color: white;
