@@ -11,16 +11,16 @@
 <div id="leerlingen">
     <table id="leerlingTable">
         <thead>
-        <td id="TD">
+        <td class="TD">
             Leerlingnummer:
         </td>
-        <td id="TD">
+        <td class="TD">
             Naam:
         </td>
-        <td id="TD">
+        <td class="TD">
             Klas:
         </td>
-        <td id="TD">
+        <td class="TD">
             Pokstatus:
         </td>
         </thead>
