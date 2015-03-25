@@ -2900,8 +2900,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+    background-color: #e30613;
+    border-radius: 5px;
 }
 .btn-primary:hover,
 .btn-primary:focus,
