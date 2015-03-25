@@ -39,7 +39,7 @@ h1{
     text-align: center;
     float: left;
 }
-#TD {
+.TD {
     text-align: center;
     width: 175px;
 }
@@ -138,10 +138,9 @@ h1{
     display: inline-block;
 }
 /* pok-aanvraag*/
-#pok{
-    background-color: lime;
-    margin: 0 auto;
-    width: 1200px;
+#pokAanvragen{
+    background-color: black;
+    width: 576px;
     display: inline-block;
 }
 /*footer*/
