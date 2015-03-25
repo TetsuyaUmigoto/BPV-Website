@@ -11,17 +11,17 @@
 <div id="leerlingen">
     <table id="leerlingTable">
         <thead>
-        <td>
-            Leerlingnummer
+        <td id="TD">
+            Leerlingnummer:
         </td>
-        <td>
-            Naam
+        <td id="TD">
+            Naam:
         </td>
-        <td>
-            Klas
+        <td id="TD">
+            Klas:
         </td>
-        <td>
-            Pokstatus
+        <td id="TD">
+            Pokstatus:
         </td>
         </thead>
         <tbody>

@@ -34,6 +34,30 @@ h1{
     width: 100%;
     height: 100%;
 }
+
+/* leraren pagina */
+#leerlingen {
+    margin-top: 10px;
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+#TD {
+    text-align: center;
+    width: 175px;
+}
+#table {
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    width: 50%;
+    float: right;
+}
 /* overzicht pagina, zoek pagina*/
 #zoek{
     display: inline-block;
