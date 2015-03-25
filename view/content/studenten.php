@@ -3,7 +3,7 @@
         $studentInfo = $this->studentInfo[0];
     ?>
     <div id="gegevens">
-        <table class='table'>
+        <table class='haai'>
             <tr>
                 <td>
                     Leerlingnummer
