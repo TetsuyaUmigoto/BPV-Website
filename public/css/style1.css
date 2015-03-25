@@ -139,9 +139,10 @@ h1{
 }
 /* pok-aanvraag*/
 #pokAanvragen{
-    background-color: white;
+    background-color: black;
     width: 576px;
     display: inline-block;
+    float:right;
 }
 /*footer*/
 #footer{
