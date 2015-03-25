@@ -19,11 +19,6 @@ h1{
     font-size: 32px;
     font-weight: 300;
 }
-.haai {
-    background-color: #FFFFF7 ;
-    width: 500px;
-    height: 300px;
-}
 .logo img, .header img{
     width: 136px;
     height: 45px;
@@ -127,6 +122,7 @@ h1{
     width: 48%;
     height: 400px;
     display: inline-block;
+    background-color: black;
 }
 #link{
     background-color: hotpink;
