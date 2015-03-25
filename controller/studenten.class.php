@@ -6,7 +6,7 @@ class Studenten extends Controller {
         parent::__construct();
         $this->view->title = 'Studenten';
         $this->view->style = 'bootstrap';
-        $this->view->altStyle = 'studentpagina';
+        $this->view->altStyle = 'style1';
     }
 
     function index() {
