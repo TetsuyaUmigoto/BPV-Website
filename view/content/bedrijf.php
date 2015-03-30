@@ -9,7 +9,7 @@
                 <div class="bedrijfInfo"><p><?php echo $info['omschrijving'] ?></p></div>
                 <div class="bedrijfInfo"><p>maps</p></div>
                 <div class="bedrijfInfo"><p>commentaar</p></div>
-                <div class="bedrijfInfo"><p>ster</p></div>
+                <div class="bedrijfInfo"><p><?php echo $this->gemiddelde ?> Sterren</p></div>
                 <?php
             }
         }
