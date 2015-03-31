@@ -10,6 +10,6 @@ class Overzicht_Model extends Model {
         $sth = $this->dbh->prepare('SELECT * FROM bedrijven');
         $sth->execute();
         return $sth->fetchall();
- }
+    }
 
 }
