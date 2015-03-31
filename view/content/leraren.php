@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="hoi1"></div>
 <div class="nee"></div>
 <div id="knopklas">Klas</div>
@@ -15,6 +16,8 @@
 
 <div id="stage">
     <div id="stage1"><h3>Naam docent.</h3></div>
+=======
+>>>>>>> 38f4b3d105ad1bc48c09d3f76d7b93fc46a24050
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
     Afspraak:<input type='text' class='form-control' name='afspraak'>
