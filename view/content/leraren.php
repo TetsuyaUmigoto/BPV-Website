@@ -1,13 +1,26 @@
 <div class="hoi1"></div>
 <div class="nee"></div>
+<div id="knopklas">Klas</div>
+<div id="knoppok">Pok</div>
+<div id="klassen">
+    <div id="klassen1"><h3>klas</h3></div>
+    <table>
+        <tr> <td>it14a1</td> </tr>
+          <tr><td>it14a2</td></tr>
+            <tr><td>it13a1</td></tr>
+            <tr><td>it13a2</td></tr>
+        
+    </table>
+</div>
 
+<div id="stage">
+    <div id="stage1"><h3>Naam docent.</h3></div>
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
     Afspraak:<input type='text' class='form-control' name='afspraak'>
     Tijd:<input type='text' class='form-control' name='tijd'>
     <input type='submit' class='btn btn-primary' value='Create!'>
 </form>
-
 <div id="leerlingen">
     <table id="leerlingTable">
         <thead>
@@ -47,10 +60,10 @@
             </tbody>
             </table>
             </div>
-
+            </div>
             <table id="table">
             <tr>
-            <td>LeerlingNummer</td>
+            <td>Naam</td>
             <td>Afspraak</td>
             <td>Tijd</td>
             </tr>
@@ -59,7 +72,9 @@
             foreach ($this->agenda as $row) {
             echo
             "<tr>
-                    <td>" . $row['leerlingnummer'] . "</td>
+                    <td>
+                        " . $row['voornaam'] . " " . $row['achternaam'] . "
+                    </td>
                     <td>" . $row['afspraak'] . "</td>
                     <td>" . $row['timestamp'] . "</td>
                 </tr>";

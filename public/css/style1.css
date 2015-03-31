@@ -4,7 +4,7 @@
     max-width: 1200px;
     background-color: rgba(0,0,0,0.5);
     height: 500px;
-                                                        /* #FFFFF7 vintage white */
+      /* #FFFFF7 vintage white */
   }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -34,6 +34,38 @@ h3{
     height: 100%;
 }
 /* leraren pagina */
+
+#klassen{
+  margin: 60px 5% 0 5%; 
+  background-color: white;
+  color: black;
+  width: 30%;
+  height: 169px;
+  float: left;
+}
+#knopklas, #knoppok{
+  margin-top: 20px;
+  margin-left: 70px;
+  background-color: red;
+  border-radius: 3px;
+  font-size: 20px;
+  color: white;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  display: inline-block;
+}
+#stage{
+  width:50% ;
+  margin:10px 5% 0 5%;
+  background-color: white;
+  color: black;
+float: right;
+}
+#stage1, #klassen1{
+  background-color: black;
+  color: white;
+}
 #leerlingen {
     margin-top: 10px;
     color: black;
