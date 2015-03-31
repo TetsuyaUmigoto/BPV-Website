@@ -35,6 +35,12 @@
         </td>
         <td class="TD">
             Pokstatus:
+            	<div class="demo-wrapper html5-progress-bar">
+                    <div class="progress-bar-wrapper">
+			<progress id="progressbar" value="0" max="100"></progress>
+			
+                    </div>
+                </div>
         </td>
         </thead>
         <tbody>
