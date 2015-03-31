@@ -24,23 +24,17 @@
 <div id="leerlingen">
     <table id="leerlingTable">
         <thead>
-        <td class="TD">
+        <td>
             Leerlingnummer:
         </td>
-        <td class="TD">
+        <td>
             Naam:
         </td>
-        <td class="TD">
+        <td>
             Klas:
         </td>
-        <td class="TD">
+        <td>
             Pokstatus:
-            	<div class="demo-wrapper html5-progress-bar">
-                    <div class="progress-bar-wrapper">
-			<progress id="progressbar" value="0" max="100"></progress>
-			
-                    </div>
-                </div>
         </td>
         </thead>
         <tbody>
@@ -58,7 +52,11 @@
                                 " . $leerling['klas'] . "
                             </td>
                             <td>
-                                " . $leerling['pokStatus'] . "
+								<div class='demo-wrapper html5-progress-bar'>
+									<div class='progress-bar-wrapper'>
+										<progress id='progressbar' value='" .  ($leerling['pokStatus'] * 4). + 25 . "' max='100'></progress>
+									</div>
+								</div>
                             </td>
                         </tr>";
                 }
