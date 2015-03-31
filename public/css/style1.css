@@ -65,6 +65,7 @@ float: right;
 #stage1, #klassen1{
   background-color: black;
   color: white;
+  height: 56px;
 }
 #leerlingen {
     margin-top: 10px;
@@ -92,6 +93,7 @@ float: right;
 #zoek2{
   background-color: black;
   color: white;
+  height: 56px;
 }
 #zoek{
     margin-top:40px;
@@ -105,6 +107,8 @@ float: right;
 #bedrijven{
   background-color: black;
   color: white;
+  height: 56px;
+  
 }
 #bedrijf{
   margin-top: 40px;
