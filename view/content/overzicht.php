@@ -1,5 +1,7 @@
 <div class="wrap">
+
     <div id="zoek">
+    	<div id="zoek2"><h3>zoekfunctie</h3></div>
 	<p>
 		<form method="get" action="<?php echo URL ?>overzicht">
 			Naam:<input type="search" name="naam" />
@@ -15,13 +17,14 @@
 					Mediavormgever
 				</option>
 			</select>
-			<br />
+			<br/>
 			Plaats:<input type="search" name="plaats" />
 			<input type="submit" value="zoeken" />
 		</form>
 	</p>
     </div>
     <div id="bedrijf">
+    <div id="bedrijven"><h3>bedrijven</h3></div>
         <table id="overzichtBedrijven">
             <thead>
 	    <td>
