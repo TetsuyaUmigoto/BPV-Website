@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div id="map" style="width: 500px; height: 400px;">
 
 </div>
@@ -66,7 +66,6 @@
     theNext();
 </script>
 
-=======
 <div class="hoi1"></div>
 <div class="nee"></div>
 <div id="knopklas">Klas</div>
@@ -84,7 +83,6 @@
 
 <div id="stage">
     <div id="stage1"><h3>Naam docent.</h3></div>
->>>>>>> f844afecee39cd73688e6dc2b577d5f322e13f39
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
     Afspraak:<input type='text' class='form-control' name='afspraak'>
@@ -129,7 +127,6 @@
 								</div>
                             </td>
                         </tr>";
-<<<<<<< HEAD
 	    }
 	    ?>
 	</tbody>
@@ -155,9 +152,8 @@
     }
     ?>
 </table>
-=======
-                }
-            ?>
+                
+            
             </tbody>
             </table>
             </div>
@@ -183,4 +179,3 @@
             }
             ?>
     </table>
->>>>>>> f844afecee39cd73688e6dc2b577d5f322e13f39
