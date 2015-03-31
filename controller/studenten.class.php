@@ -4,6 +4,7 @@ class Studenten extends Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->view->script = 'studenten';
         $this->view->title = 'Studenten';
         $this->view->style = 'bootstrap';
         $this->view->altStyle = 'style1';

@@ -78,12 +78,20 @@
     <div id="pokAanvragen">
         <div id="pok1">
         <h3>POK-aanvragen:</h3><br /></div>
+        <span>POK status:</span><br>
         <?php
 	    if(isset($this->pokInfo[0])){
 		foreach($this->pokInfo as $pokInfo){
                 $pokInfo = $this->pokInfo[0];
                 echo 
-		    "Bedrijf: " . $pokInfo["bedrijfNaam"] . "<br />Status: " . $pokInfo["pokStatus"]."<br>".
+		    "Bedrijf: " . $pokInfo["bedrijfNaam"] . "<br />
+		    Status: 
+		    <div class='demo-wrapper html5-progress-bar'>
+				<div class='progress-bar-wrapper'>
+					<progress id='progressbar' value='" .  ($pokInfo['pokStatus'] * 4). + 25 . "' max='100'></progress>
+				</div>
+			</div>" .
+		    "<br>".
 		    "<a href='".URL."studenten/pokAnnuleren'>Pok Aanvraag Annuleren</a>";
 		}
 	    }else{

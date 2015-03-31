@@ -1,8 +1,30 @@
 <div class="wrap">
+
     <div id="zoek">
-	<p>zoekbalk</p>
+    	<div id="zoek2"><h3>zoekfunctie</h3></div>
+	<p>
+		<form method="get" action="<?php echo URL ?>overzicht">
+			Naam:<input type="search" name="naam" />
+			<br />
+			Soort: 
+			<select type="search" name="soort">
+				<option value="">
+				</option>
+				<option value="0">
+					Applicatieontwikkelaar
+				</option>
+				<option value="1">
+					Mediavormgever
+				</option>
+			</select>
+			<br/>
+			Plaats:<input type="search" name="plaats" />
+			<input type="submit" value="zoeken" />
+		</form>
+	</p>
     </div>
     <div id="bedrijf">
+    <div id="bedrijven"><h3>bedrijven</h3></div>
         <table id="overzichtBedrijven">
             <thead>
 	    <td>
