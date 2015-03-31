@@ -1,6 +1,3 @@
-<div class="hoi1"></div>
-<div class="nee"></div>
-
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
     Afspraak:<input type='text' class='form-control' name='afspraak'>
