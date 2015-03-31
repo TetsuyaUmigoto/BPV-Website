@@ -5,7 +5,7 @@
 	<p>
 		<form method="get" action="<?php echo URL ?>overzicht">
 			Naam:<input type="search" name="naam" />
-			<br />
+                        <br /><br>
 			Soort: 
 			<select type="search" name="soort">
 				<option value="">
@@ -17,7 +17,7 @@
 					Mediavormgever
 				</option>
 			</select>
-			<br/>
+			<br/><br>
 			Plaats:<input type="search" name="plaats" />
 			<input type="submit" value="zoeken" />
 		</form>
