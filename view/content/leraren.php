@@ -158,24 +158,6 @@
             </table>
             </div>
             </div>
-            <table id="table">
-            <tr>
-            <td>Naam</td>
-            <td>Afspraak</td>
-            <td>Tijd</td>
-            </tr>
-            <?php
-            if (isset($this->agenda)) {
-            foreach ($this->agenda as $row) {
-            echo
-            "<tr>
-                    <td>
-                        " . $row['voornaam'] . " " . $row['achternaam'] . "
-                    </td>
-                    <td>" . $row['afspraak'] . "</td>
-                    <td>" . $row['timestamp'] . "</td>
-                </tr>";
-            }
-            }
-            ?>
+
+
     </table>
