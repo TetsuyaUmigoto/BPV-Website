@@ -89,19 +89,30 @@ float: right;
     float: right;
 }
 /* overzicht pagina, zoek pagina*/
+#zoek2{
+  background-color: black;
+  color: white;
+}
 #zoek{
+    margin-top:40px;
     display: inline-block;
     float: left;
-    background-color: #91002C;
-    width: 20%;
+    background-color: white;
+    width: 28%;
     height: 500px;
+    margin-left: 35px;
+}
+#bedrijven{
+  background-color: black;
+  color: white;
 }
 #bedrijf{
+  margin-top: 40px;
     display: inline-block;
-    width: 80%;
+    width: 60%;
     height: 500px;
     background-color: white;
-    //border-top: 50px solid black;
+    margin-left:5%;    
 }
 /* bedrijfspagina*/
 #infoWrapper{
