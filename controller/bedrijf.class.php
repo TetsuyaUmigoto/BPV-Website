@@ -18,8 +18,10 @@ class Bedrijf extends Controller {
         $this->getComments($id);
         $bedrijfInfo = $this->model->getBedrijfInfo($id);
         
+        $gemiddelde = $this->model->getGemiddelde($id);
         $this->view->bedrijfId = $id;
         $this->view->info = $bedrijfInfo;
+        $this->view->gemiddelde = round($gemiddelde[0]["gemiddelde"]);
         $this->view->render('bedrijf');
     }
     function getComments($id){

@@ -3,7 +3,8 @@
         $studentInfo = $this->studentInfo[0];
     ?>
     <div id="gegevens">
-        <table class='table'>
+        <div id="kopje"><h3>Gegevens</h3></div>
+        <table class='haai'>
             <tr>
                 <td>
                     Leerlingnummer
@@ -75,7 +76,8 @@
         </table>
     </div>
     <div id="pokAanvragen">
-        <h3>POK-aanvragen:</h3><br />
+        <div id="pok1">
+        <h3>POK-aanvragen:</h3><br /></div>
         <?php
 	    if(isset($this->pokInfo[0])){
 		foreach($this->pokInfo as $pokInfo){

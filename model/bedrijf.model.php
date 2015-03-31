@@ -29,4 +29,11 @@ class Bedrijf_Model extends Model {
         $sth->execute();
         return $sth->fetchall();
     }
+    
+    function getGemiddelde($id){
+		$sth = $this->dbh->prepare("SELECT AVG(rating) AS gemiddelde FROM comments WHERE bedrijf_id = '" . $id . "'");
+		$sth->execute();
+		return $sth->fetchall();
+	}
+    
 }

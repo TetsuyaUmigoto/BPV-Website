@@ -8,17 +8,17 @@
 <div id="leerlingen">
     <table id="leerlingTable">
         <thead>
-        <td>
-            Leerlingnummer
+        <td class="TD">
+            Leerlingnummer:
         </td>
-        <td>
-            Naam
+        <td class="TD">
+            Naam:
         </td>
-        <td>
-            Klas
+        <td class="TD">
+            Klas:
         </td>
-        <td>
-            Pokstatus
+        <td class="TD">
+            Pokstatus:
         </td>
         </thead>
         <tbody>

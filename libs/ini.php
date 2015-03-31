@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 require 'config/constant.php';
-require 'libs/Router.php';
+require 'libs/router.php';
 require 'libs/session.php';
 require 'libs/controller.php';
 require 'libs/view.php';
