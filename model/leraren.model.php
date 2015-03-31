@@ -26,7 +26,8 @@ class Leraren_Model extends Model {
     }
     
     function showCaldav() {
-        $sth = $this->dbh->prepare("SELECT * FROM calender");
+        $sth = $this->dbh->prepare("SELECT calender.*, studenten.voornaam, studenten.achternaam FROM calender LEFT 
+        OUTER JOIN studenten on calender.leerlingnummer = studenten.leerlingnummer");
         $sth->execute();
         return $sth->fetchall();
     }
