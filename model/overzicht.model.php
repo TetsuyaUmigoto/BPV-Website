@@ -14,6 +14,10 @@ class Overzicht_Model extends Model {
 		}
         $sth->execute();
         return $sth->fetchall();
+<<<<<<< HEAD
+    }
+=======
 	}
+>>>>>>> f844afecee39cd73688e6dc2b577d5f322e13f39
 
 }
