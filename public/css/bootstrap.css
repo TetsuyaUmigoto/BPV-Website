@@ -134,7 +134,8 @@ input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
-    color:black;
+    color:white;
+    margin-left: 15px;
 }
 button[disabled],
 html input[disabled] {
@@ -2900,7 +2901,7 @@ fieldset[disabled] .btn-default.active {
     background-color: #333;
 }
 .btn-primary {
-    color: #fff;
+    color: white;
     background-color: #e30613;
     border-radius: 5px;
 }
