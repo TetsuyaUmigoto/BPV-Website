@@ -68,21 +68,26 @@
 
 <div class="hoi1"></div>
 <div class="nee"></div>
-<div id="knopklas">Klas</div>
+<div id="knopklas">
+	Klas</div>
 <div id="knoppok">Pok</div>
 <div id="klassen">
     <div id="klassen1"><h3>klas</h3></div>
     <table>
-        <tr> <td>it14a1</td> </tr>
-          <tr><td>it14a2</td></tr>
-            <tr><td>it13a1</td></tr>
-            <tr><td>it13a2</td></tr>
-        
+		<?php
+			foreach($this->klassen as $klas){
+				echo "<tr>
+					<td>
+						" . $klas["klas"] . "
+					</td>
+				</tr>";
+			}
+		?>
     </table>
 </div>
 
 <div id="stage">
-    <div id="stage1"><h3>Naam docent.</h3></div>
+    <div id="stage1"><h3><?php echo $this->leraar[0]["voornaam"]?> <?php echo $this->leraar[0]["achternaam"]?><h3></div>
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
     Afspraak:<input type='text' class='form-control' name='afspraak'>
