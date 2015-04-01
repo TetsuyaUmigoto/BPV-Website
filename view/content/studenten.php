@@ -97,7 +97,7 @@
 		}
 	    }else{
 		echo"
-		    <a href='".URL."pok'><p>Pok Aanvragen</a>";
+		    <a href='".URL."pok'><button>Pok Aanvragen</button></a>";
 	    }
 	?>
     </div>
