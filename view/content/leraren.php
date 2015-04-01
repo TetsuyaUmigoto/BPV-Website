@@ -23,9 +23,9 @@
 <div id="stage">
     <div id="stage1"><h3><?php echo $this->leraar[0]["voornaam"]?> <?php echo $this->leraar[0]["achternaam"]?><h3></div>
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
-    LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
-    Afspraak:<input type='text' class='form-control' name='afspraak'>
-    Tijd:<input type='text' class='form-control' name='tijd'>
+    <p class="formulier">LeerlingNummer:</p><input type='text' class='form-control' name='leerlingnummer'>
+    <p class="formulier">Afspraak:</p><input type='text' class='form-control' name='afspraak'>
+    <p class="formulier">Tijd:</p><input type='text' class='form-control' name='tijd'>
     <input type='submit' class='btn btn-primary' value='Create!'>
 </form>
 <div id="leerlingen">

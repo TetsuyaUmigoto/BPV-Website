@@ -32,8 +32,9 @@ h3{
 #pokka{
   padding-left: 25px;
 }
-form{
-  margin-left: 25px;
+.formulier {
+   margin-left: 25px;
+    
 }
 .logo img, .header img{
     width: 136px;
