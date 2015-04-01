@@ -87,21 +87,21 @@ float: right;
 }
 #leerlingen {
     margin-top: 10px;
+    text-align: center;
     color: black;
     border: 2px solid white;
     background-color: white;
-    width: 50%;
+    width: 100%;  
     text-align: center;
     
 }
 
 #table {
     margin-top: 10px;
-    text-align: center;
     color: black;
     border: 2px solid white;
     background-color: white;
-    width: 50%;
+    width: 100%;
     
 }
 /* overzicht pagina, zoek pagina*/
@@ -227,7 +227,7 @@ float: right;
 }
 /* progress bar */
 .demo-wrapper {
-	width: 150px;
+	width: 250px;
 	margin: 30px auto 0;
 }
 
