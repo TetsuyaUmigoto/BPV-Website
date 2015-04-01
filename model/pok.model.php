@@ -15,14 +15,19 @@ class Pok_Model extends Model{
     }
 
     function pokAanvraag(){
+	$beginStage = strtotime($_POST['bpvPeriodeBegin']);
+	$eindStage = strtotime($_POST['bpvPeriodeEind']);
+	$beginStageDatum = date('Y-m-d', $beginStage);
+	$eindStageDatum = date('Y-m-d', $eindStage);
+	
 	$sth = $this->dbh->prepare("INSERT INTO pokaanvraag (leerlingnummer, bedrijfNaam, bedrijfAdres, bedrijfPostcode, bedrijfPlaats, bedrijfTelefoon, bedrijfWebsite,
                                     bedrijfContactPersoon, bedrijfContactPersoonTelefoon, bedrijfContactPersoonEmail, bedrijfPraktijkBegeleider, bedrijfPraktijkBegeleiderTelefoon,
                                     bedrijfKennisCentrum, bedrijfCode, studentNaam, studentKlas, studentOpleiding, studentCreboNummerOpleiding, studentRichting, studentInleverdatum,
-                                    bpvCoordinator, bpvBegeleider, bpvPeriode, bpvSbu, bpvBrin, bpvCrebo, bpvOpmerking)
+                                    bpvCoordinator, bpvBegeleider, bpvPeriodeBegin, bpvPeriodeEind, bpvSbu, bpvBrin, bpvCrebo, bpvOpmerking)
                                     VALUES (:leerlingnummer, :bedrijfNaam, :bedrijfAdres, :bedrijfPostcode, :bedrijfPlaats, :bedrijfTelefoon, :bedrijfWebsite,
                                     :bedrijfContactPersoon, :bedrijfContactPersoonTelefoon, :bedrijfContactPersoonEmail, :bedrijfPraktijkBegeleider, :bedrijfPraktijkBegeleiderTelefoon,
                                     :bedrijfKennisCentrum, :bedrijfCode, :studentNaam, :studentKlas, :studentOpleiding, :studentCreboNummerOpleiding, :studentRichting, :studentInleverdatum,
-                                    :bpvCoordinator, :bpvBegeleider, :bpvPeriode, :bpvSbu, :bpvBrin, :bpvCrebo, :bpvOpmerking )");
+                                    :bpvCoordinator, :bpvBegeleider, :bpvPeriodeBegin, :bpvPeriodeEind, :bpvSbu, :bpvBrin, :bpvCrebo, :bpvOpmerking )");
 	$sth->execute(array(
             ':leerlingnummer' => $_POST['studentNummer'], ':bedrijfNaam' => $_POST['bedrijfNaam'],
             ':bedrijfAdres' => $_POST['bedrijfAdres'], ':bedrijfPostcode' => $_POST['bedrijfPostcode'],
@@ -35,9 +40,9 @@ class Pok_Model extends Model{
             ':studentOpleiding' => $_POST['studentOpleiding'], ':studentCreboNummerOpleiding' => $_POST['studentCrebonummerOpleiding'],
             ':studentRichting' => $_POST['studentRichting'], ':studentInleverdatum' => $_POST['studentInleverdatum'],
             ':bpvCoordinator' => $_POST['bpvCoordinator'], ':bpvBegeleider' => $_POST['bpvBegeleider'],
-            ':bpvPeriode' => $_POST['bpvPeriode'], ':bpvSbu' => $_POST['bpvSbu'],
+            ':bpvPeriodeBegin' => $beginStageDatum, ':bpvPeriodeEind' => $eindStageDatum,
             ':bpvBrin' => $_POST['bpvBrin'], ':bpvCrebo' => $_POST['bpvCrebo'],
-            ':bpvOpmerking' => $_POST['bpvOpmerking']
+            ':bpvSbu' => $_POST['bpvSbu'], ':bpvOpmerking' => $_POST['bpvOpmerking']
         ));
 	
 	$sth = $this->dbh->prepare("INSERT INTO bedrijven (bedrijf_id, ref_nummer, soort, bedrijf_naam, Adres, Postcode, Plaats, Telefoonnummer, Website, Contactpersoon_telefoon,
