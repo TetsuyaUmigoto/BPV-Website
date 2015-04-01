@@ -78,7 +78,8 @@
     <div id="pokAanvragen">
         <div id="pok1">
         <h3>POK-aanvragen:</h3><br /></div>
-        <span>POK status:</span><br>
+        <div id="pokka">
+        <p>POK status:</p><br>
         <?php
 	    if(isset($this->pokInfo[0])){
 		foreach($this->pokInfo as $pokInfo){
@@ -96,8 +97,9 @@
 		}
 	    }else{
 		echo"
-		    <a href='".URL."pok'>Pok Aanvragen</a>";
+		    <a href='".URL."pok'><p>Pok Aanvragen</a>";
 	    }
 	?>
+    </div>
     </div>
 </div>
