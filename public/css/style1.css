@@ -4,10 +4,11 @@
     max-width: 1200px;
     background-color: rgba(0,0,0,0.5);
     height: 500px;
-      /* #FFFFF7 vintage white */
+    font-family: garamond;
+      
   }
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: garamond;
     background: url(../img/Header-3.jpg);
 }
 .bedrijf-comments-test{
@@ -19,11 +20,13 @@ body{
 h1{
     font-size: 32px;
     font-weight: 300;
+    font-family: garamond;
 }
 h3{
     margin-top: 0;
     padding-top:20px;
     text-align: center;
+    font-family: garamond;
 
 }
 .logo img, .header img{
@@ -52,7 +55,7 @@ h3{
 }
 #knopklas, #knoppok{
   margin-top: 20px;
-  margin-left: 70px;
+  margin-left: 85px;
   background-color: red;
   border-radius: 3px;
   font-size: 20px;
@@ -63,7 +66,7 @@ h3{
   display: inline-block;
 }
 #stage{
-  width:50% ;
+  width:49% ;
   margin:10px 5% 0 5%;
   background-color: white;
   color: black;
