@@ -6,6 +6,18 @@ class Leraren_Model extends Model {
         parent::__construct();
     }
 
+	public function getKlassen(){
+		$sth = $this->dbh->prepare("SELECT klas FROM studenten GROUP BY klas");
+		$sth->execute();
+		return $sth->fetchall();
+	}
+
+	public function getLeraar(){
+		$sth = $this->dbh->prepare("SELECT voornaam, achternaam FROM leraren WHERE id = '" . $_SESSION['user_id'] . "'");
+		$sth->execute();
+		return $sth->fetchall();
+	}
+
     public function getAlliedLeerlingen($id) {
         $sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer"
                 . " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"

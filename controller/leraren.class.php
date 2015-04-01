@@ -11,7 +11,11 @@ class Leraren extends Controller {
 
     function index() {
         $leerlingen = $this->model->getAlliedLeerlingen($_SESSION["user_id"]);
+        $klassen =  $this->model->getKlassen();
         $agenda = $this->model->showCaldav();
+        $leraar = $this->model->getLeraar();
+        $this->view->leraar = $leraar;
+        $this->view->klassen = $klassen;
         $this->view->leerlingen = $leerlingen;
         $this->view->agenda = $agenda;
         $this->view->render('leraren');
