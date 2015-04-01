@@ -22,6 +22,9 @@ h1{
 }
 h3{
     margin-top: 0;
+    padding-top:20px;
+    text-align: center;
+
 }
 .logo img, .header img{
     width: 136px;
@@ -36,12 +39,15 @@ h3{
 /* leraren pagina */
 
 #klassen{
-  margin: 60px 5% 0 5%; 
+  margin: 60px 5% 50px 5%; 
   background-color: white;
   color: black;
-  width: 30%;
+  width: 30%  ;
   height: 169px;
   float: left;
+}
+#maps1{
+  margin-left: 5%;
 }
 #knopklas, #knoppok{
   margin-top: 20px;
@@ -207,6 +213,7 @@ float: right;
   background-color: black;
   color:white;
   top:0;
+  height: 56px ;
   text-align: center;
 }
 /* progress bar */
