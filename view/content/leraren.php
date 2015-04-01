@@ -80,7 +80,7 @@
     </table>
 </div>
 
-<div id="stage">`
+<div id="stage">
     <div id="stage1"><h3><?php echo $this->leraar[0]["voornaam"]?> <?php echo $this->leraar[0]["achternaam"]?><h3></div>
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     <p class="formulier">LeerlingNummer:</p><input type='text' class='form-control' name='leerlingnummer'>
