@@ -92,7 +92,7 @@ float: right;
     background-color: white;
     width: 50%;
     text-align: center;
-    float: left;
+    
 }
 
 #table {
@@ -102,7 +102,7 @@ float: right;
     border: 2px solid white;
     background-color: white;
     width: 50%;
-    float: right;
+    
 }
 /* overzicht pagina, zoek pagina*/
 #zoek2{
