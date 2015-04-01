@@ -10,7 +10,9 @@
 			foreach($this->klassen as $klas){
 				echo "<tr>
 					<td>
-						" . $klas["klas"] . "
+						<a href='" . URL . "leraren/showKlas/" . $klas["klas"] . "'>
+							" . $klas["klas"] . "
+						</a>
 					</td>
 				</tr>";
 			}

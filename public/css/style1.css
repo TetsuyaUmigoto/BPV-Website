@@ -33,6 +33,9 @@ h3{
     width: 136px;
     height: 45px;
 }
+td{
+  padding-left: 25px;
+}
 /* voorpagina */
 #doel{
     text-align: center;
@@ -91,10 +94,7 @@ float: right;
     text-align: center;
     float: left;
 }
-.TD {
-    text-align: center;
-    width: 175px;
-}
+
 #table {
     margin-top: 10px;
     text-align: center;
