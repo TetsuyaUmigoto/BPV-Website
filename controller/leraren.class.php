@@ -20,6 +20,18 @@ class Leraren extends Controller {
         $this->view->agenda = $agenda;
         $this->view->render('leraren');
     }
+    
+    function showKlas($klasNaam){
+        $leerlingen = $this->model->getKlasLeerlingen($klasNaam);
+        $klassen =  $this->model->getKlassen();
+        $agenda = $this->model->showCaldav();
+        $leraar = $this->model->getLeraar();
+        $this->view->leraar = $leraar;
+        $this->view->klassen = $klassen;
+        $this->view->leerlingen = $leerlingen;
+        $this->view->agenda = $agenda;
+        $this->view->render('leraren');
+	}
 
     function caldav() {
         $this->model->caldav();
