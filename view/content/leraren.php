@@ -4,11 +4,19 @@
 <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGBByvGgOTRGqO-ZB1hVoAeVZGjm6UoTM">
 </script>
+        <?php
+	$locations = "[";
+	foreach($this->leerlingen as $leerling){
+	    $locations .= "'" . $leerling['bedrijfPostcode'] . "'" . ", ";
+	}
+	
+	$locations = substr($locations, 0, strlen($locations) - 2) . "]";
+    ?>
 <script type="text/javascript">
     var delay = 100;
     var infowindow = new google.maps.InfoWindow();
     var latlng = new google.maps.LatLng(52.527978100000000000, 5.995350800000006000);
-    var locations = ['8321HN', '8303ZN', '8317PZ', '3526KV', '8081BD', '2012ES', '1069JT', '3245VN', '3295KK', '6446XM', '6522LC', '9746CW', '1314ND', '7328DH', '2014RJ', '9451GC', '2545BH'];
+    var locations = <?php echo $locations ?>;
     var nextAddress = 0;
     var mapOptions = {
 	zoom: 6,
@@ -130,4 +138,4 @@
 		?>
 	    </tbody>
 	</table>
-    </div>
+</div>
