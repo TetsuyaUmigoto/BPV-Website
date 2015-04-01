@@ -27,8 +27,14 @@ h3{
     padding-top:20px;
     text-align: center;
     font-family: arial;
-
 }
+
+#button{
+  height:50px;
+  width: 50px;
+  background-color: red;
+}
+
 #pokka{
   padding-left: 25px;
 }
