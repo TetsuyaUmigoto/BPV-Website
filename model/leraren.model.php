@@ -19,15 +19,15 @@ class Leraren_Model extends Model {
 	}
 
     public function getKlasLeerlingen($klas) {
-		$sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer"
+		$sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer, pokaanvraag.bedrijfPostcode"
                 . " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
-                . " WHERE studenten.klas = '" . $klas . "' ORDER BY pokaanvraag.id DESC LIMIT 1");
+                . " WHERE studenten.klas = '" . $klas . "' ORDER BY pokaanvraag.id DESC");
         $sth->execute();
         return $sth->fetchall();
 	}
 	
     public function getAlliedLeerlingen($id) {
-        $sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer"
+        $sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer, pokaanvraag.bedrijfPostcode"
                 . " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
                 . " WHERE leraar_id = " . $id . " ORDER BY pokaanvraag.id DESC LIMIT 1");
         $sth->execute();
