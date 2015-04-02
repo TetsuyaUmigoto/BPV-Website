@@ -28,8 +28,10 @@ body{
     
 }
 .leerlingnummer {
-    color: red;
-    font-size: 18px;
+    border-top: 1px solid black;
+    width: 555px;
+    font-size: 17px;
+    padding-top: 20px;
 }
 .rating {
     
