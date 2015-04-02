@@ -4,12 +4,11 @@
 <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGBByvGgOTRGqO-ZB1hVoAeVZGjm6UoTM">
 </script>
-        <?php
+    <?php
 	$locations = "[";
 	foreach($this->leerlingen as $leerling){
 	    $locations .= "'" . $leerling['bedrijfPostcode'] . "'" . ", ";
 	}
-	
 	$locations = substr($locations, 0, strlen($locations) - 2) . "]";
     ?>
 <script type="text/javascript">
