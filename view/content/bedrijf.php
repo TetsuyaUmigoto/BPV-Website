@@ -1,22 +1,23 @@
 <div id="wrap">
     <div id="infoWrapper">
+    	<div id="info"><h3>
         <?php
         if (isset($this->info)) {
             foreach ($this->info as $info) {
                 ?>
-                <div class="bedrijfInfo"><p><?php echo $info['bedrijf_naam'] ?></p></div>
-                <div class="bedrijfInfo"><p>ster</p></div>
-                <div class="bedrijfInfo">
-
-
-		</div>
-                <div class="bedrijfInfo"><p>commentaar</p></div>
+                <div class="bedrijfInform"><p><?php echo $info['bedrijf_naam'] ?></p></div>
                 <div class="bedrijfInfo"><p><?php echo $this->gemiddelde ?> Sterren</p></div>
+
+                <div class="bedrijfInfo"></div>
+       </h3> </div>
+ 	  		<div id="comments">
+	      
+                <div class="bedrijfInfo"><p>commentaar</p></div>
+            </div>    
                 <?php
             }
         }
         ?>
-    </div>
 
     <div id="gebruikerComments">
         <?php
@@ -29,7 +30,7 @@
             }
         }
         ?>
-    </div>
+    </div></div>
     <div class="bedrijf-comments-test">
         <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
             <input type="hidden" name="bedrijf_id" value="<?php echo $this->bedrijfId ?>" />

@@ -171,20 +171,32 @@ float: right;
 #infoWrapper{
     display: inline-block;
     vertical-align: top;
-   background-color: rgba(0,0,0,0.5);
+   background-color: white;
    width: 600px;
    height: 400px;
    float: left;  
+   color: black;
+  overflow: scroll;
 }
 
 #gebruikerComments{
     display: inline-block;
     width: 500px;
-    margin-left: 200px;
+    padding-left: 15px;
     vertical-align: top;
 }
+#info{
+  background-color: black;
+  color: white;
+}
+#comments{
+  padding: 10px;
 
-.bedrijfInfo{}
+}
+.bedrijfInfo{
+  padding-left:10px;
+}
+
 .sterren{
     background-color: yellow;
     width: 50%;
