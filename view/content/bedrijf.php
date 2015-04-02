@@ -12,7 +12,7 @@
     	
  	  		<div id="comments">
 	      
-                <div class="bedrijfInform"><p>commentaar</p></div>
+                <div class="bedrijfInform"><p>Reactie's:</p></div>
             </div>    
                 <?php
             }
@@ -23,10 +23,10 @@
         <?php
         if (isset($this->comments)) {
             foreach ($this->comments as $row) {
-                echo
-                " <div id='rating'>" . $row['rating'] . "</div>"
-                . "<div id='leerlingnummer'>" . $row['leerlingnummer'] . "</div>"
-                . "<div id='comment'>" . $row['comment'] . "</div>";
+                echo 
+                "<div class='leerlingnummer'>" . $row['leerlingnummer'] . "</div>"
+                . " <div class='rating'>" . $row['rating'] . "</div>"
+                . "<div class='comment'>" . $row['comment'] . "</div>". "<br>";
             }
         }
         ?>

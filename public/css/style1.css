@@ -27,6 +27,19 @@ body{
     margin-bottom: 10px;
     
 }
+.leerlingnummer {
+    color: red;
+    font-size: 18px;
+}
+.rating {
+    
+}
+.comment {
+    border-bottom: 1px solid black;
+    width: 555px;
+    padding-bottom: 20px;
+    
+}
 h1{
     font-size: 32px;
     font-weight: 300;
