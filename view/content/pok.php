@@ -1,4 +1,4 @@
-<?php
+<div id="pokform"><?php
 if(isset($this->studentData)){
     foreach($this->studentData as $row){
         $naam = $row['voornaam'];
@@ -103,4 +103,6 @@ if(isset($this->ecabo)){
 	    <input type='submit' name='ecabo' value='Ecabo'>
 	    <input type='submit' name='goc' value='GOC'>
 	</form>";
-}
+} 
+?>
+</div>

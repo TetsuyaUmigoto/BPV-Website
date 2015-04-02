@@ -242,6 +242,9 @@ float: right;
   height: 56px ;
   text-align: center;
 }
+#pokform{
+  color:white;
+}
 /* progress bar */
 .demo-wrapper {
 	width: 250px;
