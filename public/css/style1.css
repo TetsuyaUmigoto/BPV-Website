@@ -12,9 +12,20 @@ body{
 }
 .bedrijf-comments-test{
     float: left;
-    width: 100%;
+    width: 601px;
     margin-top: 20px;
-    background-color: gray;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+.form-control1 {
+    color: black;
+}
+.form-control2 {
+    color: black;
+}
+.btnComment {
+    margin-bottom: 10px;
+    
 }
 h1{
     font-size: 32px;
@@ -43,7 +54,6 @@ h3{
 }
 form {
     padding-left: 25px;
-    
 }
 .logo img, .header img{
     width: 136px;

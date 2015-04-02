@@ -32,12 +32,11 @@
         ?>
     </div></div>
     <div class="bedrijf-comments-test">
-        <form action='<?php echo URL ?>bedrijf/postComment' method='post'>
+        <form class="form2" action='<?php echo URL ?>bedrijf/postComment' method='post'>
             <input type="hidden" name="bedrijf_id" value="<?php echo $this->bedrijfId ?>" />
             <input type="hidden" name="rating" id="ratingInput" value="" />
-            LeerlingNummer:<input type='text' class='form-control' name='leerlingnummer'>
-            Comment:<input type='text' class='form-control' name='comment'>
-            Rating:<br><span class="rating">
+            LeerlingNummer:<input type='text' class='form-control1' name='leerlingnummer'>
+            Rating:<span class="rating">
                 <input type="radio" class="rating-input"
                        id="rating-input-5" name="rating-input-1">
                 <label for="rating-input-5" class="rating-star"></label>
@@ -53,8 +52,10 @@
                 <input type="radio" class="rating-input"
                        id="rating-input-1" name="rating-input-1">
                 <label for="rating-input-1" class="rating-star"></label>
-            </span>
-            <input type='submit' class='btn btn-primary' value='Comment!'>
+            </span><br><br>
+            Comment:<textarea type='text' rows="2" cols="75" class='form-control2' name='comment'></textarea><br>
+            
+            <input type='submit' class='btnComment' value='Comment!'>
         </form>
     </div>
 </div>
