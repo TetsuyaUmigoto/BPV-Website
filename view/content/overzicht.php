@@ -28,10 +28,10 @@
         <table id="overzichtBedrijven">
             <thead>
 	    <td>
-		Ecabo/GOC nummer
+		Ecabo/GOC nummer:
 	    </td>
 	    <td>
-		Naam
+		Naam:
 	    </td>
             </thead>
 	    <?php

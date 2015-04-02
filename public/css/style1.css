@@ -41,6 +41,10 @@ h3{
    margin-left: 25px;
     
 }
+form {
+    padding-left: 25px;
+    
+}
 .logo img, .header img{
     width: 136px;
     height: 45px;
@@ -146,12 +150,13 @@ float: right;
   height: 56px;
 }
 #bedrijf{
-  margin-top: 50px;
+    margin-top: 50px;
     display: inline-block;
     width: 60%;
     min-height: 500px;
     background-color: white;
-    margin-left:5%;    
+    margin-left:5%;
+    padding-bottom: 15px;
 }
 /* bedrijfspagina*/
 #infoWrapper{
