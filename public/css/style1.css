@@ -22,7 +22,7 @@ h1{
     font-family: arial;
 }
 h3{
-    margin-top: 0;
+    margin: 0px 0px 0px 0px;
     padding-top:20px;
     text-align: center;
     font-family: arial;
@@ -89,7 +89,7 @@ tr{
 }
 .map2{
   display: inline-block;
-  margin-right: 10px;
+  margin-right: -75px;
   position: absolute;
   top: -215px;
   right: 650px;
@@ -173,10 +173,13 @@ float: right;
     vertical-align: top;
    background-color: white;
    width: 600px;
-   height: 400px;
+   height: 310px;
    float: left;  
    color: black;
-  overflow: scroll;
+   overflow: scroll;
+}
+#Gsterren {
+    margin: 0px;
 }
 
 #gebruikerComments{
@@ -188,15 +191,21 @@ float: right;
 #info{
   background-color: black;
   color: white;
+  width: 600px;
+  
 }
 #comments{
   padding: 10px;
-
+  
 }
 .bedrijfInfo{
   padding-left:10px;
+  margin: 0px;
 }
-
+bedrijfInform {
+    overflow: scroll;
+    
+}
 .sterren{
     background-color: yellow;
     width: 50%;
@@ -274,7 +283,7 @@ float: right;
   height: 56px ;
   text-align: center;
 }
-#pokform{
+#pok{
   color:white;
 }
 #input-tekst {

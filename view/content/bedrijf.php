@@ -1,18 +1,18 @@
 <div id="wrap">
-    <div id="infoWrapper">
-    	<div id="info"><h3>
+    <div id="info"><h3>
         <?php
         if (isset($this->info)) {
             foreach ($this->info as $info) {
                 ?>
-                <div class="bedrijfInform"><p><?php echo $info['bedrijf_naam'] ?></p></div>
-                <div class="bedrijfInfo"><p><?php echo $this->gemiddelde ?> Sterren</p></div>
-
+                <div class="bedrijfInfo"><p><?php echo $info['bedrijf_naam'] ?></p></div>
+                <div class="bedrijfInfo"><p id="Gsterren"><?php echo $this->gemiddelde ?> Sterren</p></div>
                 <div class="bedrijfInfo"></div>
        </h3> </div>
+    <div id="infoWrapper">
+    	
  	  		<div id="comments">
 	      
-                <div class="bedrijfInfo"><p>commentaar</p></div>
+                <div class="bedrijfInform"><p>commentaar</p></div>
             </div>    
                 <?php
             }
