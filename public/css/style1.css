@@ -83,8 +83,17 @@ tr{
     left: 5%;
     margin-bottom: 25px;
 }
+
 #maps1{
   margin-left: 5%;
+}
+.map2{
+  display: inline-block;
+  margin-right: 10px;
+  position: absolute;
+  top: -215px;
+  right: 650px;
+
 }
 #knoppok{
   margin-top: 20px;
@@ -160,9 +169,12 @@ float: right;
 }
 /* bedrijfspagina*/
 #infoWrapper{
-    width: 400px;
     display: inline-block;
     vertical-align: top;
+   background-color: rgba(0,0,0,0.5);
+   width: 600px;
+   height: 400px;
+   float: left;  
 }
 
 #gebruikerComments{
