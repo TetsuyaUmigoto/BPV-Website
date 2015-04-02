@@ -277,6 +277,10 @@ float: right;
 #pokform{
   color:white;
 }
+#input-tekst {
+  color:black;
+  
+}
 /* progress bar */
 .demo-wrapper {
 	width: 250px;
