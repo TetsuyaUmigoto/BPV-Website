@@ -66,8 +66,6 @@
 </script>
 <div class="hoi1"></div>
 <div class="nee"></div>
-<div id="knopklas">
-	Klas</div>
 <div id="knoppok">Pok</div>
 <div id="klassen">
     <div id="klassen1"><h3>klas</h3></div>

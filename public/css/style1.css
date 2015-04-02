@@ -82,7 +82,7 @@ tr{
 #maps1{
   margin-left: 5%;
 }
-#knopklas, #knoppok{
+#knoppok{
   margin-top: 20px;
   margin-left: 85px;
   background-color: red;
@@ -137,7 +137,7 @@ float: right;
     float: left;
     background-color: white;
     width: 28%;
-    height: 500px;
+    height: 210px;
     margin-left: 35px;
 }
 #bedrijven{
