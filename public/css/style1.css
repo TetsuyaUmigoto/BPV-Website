@@ -99,7 +99,7 @@ tr{
   background-color: white;
   color: black;
   width: 30%  ;
-  height: 169px;
+  min-height: 169px;
   float: left;
 }
 #map {

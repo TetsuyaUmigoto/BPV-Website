@@ -60,8 +60,6 @@
 </script>
 <div class="hoi1"></div>
 <div class="nee"></div>
-<div id="knopklas">
-    Klas</div>
 <div id="knoppok">Pok</div>
 <div id="klassen">
     <div id="klassen1"><h3>klas</h3></div>
@@ -82,13 +80,7 @@
 </div>
 
 <div id="stage">
-    <div id="stage1"><h3><?php echo $this->leraar[0]["voornaam"] ?> <?php echo $this->leraar[0]["achternaam"] ?><h3></div>
-		<form action='<?php echo URL ?>leraren/caldav' method='post'>
-		    <p class="formulier">LeerlingNummer:</p><input type='text' class='form-control' name='leerlingnummer'>
-		    <p class="formulier">Afspraak:</p><input type='text' class='form-control' name='afspraak'>
-		    <p class="formulier">Tijd:</p><input type='text' class='form-control' name='tijd'>
-		    <input type='submit' class='btn btn-primary' value='Create!'>
-		</form>
+    <div id="stage1"><h3><?php echo $this->leraar[0]["leraar_voornaam"] ?> <?php echo $this->leraar[0]["leraar_achternaam"] ?><h3></div>
 		<div id="leerlingen">
 		    <table id="leerlingTable">
 			<thead>

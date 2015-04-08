@@ -23,7 +23,7 @@ class Leraren_Model extends Model{
     }
 
     public function getLeraar(){
-	$sth = $this->dbh->prepare("SELECT voornaam, achternaam FROM leraren WHERE id = '" . $_SESSION['user_id'] . "'");
+	$sth = $this->dbh->prepare("SELECT leraar_voornaam, leraar_achternaam FROM leraren WHERE id = '" . $_SESSION['user_id'] . "'");
 	$sth->execute();
 	return $sth->fetchall();
     }
@@ -45,12 +45,13 @@ class Leraren_Model extends Model{
     }
 
     public function caldav(){
-	$sth = $this->dbh->prepare("INSERT INTO calender (id, timestamp, afspraak, leerlingnummer)
-		VALUES (NULL, :timestamp, :afspraak, :leerlingnummer )");
+	$sth = $this->dbh->prepare("INSERT INTO calender (id, timestamp, afspraak, leerlingnummer, leraren_id)
+		VALUES (NULL, :timestamp, :afspraak, :leerlingnummer, :leraren_id)");
 	$sth->execute(array(
 	    ':leerlingnummer' => $_POST['leerlingnummer'],
 	    ':afspraak' => $_POST['afspraak'],
-	    ':timestamp' => $_POST['tijd']
+	    ':timestamp' => $_POST['tijd'],
+	    ':leraren_id' => $_SESSION['user_id']
 	));
 	header("location: " . URL . "leraren");
     }
@@ -63,8 +64,14 @@ class Leraren_Model extends Model{
     }
     
     public function getStudent($leerlingNummer){
-	$sth = $this->dbh->prepare("SELECT * FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
-		. " WHERE studenten.leerlingnummer = '" . $leerlingNummer . "' ORDER BY pokaanvraag.id DESC LIMIT 1");
+	$sth = $this->dbh->prepare("SELECT studenten.*, leraren.*, pokaanvraag.* "
+		. "			FROM studenten"
+		. "			    JOIN leraren ON"
+		. "				studenten.leraar_id = leraren.id"
+		. "			    JOIN pokaanvraag ON"
+		. "				studenten.leerlingnummer = pokaanvraag.leerlingnummer"
+		. "			WHERE studenten.leerlingnummer = '" . $leerlingNummer . "' "
+		. "			ORDER BY pokaanvraag.id DESC LIMIT 1");
 	$sth->execute();
 	return $sth->fetchall();
     }

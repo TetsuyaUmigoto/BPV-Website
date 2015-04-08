@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Genereertijd: 01 apr 2015 om 14:49
+-- Genereertijd: 08 apr 2015 om 11:31
 -- Serverversie: 5.6.14
 -- PHP-versie: 5.5.6
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `bedrijven` (
   `Praktijkbegeleider` varchar(30) NOT NULL,
   `Praktijkbegeleider_telefoon` int(10) NOT NULL,
   PRIMARY KEY (`bedrijf_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `bedrijven`
@@ -74,7 +74,8 @@ INSERT INTO `bedrijven` (`bedrijf_id`, `ref_nummer`, `soort`, `bedrijf_naam`, `A
 (26, 9783133, 0, '4ITpoint', 'Dokter van Deenweg 13 ', '8025 BP', 'ZWOLLE', 38, ' http://www.4itpoint.nl ', 38, ' eeller@4itpoint.nlÂ ', 'Dhr. E. (Eric) Eller ', 38),
 (27, 9805254, 0, '8internet', 'Schweitzerstraat 31 ', '7909 AV', 'HOOGEVEEN', 528, ' http://8internet.nl/ ', 528, ' info@8internet.nlÂ ', 'Dhr. R.C. (Ramon) Mol ', 528),
 (28, 9725415, 0, 'A-Vision', 'IJzerweg 53 ', '7335 DH', 'APELDOORN', 55, ' http://www.a-vision.nu ', 55, ' mvankleef@a-vision.nuÂ ', 'Mw. H. (Hermien) Lubbers-Jurri', 55),
-(29, 9814859, 0, '2 Monkeys', 'Laboratoriumplein 43 ', '7411 CH', 'DEVENTER', 6, '  ', 0, '', '', 0);
+(29, 9814859, 0, '2 Monkeys', 'Laboratoriumplein 43 ', '7411 CH', 'DEVENTER', 6, '  ', 0, '', '', 0),
+(30, 9504620, 0, 'Aannemingsmaatschappij va', 'J.P. Broekhovenstraat 36 ', '8081 HC', 'ELBURG', 525, ' http://www.gelder.com ', 0, ' m.dejonghe@gelder.comÂ ', 'Mw. J. (Jelly) Oost ', 0);
 
 -- --------------------------------------------------------
 
@@ -87,8 +88,9 @@ CREATE TABLE IF NOT EXISTS `calender` (
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `afspraak` varchar(500) NOT NULL,
   `leerlingnummer` int(11) NOT NULL,
+  `leraren_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -128,10 +130,10 @@ INSERT INTO `comments` (`comment_id`, `bedrijf_id`, `leerlingnummer`, `comment`,
 
 CREATE TABLE IF NOT EXISTS `leraren` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `voornaam` varchar(25) NOT NULL,
-  `achternaam` varchar(25) NOT NULL,
+  `leraar_voornaam` varchar(25) NOT NULL,
+  `leraar_achternaam` varchar(25) NOT NULL,
   `wachtwoord` varchar(256) NOT NULL,
-  `email` varchar(25) NOT NULL,
+  `leraar_email` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
@@ -139,8 +141,8 @@ CREATE TABLE IF NOT EXISTS `leraren` (
 -- Gegevens worden uitgevoerd voor tabel `leraren`
 --
 
-INSERT INTO `leraren` (`id`, `voornaam`, `achternaam`, `wachtwoord`, `email`) VALUES
-(1, 'Jonas', '', '098f6bcd4621d373cade4e832627b4f6', '');
+INSERT INTO `leraren` (`id`, `leraar_voornaam`, `leraar_achternaam`, `wachtwoord`, `leraar_email`) VALUES
+(1, 'Jezus', 'Christus van Nazareth', '098f6bcd4621d373cade4e832627b4f6', '');
 
 -- --------------------------------------------------------
 
@@ -172,30 +174,30 @@ CREATE TABLE IF NOT EXISTS `pokaanvraag` (
   `studentInleverdatum` varchar(50) NOT NULL,
   `bpvCoordinator` varchar(50) NOT NULL,
   `bpvBegeleider` varchar(50) NOT NULL,
-  `bpvPeriodeBegin` date NOT NULL,
-  `bpvPeriodeEind` date NOT NULL,
+  `bpvPeriodeBegin` int(11) NOT NULL,
+  `bpvPeriodeEind` int(11) NOT NULL,
   `bpvSbu` int(11) NOT NULL,
   `bpvBrin` varchar(20) NOT NULL,
   `bpvCrebo` varchar(20) NOT NULL,
   `bpvOpmerking` varchar(500) NOT NULL,
   `pokStatus` int(2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `pokaanvraag`
 --
 
 INSERT INTO `pokaanvraag` (`id`, `leerlingnummer`, `bedrijfNaam`, `bedrijfAdres`, `bedrijfPostcode`, `bedrijfPlaats`, `bedrijfTelefoon`, `bedrijfWebsite`, `bedrijfContactPersoon`, `bedrijfContactPersoonTelefoon`, `bedrijfContactPersoonEmail`, `bedrijfPraktijkBegeleider`, `bedrijfPraktijkBegeleiderTelefoon`, `bedrijfKennisCentrum`, `bedrijfCode`, `studentNaam`, `studentKlas`, `studentOpleiding`, `studentCreboNummerOpleiding`, `studentRichting`, `studentInleverdatum`, `bpvCoordinator`, `bpvBegeleider`, `bpvPeriodeBegin`, `bpvPeriodeEind`, `bpvSbu`, `bpvBrin`, `bpvCrebo`, `bpvOpmerking`, `pokStatus`) VALUES
-(32, 1, '!CL Web', 'Winthontlaan 200 ', '3526 KV', 'UTRECHT', '2147483647', '  ', 'Dhr. C. (Cyril) Loosjes ', '2147483647', ' info@clweb.nlÂ ', 'Dhr. C. (Cyril) Loosjes ', '2147483647', '', '', 'jonas ', 'IT13A', '', '', '', '', '', '', '2015-04-02', '2015-04-23', 0, '', '', '', 0),
-(33, 2, '12Build', 'Nijverdalseweg 143 ', '7461 AG', 'RIJSSEN', '548', ' http://www.12build.com ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', ' r.vanbloem@12build.comÂ ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', '', '', 'Jonas Muilwijk', 'IT13A', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0),
-(34, 5, '12Tune International B.V.', 'Jagerserf 5 A ', '3851 SM', 'ERMELO', '341', ' http://www.12tune.com ', 'Dhr. E. (Egbert) van den End ', '0', '+31 (0)341-550119 ext 201Â ', 'Dhr. R.D.C. (Richard) Fruitman ', '31', '', '', 'Lubbert Kramer', '1337', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0),
-(36, 22, '2Complex B.V.', 'K J Blokstraat 49 ', '8384 EV', 'WILHELMINAOORD', '521', '  ', 'Dhr. C. Hilbrink ', '521', ' cor@hilbrink.nlÂ ', 'Dhr. C. Hilbrink ', '521', '', '', 'kaas test', '321', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0),
-(37, 33, '2G BV', 'Essenkamp 2 ', '3888 LL', 'UDDEL', '577', ' http://www.2g.it.nl ', 'Dhr. J.C. (Joost) Geuze ', '577', ' jcgeuze@2g-it.nlÂ ', 'Dhr. J.C. (Joost) Geuze ', '577', '', '', 'kees gup', '1', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0),
-(38, 44, '4ITpoint', 'Dokter van Deenweg 13 ', '8025 BP', 'ZWOLLE', '38', ' http://www.4itpoint.nl ', 'Dhr. E. (Eric) Eller ', '38', ' eeller@4itpoint.nlÂ ', 'Dhr. E. (Eric) Eller ', '38', '', '', 'gup kees', '1', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0),
-(39, 55, '8internet', 'Schweitzerstraat 31 ', '7909 AV', 'HOOGEVEEN', '528', ' http://8internet.nl/ ', 'Dhr. R.C. (Ramon) Mol ', '528', ' info@8internet.nlÂ ', 'Dhr. R.C. (Ramon) Mol ', '528', '', '', 'kop tulp', '1', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0),
-(40, 66, 'A-Vision', 'IJzerweg 53 ', '7335 DH', 'APELDOORN', '55', ' http://www.a-vision.nu ', 'Mw. M. (Marjan) van Kleef ', '55', ' mvankleef@a-vision.nuÂ ', 'Mw. H. (Hermien) Lubbers-Jurrien ', '55', '', '', 'tulp kop', '1', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0),
-(41, 11, '2 Monkeys', 'Laboratoriumplein 43 ', '7411 CH', 'DEVENTER', '6', '  ', '', '0', '', '', '0', '', '', 'test kaas', '123', '', '', '', '', '', '', '1970-01-01', '1970-01-01', 0, '', '', '', 0);
+(33, 2, '12Build', 'Nijverdalseweg 143 ', '7461 AG', 'RIJSSEN', '548', ' http://www.12build.com ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', ' r.vanbloem@12build.comÂ ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', '', '', 'Jonas Muilwijk', 'IT13A', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(34, 5, '12Tune International B.V.', 'Jagerserf 5 A ', '3851 SM', 'ERMELO', '341', ' http://www.12tune.com ', 'Dhr. E. (Egbert) van den End ', '0', '+31 (0)341-550119 ext 201Â ', 'Dhr. R.D.C. (Richard) Fruitman ', '31', '', '', 'Lubbert Kramer', '1337', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(36, 22, '2Complex B.V.', 'K J Blokstraat 49 ', '8384 EV', 'WILHELMINAOORD', '521', '  ', 'Dhr. C. Hilbrink ', '521', ' cor@hilbrink.nlÂ ', 'Dhr. C. Hilbrink ', '521', '', '', 'kaas test', '321', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(37, 33, '2G BV', 'Essenkamp 2 ', '3888 LL', 'UDDEL', '577', ' http://www.2g.it.nl ', 'Dhr. J.C. (Joost) Geuze ', '577', ' jcgeuze@2g-it.nlÂ ', 'Dhr. J.C. (Joost) Geuze ', '577', '', '', 'kees gup', '1', '', '', '', '', '', '', 1423695600, 1431640800, 0, '', '', '', 3),
+(38, 44, '4ITpoint', 'Dokter van Deenweg 13 ', '8025 BP', 'ZWOLLE', '38', ' http://www.4itpoint.nl ', 'Dhr. E. (Eric) Eller ', '38', ' eeller@4itpoint.nlÂ ', 'Dhr. E. (Eric) Eller ', '38', '', '', 'gup kees', '1', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(39, 55, '8internet', 'Schweitzerstraat 31 ', '7909 AV', 'HOOGEVEEN', '528', ' http://8internet.nl/ ', 'Dhr. R.C. (Ramon) Mol ', '528', ' info@8internet.nlÂ ', 'Dhr. R.C. (Ramon) Mol ', '528', '', '', 'kop tulp', '1', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(40, 66, 'A-Vision', 'IJzerweg 53 ', '7335 DH', 'APELDOORN', '55', ' http://www.a-vision.nu ', 'Mw. M. (Marjan) van Kleef ', '55', ' mvankleef@a-vision.nuÂ ', 'Mw. H. (Hermien) Lubbers-Jurrien ', '55', '', '', 'tulp kop', '1', '', '', '', '', '', '', 1423695600, 1431640800, 0, '', '', '', 3),
+(41, 11, '2 Monkeys', 'Laboratoriumplein 43 ', '7411 CH', 'DEVENTER', '6', '  ', '', '0', '', '', '0', '', '', 'test kaas', '123', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(42, 1, 'Aannemingsmaatschappij van Gelder B.V.', 'J.P. Broekhovenstraat 36 ', '8081 HC', 'ELBURG', '0525-659888', ' http://www.gelder.com ', 'Mw. M. (Mariet) de Jonghe ', 'Â ', ' m.dejonghe@gelder.comÂ ', 'Mw. J. (Jelly) Oost ', 'Â ', '', '', 'jonas ', 'IT13A', '', '', '', '', '', '', 1423695600, 1431640800, 0, '', '', '', 3);
 
 -- --------------------------------------------------------
 
@@ -221,9 +223,9 @@ CREATE TABLE IF NOT EXISTS `studenten` (
 --
 
 INSERT INTO `studenten` (`leerlingnummer`, `voornaam`, `achternaam`, `wachtwoord`, `email`, `geboortedatum`, `telefoonnummer`, `klas`, `leraar_id`) VALUES
-(1, 'jonas', '', '098f6bcd4621d373cade4e832627b4f6', '', '2015-03-18 08:55:31', 0, 'IT13A', 0),
+(1, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', '', '2015-04-08 08:44:56', 0, 'IT13A', 1),
 (2, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', '', '2015-03-18 10:36:55', 0, 'IT13A', 1),
-(5, 'Lubbert', 'Kramer', '098f6bcd4621d373cade4e832627b4f6', 'test@test.test', '2015-04-01 12:27:58', 123, 'IT13A', 2),
+(5, 'Lubbert', 'Kramer', '098f6bcd4621d373cade4e832627b4f6', 'test@test.test', '2015-04-08 08:45:11', 123, 'IT13A', 1),
 (11, 'test', 'kaas', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:01', 1234, 'IT13A', 1),
 (22, 'kaas', 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:05', 4321, 'IT13A', 1),
 (33, 'kees', 'gup', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:07', 66, 'IT13A', 1),
