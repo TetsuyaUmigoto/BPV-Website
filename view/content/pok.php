@@ -13,7 +13,7 @@ if(isset($this->ecabo)){
 	"<div>
 	    Test nummer: 9812355<br>
 	    <form action='" . URL . "pok/crawl' method='post'>
-		Ecabo relatie nummer: <input type='text' name='number'>
+		Ecabo relatie nummer: <input id='input-tekst' type='text' name='number'>
 		<input type='submit' value='POK'>
 	    </form>
 	</div>";

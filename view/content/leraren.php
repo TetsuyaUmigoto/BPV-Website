@@ -60,8 +60,11 @@
 </script>
 <div class="hoi1"></div>
 <div class="nee"></div>
+<<<<<<< HEAD
 <div id="knopklas">
     Klas</div>
+=======
+>>>>>>> 4d0d182bac9a1d5b4407a8d70f2a7fe078ec9f61
 <div id="knoppok">Pok</div>
 <div id="klassen">
     <div id="klassen1"><h3>klas</h3></div>
