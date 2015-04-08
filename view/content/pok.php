@@ -85,8 +85,8 @@ if(isset($this->ecabo)){
 
 		    <tr><td>BPV-Coördinator:</td><td><input class='form-control' type='text' name='bpvCoordinator'></td></tr>
 		    <tr><td>Stagebegeleider Landstede:</td><td><input class='form-control' type='text' name='bpvBegeleider'></td></tr>
-		    <tr><td>BPV-periode-begin (Bijv: dd-mm-yyyy):</td><td><input class='form-control' type='date' name='bpvPeriodeBegin'></td></tr>
-		    <tr><td>BPV-periode-eind (Bijv: dd-mm-yyyy):</td><td><input class='form-control' type='date' name='bpvPeriodeEind'></td></tr>
+		    <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='date' name='bpvPeriodeBegin'></td></tr>
+		    <tr><td>BPV-periode-eind (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='date' name='bpvPeriodeEind'></td></tr>
 		    <tr><td>Aantal sbu’s:</td><td><input class='form-control' type='text' name='bpvSbu'></td></tr>
 		    <tr><td>Brinnummer:</td><td><input class='form-control' type='text' name='bpvBrin'></td></tr>
 		    <tr><td>Crebonummer:</td><td><input class='form-control' type='text' name='bpvCrebo'></td></tr>

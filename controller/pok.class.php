@@ -85,11 +85,9 @@ class Pok extends Controller {
     }
     
     function pokAanvraag(){
-	$beginStageDatum = date('d-m-Y', $_POST['bpvPeriodeBegin']);
-	$eindStageDatum = date('d-m-Y', $_POST['bpvPeriodeEind']);
-	$beginStage = strtotime($beginStageDatum);
-	$eindStage = strtotime($eindStageDatum);
-	if($beginStageDatum == '1970-01-01' || $eindStageDatum == '1970-01-01'){
+	$beginStage = strtotime($_POST['bpvPeriodeBegin']);
+	$eindStage = strtotime($_POST['bpvPeriodeEind']);
+	if($beginStage == '1970-01-01' || $eindStage == '1970-01-01'){
 	    //echo "<script>alert('wrong date format')</script>";
 	    print_r($beginStageDatum);
 	    print_r($beginStage);

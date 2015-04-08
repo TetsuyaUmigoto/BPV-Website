@@ -17,8 +17,6 @@ class Pok_Model extends Model{
     function pokAanvraag(){
 	$beginStage = strtotime($_POST['bpvPeriodeBegin']);
 	$eindStage = strtotime($_POST['bpvPeriodeEind']);
-	$beginStageDatum = date('Y-m-d', $beginStage);
-	$eindStageDatum = date('Y-m-d', $eindStage);
 	
 	$sth = $this->dbh->prepare("INSERT INTO pokaanvraag (leerlingnummer, bedrijfNaam, bedrijfAdres, bedrijfPostcode, bedrijfPlaats, bedrijfTelefoon, bedrijfWebsite,
                                     bedrijfContactPersoon, bedrijfContactPersoonTelefoon, bedrijfContactPersoonEmail, bedrijfPraktijkBegeleider, bedrijfPraktijkBegeleiderTelefoon,
@@ -40,7 +38,7 @@ class Pok_Model extends Model{
             ':studentOpleiding' => $_POST['studentOpleiding'], ':studentCreboNummerOpleiding' => $_POST['studentCrebonummerOpleiding'],
             ':studentRichting' => $_POST['studentRichting'], ':studentInleverdatum' => $_POST['studentInleverdatum'],
             ':bpvCoordinator' => $_POST['bpvCoordinator'], ':bpvBegeleider' => $_POST['bpvBegeleider'],
-            ':bpvPeriodeBegin' => $beginStageDatum, ':bpvPeriodeEind' => $eindStageDatum,
+            ':bpvPeriodeBegin' => $beginStage, ':bpvPeriodeEind' => $eindStage,
             ':bpvBrin' => $_POST['bpvBrin'], ':bpvCrebo' => $_POST['bpvCrebo'],
             ':bpvSbu' => $_POST['bpvSbu'], ':bpvOpmerking' => $_POST['bpvOpmerking']
         ));

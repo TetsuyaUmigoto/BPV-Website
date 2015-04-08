@@ -36,28 +36,28 @@
 			    <div class='andere'>";
 		    }
                 
-if (!isset($_SESSION['user_id'])) {
-    echo
-	"<form id='loginForm' method='post' action='" . URL . "login/userLogin'>
-            <input type='text' name='username' />
-            <select id='keuze' name='type'>
-		<option value='0'>
-		    Leerling
-		</option>
-		<option value='1'>
-		    Leraar
-                </option>
-                <option value='2'>
-                    Bedrijf
-                </option>
-            </select><br>
-            <input type='password' name='password'>
-            <input id='login' type='submit' value='Login' />
-        </form>";
-} else {
-    echo 
-	"<br /><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";
-}
-?>
-		</div>
+		    if (!isset($_SESSION['user_id'])) {
+			echo
+			    "<form id='loginForm' method='post' action='" . URL . "login/userLogin'>
+				<input type='text' name='username' />
+				<select id='keuze' name='type'>
+				    <option value='0'>
+					Leerling
+				    </option>
+				    <option value='1'>
+					Leraar
+				    </option>
+				    <option value='2'>
+					Bedrijf
+				    </option>
+				</select><br>
+				<input type='password' name='password'>
+				<input id='login' type='submit' value='Login' />
+			    </form>";
+		    } else {
+			echo 
+			    "<br /><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";
+		    }
+		?>
+	    </div>
 	    </div>
