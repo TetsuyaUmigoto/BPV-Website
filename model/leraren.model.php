@@ -23,7 +23,7 @@ class Leraren_Model extends Model{
     }
 
     public function getLeraar(){
-	$sth = $this->dbh->prepare("SELECT leraar_voornaam, leraar_achternaam FROM leraren WHERE id = '" . $_SESSION['user_id'] . "'");
+	$sth = $this->dbh->prepare("SELECT voornaam, achternaam FROM leraren WHERE id = '" . $_SESSION['user_id'] . "'");
 	$sth->execute();
 	return $sth->fetchall();
     }

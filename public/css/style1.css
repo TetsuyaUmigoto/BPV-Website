@@ -48,7 +48,7 @@ h1{
     font-family: arial;
 }
 h3{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 3px 0px;
     padding-top:20px;
     text-align: center;
     font-family: arial;
@@ -162,6 +162,24 @@ float: right;
     background-color: white;
     width: 100%;
     
+}
+#pokform{
+  color: white;
+  background-color:   rgba(0,0,0,0.5);
+  margin: 50px auto 0 auto;
+  min-height: 300px;
+  max-width: 1000px;
+}
+#pokform1{
+  color: black;
+  background-color: white; 
+  min-height: 300px;
+  max-width: 1000px;
+}
+.formpokhead{
+  color: white;
+  background-color: black;
+
 }
 /* overzicht pagina, zoek pagina*/
 #zoek2{
