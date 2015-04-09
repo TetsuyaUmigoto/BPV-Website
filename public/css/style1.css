@@ -10,6 +10,9 @@ body{
     font-family: Arial;
     background: url(../img/Header-3.jpg);
 }
+#loginForm {
+    width: 500px;
+}
 .bedrijf-comments-test{
     float: left;
     width: 601px;
