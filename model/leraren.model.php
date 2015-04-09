@@ -23,7 +23,7 @@ class Leraren_Model extends Model{
     }
 
     public function getLeraar(){
-	$sth = $this->dbh->prepare("SELECT voornaam, achternaam FROM leraren WHERE id = '" . $_SESSION['user_id'] . "'");
+	$sth = $this->dbh->prepare("SELECT leraar_voornaam, leraar_achternaam FROM leraren WHERE id = '" . $_SESSION['user_id'] . "'");
 	$sth->execute();
 	return $sth->fetchall();
     }
@@ -74,6 +74,36 @@ class Leraren_Model extends Model{
 		. "			ORDER BY pokaanvraag.id DESC LIMIT 1");
 	$sth->execute();
 	return $sth->fetchall();
+    }
+    
+    public function savePokChanges(){
+        $beginStage = strtotime($_POST['bpvPeriodeBegin']);
+	$eindStage = strtotime($_POST['bpvPeriodeEind']);
+        
+        $sth = $this->dbh->prepare("UPDATE pokaanvraag SET bedrijfNaam = :bedrijfNaam, bedrijfAdres = :bedrijfAdres, bedrijfPostcode = :bedrijfPostcode, bedrijfPlaats = :bedrijfPlaats,
+                                    bedrijfTelefoon = :bedrijfTelefoon, bedrijfWebsite = :bedrijfWebsite, bedrijfContactPersoon = :bedrijfContactPersoon, bedrijfContactPersoonTelefoon = :bedrijfContactPersoonTelefoon,
+                                    bedrijfContactPersoonEmail = :bedrijfContactPersoonEmail, bedrijfPraktijkBegeleider = :bedrijfPraktijkBegeleider, bedrijfPraktijkBegeleiderTelefoon = :bedrijfPraktijkBegeleiderTelefoon,
+                                    bedrijfKennisCentrum = :bedrijfKennisCentrum, bedrijfCode = :bedrijfCode, studentNaam = :studentNaam, studentKlas = :studentKlas, studentOpleiding = :studentOpleiding,
+                                    studentCreboNummerOpleiding = :studentCreboNummerOpleiding, studentRichting = :studentRichting, studentInleverdatum = :studentInleverdatum, bpvCoordinator = :bpvCoordinator,
+                                    bpvBegeleider = :bpvBegeleider, bpvPeriodeBegin = :bpvPeriodeBegin, bpvPeriodeEind = :bpvPeriodeEind, bpvSbu = :bpvSbu, bpvBrin = :bpvBrin, bpvCrebo = :bpvCrebo,
+                                    bpvOpmerking = :bpvOpmerking WHERE leerlingnummer = :leerlingnummer ORDER BY id DESC LIMIT 1");
+        $sth->execute(array(
+            ':leerlingnummer' => $_POST['studentNummer'], ':bedrijfNaam' => $_POST['bedrijfNaam'],
+            ':bedrijfAdres' => $_POST['bedrijfAdres'], ':bedrijfPostcode' => $_POST['bedrijfPostcode'],
+            ':bedrijfPlaats' => $_POST['bedrijfPlaats'], ':bedrijfTelefoon' => $_POST['bedrijfTelefoon'],
+            ':bedrijfWebsite' => $_POST['bedrijfWebsite'], ':bedrijfContactPersoon' => $_POST['bedrijfContactpersoon'],
+            ':bedrijfContactPersoonTelefoon' => $_POST['bedrijfContactpersoonTelefoon'], ':bedrijfContactPersoonEmail' => $_POST['bedrijfContactpersoonEmail'],
+            ':bedrijfPraktijkBegeleider' => $_POST['bedrijfPraktijkbegeleider'], ':bedrijfPraktijkBegeleiderTelefoon' => $_POST['bedrijfPraktijkbegeleiderTelefoon'],
+            ':bedrijfKennisCentrum' => $_POST['bedrijfKenniscentrum'], ':bedrijfCode' => $_POST['bedrijfBedrijfscode'],
+            ':studentNaam' => $_POST['studentNaam'], ':studentKlas' => $_POST['studentKlas'],
+            ':studentOpleiding' => $_POST['studentOpleiding'], ':studentCreboNummerOpleiding' => $_POST['studentCrebonummerOpleiding'],
+            ':studentRichting' => $_POST['studentRichting'], ':studentInleverdatum' => $_POST['studentInleverdatum'],
+            ':bpvCoordinator' => $_POST['bpvCoordinator'], ':bpvBegeleider' => $_POST['bpvBegeleider'],
+            ':bpvPeriodeBegin' => $beginStage, ':bpvPeriodeEind' => $eindStage,
+            ':bpvBrin' => $_POST['bpvBrin'], ':bpvCrebo' => $_POST['bpvCrebo'],
+            ':bpvSbu' => $_POST['bpvSbu'], ':bpvOpmerking' => $_POST['bpvOpmerking']
+        ));
+        header("location: " . URL . "leraren");
     }
 
 }

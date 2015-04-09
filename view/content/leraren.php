@@ -80,7 +80,7 @@
 </div>
 
 <div id="stage">
-    <div id="stage1"><h3><?php echo $this->leraar[0]["voornaam"] ?> <?php echo $this->leraar[0]["achternaam"] ?><h3></div>
+    <div id="stage1"><h3><?php echo $this->leraar[0]["leraar_voornaam"] ?> <?php echo $this->leraar[0]["leraar_achternaam"] ?><h3></div>
 		<div id="leerlingen">
 		    <table id="leerlingTable">
 			<thead>

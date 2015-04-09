@@ -68,7 +68,34 @@ class Leraren extends Controller {
 	$this->view->names = $names;
 	$this->view->locations = $locations;
 	$this->view->student = $student;
+        $this->view->edit = false;
 	$this->view->render('student');
+    }
+    
+    function editPok($leerlingNummer){
+        $student = $this->model->getStudent($leerlingNummer);
+	
+	$locations = "[";
+	foreach($student as $mapsLocation){
+	    $locations .= "'" . $mapsLocation['bedrijfPostcode'] . "'" . ", ";
+	}
+	$locations = substr($locations, 0, strlen($locations) - 2) . "]";
+	
+	$names = "[";
+	foreach($student as $name){
+	    $names .= "'" . $name['voornaam'] ." ". $name['achternaam'] . "'" . ", ";
+	}
+	$names = substr($names, 0, strlen($names) - 2) . "]";
+	
+	$this->view->names = $names;
+	$this->view->locations = $locations;
+	$this->view->student = $student;
+        $this->view->edit = true;
+	$this->view->render('student');
+    }
+    
+    function savePokChanges(){
+        $this->model->savePokChanges();
     }
 
     function caldav() {
