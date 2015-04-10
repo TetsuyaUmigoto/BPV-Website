@@ -17,10 +17,15 @@ class Bedrijf extends Controller {
     function showBedrijf($id) {
         $this->getComments($id);
         $bedrijfInfo = $this->model->getBedrijfInfo($id);
-        
         $gemiddelde = $this->model->getGemiddelde($id);
         $this->view->bedrijfId = $id;
         $this->view->info = $bedrijfInfo;
+	$locations = "[";
+	foreach($bedrijfInfo as $mapsLocation){
+	    $locations .= "'" . $mapsLocation['Postcode'] . "'" . ", ";
+	}
+	$locations = substr($locations, 0, strlen($locations) - 2) . "]";
+	$this->view->locations = $locations;
         $this->view->gemiddelde = round($gemiddelde[0]["gemiddelde"]);
         $this->view->render('bedrijf');
     }

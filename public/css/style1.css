@@ -195,7 +195,7 @@ float: right;
     float: left;
     background-color: white;
     width: 28%;
-    height: 210px;
+    min-height: 210px;
     margin-left: 35px;
 }
 #bedrijven{

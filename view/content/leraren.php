@@ -12,7 +12,7 @@
     var locations = <?php echo $this->locations ?>;
     var nextAddress = 0;
     var mapOptions = {
-	zoom: 6,
+	zoom: 7,
 	center: latlng,
 	mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -58,11 +58,8 @@
     }
     theNext();
 </script>
-<div class="hoi1"></div>
-<div class="nee"></div>
-<div id="knoppok">Pok</div>
 <div id="klassen">
-    <div id="klassen1"><h3>klas</h3></div>
+    <div id="klassen1"><h3>klassen</h3></div>
     <table>
 
 	<?php
