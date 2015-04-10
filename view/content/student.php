@@ -142,6 +142,17 @@
 	    </td>
 	</tr>
     </table>
+    <h4>
+		Afspraken
+	    </h4>
+	    <?php
+	    /*
+		foreach($this->afspraak as $afspraak){
+		    echo date('Y-m-d', strtotime($afspraak['timestamp']))."<br>";
+		    echo $afspraak['afspraak'];
+		}
+	     */
+	    ?>
 </div>
 <div id="stage">
     <div id="stage1">
@@ -185,7 +196,9 @@
 		    <tr><td>Crebonummer:</td><td>".$this->student[0]['bpvCrebo']."</td></tr>
 		    <tr><td>Opmerkingen:</td><td>".$this->student[0]['bpvOpmerking']."</td></tr>
                 </table>
-                <a href='" . URL . "leraren/editPok/" . $this->student[0]['leerlingnummer'] . "'>Edit</a>";
+                <a href='" . URL . "leraren/editPok/" . $this->student[0]['leerlingnummer'] . "'>Edit</a>
+		<a href='" . URL . "leraren/pokGoed/" . $this->student[0]['id'] . "'>Klopt</a>";
+		print_r($this->student[0]['pokStatus']);
         }else{
             echo
                 "<table class='table'>
@@ -226,3 +239,4 @@
                     </form>
                 </table>";
         }
+    ?>

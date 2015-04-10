@@ -7,7 +7,7 @@ class Studenten_Model extends Model {
     }
 
     public function getStudentInfo($id) {
-        $sth = $this->dbh->prepare('SELECT * FROM studenten WHERE leerlingnummer = "' . $id . '"');
+        $sth = $this->dbh->prepare('SELECT * FROM studenten JOIN leraren ON studenten.leraar_id = leraren.id WHERE leerlingnummer = "' . $id . '"');
         $sth->execute();
         return $sth->fetchall();
  }
@@ -16,6 +16,12 @@ class Studenten_Model extends Model {
         $sth = $this->dbh->prepare('SELECT * FROM pokaanvraag WHERE leerlingnummer = "' . $id . '" ORDER BY id DESC LIMIT 1');
         $sth->execute();
         return $sth->fetchall();
+    }
+    
+    public function getAfspraak($id){
+	$sth = $this->dbh->prepare('SELECT * FROM calender WHERE leerlingnummer = "'.$id.'"');
+	$sth->execute();
+	return $sth->fetchall();
     }
     
     public function pokAnnuleren(){

@@ -38,7 +38,7 @@
 	    foreach($this->bedrijfList as $bedrijf){
 		echo "<tr>"
 		. "<td>"
-		. $bedrijf['bedrijf_id'] .
+		. $bedrijf['ref_nummer'] .
 		"</td>"
 		. "<td>"
 		. "<a href='" . URL . "bedrijf/showBedrijf/" . $bedrijf["bedrijf_id"] . "'>" . $bedrijf["bedrijf_naam"] . "</a>" .

@@ -39,7 +39,7 @@ class Leraren_Model extends Model{
     public function getAlliedLeerlingen($id){
 	$sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer, pokaanvraag.bedrijfPostcode"
 		. " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
-		. " WHERE leraar_id = " . $id . " ORDER BY pokaanvraag.id DESC LIMIT 1");
+		. " WHERE leraar_id = " . $id . " ORDER BY pokaanvraag.id DESC");
 	$sth->execute();
 	return $sth->fetchall();
     }
@@ -70,9 +70,11 @@ class Leraren_Model extends Model{
 		. "				studenten.leraar_id = leraren.id"
 		. "			    JOIN pokaanvraag ON"
 		. "				studenten.leerlingnummer = pokaanvraag.leerlingnummer"
-		. "			WHERE studenten.leerlingnummer = '" . $leerlingNummer . "' "
+		. "			WHERE studenten.leerlingnummer = ? "
 		. "			ORDER BY pokaanvraag.id DESC LIMIT 1");
-	$sth->execute();
+	$sth->execute(array(
+	    $leerlingNummer
+	));
 	return $sth->fetchall();
     }
     
@@ -104,6 +106,14 @@ class Leraren_Model extends Model{
             ':bpvSbu' => $_POST['bpvSbu'], ':bpvOpmerking' => $_POST['bpvOpmerking']
         ));
         header("location: " . URL . "leraren");
+    }
+    
+    public function pokGoed($id){
+	$sth = $this->dbh->prepare("UPDATE pokaanvraag SET pokStatus = 1 WHERE id = :id");
+	$sth->execute(array(
+	    ':id' => $id
+	));
+	header("location: " . URL . "leraren");
     }
 
 }
