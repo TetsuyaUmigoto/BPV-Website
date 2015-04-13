@@ -111,7 +111,7 @@
                             <td>
 								<div class='demo-wrapper html5-progress-bar'>
 									<div class='progress-bar-wrapper'>
-										<progress id='progressbar' value='" . ($leerling['pokStatus'] * 4) . + 25 . "' max='100'></progress>
+										<progress id='progressbar' value='" . (($leerling['pokStatus'] * 25) + 25) . "' max='100'></progress>
 									</div>
 								</div>
                             </td>

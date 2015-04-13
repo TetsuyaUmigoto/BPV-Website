@@ -69,11 +69,20 @@
                 </td>
                 <td>
                     <?php
-                        echo $studentInfo["leraar_id"];
+                        echo $studentInfo["leraar_voornaam"]. " " .$studentInfo["leraar_achternaam"];
                     ?>
                 </td>
             </tr>
         </table>
+	    <h4>
+		Afspraken
+	    </h4>
+	    <?php
+		foreach($this->afspraak as $afspraak){
+		    echo date('Y-m-d', strtotime($afspraak['timestamp']))."<br>";
+		    echo $afspraak['afspraak'];
+		}
+	    ?>
     </div>
     <div id="pokAanvragen">
         <div id="pok1">
@@ -89,7 +98,7 @@
 		    Status: 
 		    <div class='demo-wrapper html5-progress-bar'>
 				<div class='progress-bar-wrapper'>
-					<progress id='progressbar' value='" .  ($pokInfo['pokStatus'] * 4). + 25 . "' max='100'></progress>
+					<progress id='progressbar' value='" .  (($pokInfo['pokStatus'] * 25) + 25) . "' max='100'></progress>
 				</div>
 			</div>" .
 		    "<br>".
