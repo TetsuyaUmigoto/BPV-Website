@@ -82,10 +82,13 @@
 		    <table id="leerlingTable">
 			<thead>
 			<td>
-			    Leerlingnummer:
+			    Naam:
 			</td>
 			<td>
-			    Naam:
+			    Stage bedrijf:
+			</td>
+			<td>
+			    Stage plaats:
 			</td>
 			<td>
 			    Klas:
@@ -100,11 +103,14 @@
 				echo "
                         <tr>
                             <td>
-                                " . $leerling['leerlingnummer'] . "
+                                <a href='" . URL . "leraren/showStudent/" . $leerling['leerlingnummer'] . "'>" . $leerling['achternaam'] . ", " . $leerling['voornaam'] . "</a>
                             </td>
-                            <td>
-                                <a href='" . URL . "leraren/showStudent/" . $leerling['leerlingnummer'] . "'>" . $leerling['voornaam'] . " " . $leerling['achternaam'] . "</a>
-                            </td>
+			    <td>
+				" . $leerling['bedrijfNaam'] . "
+			    </td>
+			    <td>
+				" . $leerling['bedrijfPlaats'] . "
+			    </td>
                             <td>
                                 " . $leerling['klas'] . "
                             </td>

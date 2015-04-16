@@ -29,10 +29,12 @@ class Leraren_Model extends Model{
     }
 
     public function getKlasLeerlingen($klas){
-	$sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer"
+	$sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer, pokaanvraag.bedrijfNaam, pokaanvraag.bedrijfPlaats"
 		. " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
-		. " WHERE studenten.klas = '" . $klas . "' ORDER BY pokaanvraag.id DESC");
-	$sth->execute();
+		. " WHERE studenten.klas = :klas ORDER BY studenten.achternaam ASC");
+	$sth->execute(array(
+	    ':klas' => $klas
+	));
 	return $sth->fetchall();
     }
 

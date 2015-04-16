@@ -156,7 +156,9 @@ float: right;
     text-align: center;
     
 }
-
+#leerlingTable{
+    text-align: left;
+}
 #table {
     margin-top: 10px;
     color: black;
