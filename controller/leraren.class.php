@@ -52,7 +52,8 @@ class Leraren extends Controller{
 
     function showStudent($leerlingNummer){
 	$student = $this->model->getStudent($leerlingNummer);
-
+	$afspraken = $this->model->afspraken($leerlingNummer);
+	
 	$locations = "[";
 	foreach($student as $mapsLocation){
 	    $locations .= "'" . $mapsLocation['bedrijfPostcode'] . "'" . ", ";
@@ -64,7 +65,8 @@ class Leraren extends Controller{
 	    $names .= "'" . $name['voornaam'] . " " . $name['achternaam'] . "'" . ", ";
 	}
 	$names = substr($names, 0, strlen($names) - 2) . "]";
-
+	
+	$this->view->afspraken = $afspraken;
 	$this->view->names = $names;
 	$this->view->locations = $locations;
 	$this->view->student = $student;
@@ -74,7 +76,7 @@ class Leraren extends Controller{
 
     function editPok($leerlingNummer){
 	$student = $this->model->getStudent($leerlingNummer);
-
+	
 	$locations = "[";
 	foreach($student as $mapsLocation){
 	    $locations .= "'" . $mapsLocation['bedrijfPostcode'] . "'" . ", ";
@@ -86,7 +88,7 @@ class Leraren extends Controller{
 	    $names .= "'" . $name['voornaam'] . " " . $name['achternaam'] . "'" . ", ";
 	}
 	$names = substr($names, 0, strlen($names) - 2) . "]";
-
+	
 	$this->view->names = $names;
 	$this->view->locations = $locations;
 	$this->view->student = $student;

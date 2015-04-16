@@ -115,5 +115,18 @@ class Leraren_Model extends Model{
 	));
 	header("location: " . URL . "leraren");
     }
+    
+    public function afspraken($leerlingNummer){
+	$sth = $this->dbh->prepare("SELECT * FROM calender WHERE leerlingnummer = :leerlingnummer");
+	$sth->execute(array(
+	    ':leerlingnummer' => $leerlingNummer
+	));
+	
+	$aantalAfspraken = $sth->rowCount();
+	$afsprakenData = $sth->fetchall();
+	$afspraken = array();
+	array_push($afspraken, $aantalAfspraken, $afsprakenData);
+	return $afspraken;
+    }
 
 }
