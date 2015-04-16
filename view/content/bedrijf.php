@@ -36,9 +36,9 @@
 	    echo
 		"<div class='bedrijf-comments-test'>
 		    <form class='form2' action='".URL."bedrijf/postComment' method='post'>
+		    <input type='hidden' name='leerlingnummer' value=" . $_SESSION['user_id'] . ">
 			<input type='hidden' name='bedrijf_id' value=".$this->bedrijfId." />
 			<input type='hidden' name='rating' id='ratingInput' value='' />
-			Naam:<input type='text' class='form-control1' name='leerlingnummer'>
 			Rating:<span class='rating'>
 			<input type='radio' class='rating-input'
 			   id='rating-input-5' name='rating-input-1'>

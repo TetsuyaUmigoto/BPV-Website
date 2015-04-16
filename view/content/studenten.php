@@ -83,6 +83,16 @@
 		    echo $afspraak['afspraak'];
 		}
 	    ?>
+	    
+	    <h4>
+			Commentaren:
+	    </h4>
+	    <?php 
+			foreach($this->studentInfo as $comment){
+				echo 'Rating: ' . $comment['rating'] . 
+				'<br />' . $comment['comment'] . '<br /><br />';
+			}
+		?>
     </div>
     <div id="pokAanvragen">
         <div id="pok1">
