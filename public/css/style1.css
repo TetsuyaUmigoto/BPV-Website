@@ -354,6 +354,8 @@ bedrijfInform {
 	background-color: #f3f3f3;
 	border-radius: 9px;
 }
+/*er moet nog javascript bij als je de kleur wilt veranderen als je verder bent met de aanvraag.
+de kleur is gwn een gradient effect die je kan aanpassen met 0%=bovenste helft en %100=onderste helft. */
 .html5-progress-bar progress::-webkit-progress-value {
 	background: #cdeb8e;
 	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
