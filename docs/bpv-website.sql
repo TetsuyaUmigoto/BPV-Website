@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Genereertijd: 08 apr 2015 om 11:31
+-- Genereertijd: 18 mei 2015 om 11:53
 -- Serverversie: 5.6.14
 -- PHP-versie: 5.5.6
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `bedrijven` (
   `Praktijkbegeleider` varchar(30) NOT NULL,
   `Praktijkbegeleider_telefoon` int(10) NOT NULL,
   PRIMARY KEY (`bedrijf_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `bedrijven`
@@ -75,7 +75,10 @@ INSERT INTO `bedrijven` (`bedrijf_id`, `ref_nummer`, `soort`, `bedrijf_naam`, `A
 (27, 9805254, 0, '8internet', 'Schweitzerstraat 31 ', '7909 AV', 'HOOGEVEEN', 528, ' http://8internet.nl/ ', 528, ' info@8internet.nlÂ ', 'Dhr. R.C. (Ramon) Mol ', 528),
 (28, 9725415, 0, 'A-Vision', 'IJzerweg 53 ', '7335 DH', 'APELDOORN', 55, ' http://www.a-vision.nu ', 55, ' mvankleef@a-vision.nuÂ ', 'Mw. H. (Hermien) Lubbers-Jurri', 55),
 (29, 9814859, 0, '2 Monkeys', 'Laboratoriumplein 43 ', '7411 CH', 'DEVENTER', 6, '  ', 0, '', '', 0),
-(30, 9504620, 0, 'Aannemingsmaatschappij va', 'J.P. Broekhovenstraat 36 ', '8081 HC', 'ELBURG', 525, ' http://www.gelder.com ', 0, ' m.dejonghe@gelder.comÂ ', 'Mw. J. (Jelly) Oost ', 0);
+(30, 9504620, 0, 'Aannemingsmaatschappij va', 'J.P. Broekhovenstraat 36 ', '8081 HC', 'ELBURG', 525, ' http://www.gelder.com ', 0, ' m.dejonghe@gelder.comÂ ', 'Mw. J. (Jelly) Oost ', 0),
+(31, 9812355, 0, '!CL Web', 'Winthontlaan 200 ', '3526 KV', 'UTRECHT', 2147483647, '  ', 2147483647, ' info@clweb.nlÂ ', 'Dhr. C. (Cyril) Loosjes ', 2147483647),
+(32, 9812355, 0, '!CL Web', 'Winthontlaan 200 ', '3526 KV', 'UTRECHT', 2147483647, '  ', 2147483647, ' info@clweb.nlÂ ', 'Dhr. C. (Cyril) Loosjes ', 2147483647),
+(33, 9812355, 0, '!CL Web', 'Winthontlaan 200 ', '3526 KV', 'UTRECHT', 2147483647, '  ', 2147483647, ' info@clweb.nlÂ ', 'Dhr. C. (Cyril) Loosjes ', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -90,7 +93,18 @@ CREATE TABLE IF NOT EXISTS `calender` (
   `leerlingnummer` int(11) NOT NULL,
   `leraren_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `calender`
+--
+
+INSERT INTO `calender` (`id`, `timestamp`, `afspraak`, `leerlingnummer`, `leraren_id`) VALUES
+(2, '2015-09-11 22:00:00', 'test', 1, 1),
+(3, '0000-00-00 00:00:00', 'test', 9, 1),
+(4, '0000-00-00 00:00:00', 'test', 9, 1),
+(5, '0000-00-00 00:00:00', '1', 9, 1),
+(6, '0000-00-00 00:00:00', 'anus', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -105,22 +119,16 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment` varchar(500) NOT NULL,
   `rating` int(1) NOT NULL,
   PRIMARY KEY (`comment_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `comments`
 --
 
 INSERT INTO `comments` (`comment_id`, `bedrijf_id`, `leerlingnummer`, `comment`, `rating`) VALUES
-(1, 1, 124523, 'asdfgh', 0),
-(2, 0, 123456, 'asdfghgfdsa', 0),
-(3, 1, 321, 'testtser', 0),
-(4, 1, 1234, 'testttredfgfdfgfrgbfgfr', 0),
-(5, 1, 123456789, 'ratingtest', 0),
-(6, 1, 2345432, 'extratest', 2),
-(7, 0, 0, '', 4),
-(8, 0, 0, '', 4),
-(9, 4, 1, 'ass', 5);
+(10, 26, 1, 'test', 2),
+(11, 26, 2, 'test2', 5),
+(12, 21, 1, 'test', 3);
 
 -- --------------------------------------------------------
 
@@ -142,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `leraren` (
 --
 
 INSERT INTO `leraren` (`id`, `leraar_voornaam`, `leraar_achternaam`, `wachtwoord`, `leraar_email`) VALUES
-(1, 'Jezus', 'Christus van Nazareth', '098f6bcd4621d373cade4e832627b4f6', '');
+(1, 'Paul', 'Woerlee', '098f6bcd4621d373cade4e832627b4f6', '');
 
 -- --------------------------------------------------------
 
@@ -172,32 +180,32 @@ CREATE TABLE IF NOT EXISTS `pokaanvraag` (
   `studentCreboNummerOpleiding` varchar(20) NOT NULL,
   `studentRichting` varchar(50) NOT NULL,
   `studentInleverdatum` varchar(50) NOT NULL,
-  `bpvCoordinator` varchar(50) NOT NULL,
-  `bpvBegeleider` varchar(50) NOT NULL,
+  `onderwijsBegeleider` varchar(50) NOT NULL,
+  `vertegenwoordigerLandstede` varchar(50) NOT NULL,
   `bpvPeriodeBegin` int(11) NOT NULL,
   `bpvPeriodeEind` int(11) NOT NULL,
   `bpvSbu` int(11) NOT NULL,
-  `bpvBrin` varchar(20) NOT NULL,
-  `bpvCrebo` varchar(20) NOT NULL,
-  `bpvOpmerking` varchar(500) NOT NULL,
+  `werkprocessen` varchar(240) NOT NULL,
+  `begeleidingTeam` varchar(240) NOT NULL,
+  `begeleidingBedrijf` varchar(240) NOT NULL,
   `pokStatus` int(2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `pokaanvraag`
 --
 
-INSERT INTO `pokaanvraag` (`id`, `leerlingnummer`, `bedrijfNaam`, `bedrijfAdres`, `bedrijfPostcode`, `bedrijfPlaats`, `bedrijfTelefoon`, `bedrijfWebsite`, `bedrijfContactPersoon`, `bedrijfContactPersoonTelefoon`, `bedrijfContactPersoonEmail`, `bedrijfPraktijkBegeleider`, `bedrijfPraktijkBegeleiderTelefoon`, `bedrijfKennisCentrum`, `bedrijfCode`, `studentNaam`, `studentKlas`, `studentOpleiding`, `studentCreboNummerOpleiding`, `studentRichting`, `studentInleverdatum`, `bpvCoordinator`, `bpvBegeleider`, `bpvPeriodeBegin`, `bpvPeriodeEind`, `bpvSbu`, `bpvBrin`, `bpvCrebo`, `bpvOpmerking`, `pokStatus`) VALUES
-(33, 2, '12Build', 'Nijverdalseweg 143 ', '7461 AG', 'RIJSSEN', '548', ' http://www.12build.com ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', ' r.vanbloem@12build.comÂ ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', '', '', 'Jonas Muilwijk', 'IT13A', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
-(34, 5, '12Tune International B.V.', 'Jagerserf 5 A ', '3851 SM', 'ERMELO', '341', ' http://www.12tune.com ', 'Dhr. E. (Egbert) van den End ', '0', '+31 (0)341-550119 ext 201Â ', 'Dhr. R.D.C. (Richard) Fruitman ', '31', '', '', 'Lubbert Kramer', '1337', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
-(36, 22, '2Complex B.V.', 'K J Blokstraat 49 ', '8384 EV', 'WILHELMINAOORD', '521', '  ', 'Dhr. C. Hilbrink ', '521', ' cor@hilbrink.nlÂ ', 'Dhr. C. Hilbrink ', '521', '', '', 'kaas test', '321', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
-(37, 33, '2G BV', 'Essenkamp 2 ', '3888 LL', 'UDDEL', '577', ' http://www.2g.it.nl ', 'Dhr. J.C. (Joost) Geuze ', '577', ' jcgeuze@2g-it.nlÂ ', 'Dhr. J.C. (Joost) Geuze ', '577', '', '', 'kees gup', '1', '', '', '', '', '', '', 1423695600, 1431640800, 0, '', '', '', 3),
-(38, 44, '4ITpoint', 'Dokter van Deenweg 13 ', '8025 BP', 'ZWOLLE', '38', ' http://www.4itpoint.nl ', 'Dhr. E. (Eric) Eller ', '38', ' eeller@4itpoint.nlÂ ', 'Dhr. E. (Eric) Eller ', '38', '', '', 'gup kees', '1', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
-(39, 55, '8internet', 'Schweitzerstraat 31 ', '7909 AV', 'HOOGEVEEN', '528', ' http://8internet.nl/ ', 'Dhr. R.C. (Ramon) Mol ', '528', ' info@8internet.nlÂ ', 'Dhr. R.C. (Ramon) Mol ', '528', '', '', 'kop tulp', '1', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
-(40, 66, 'A-Vision', 'IJzerweg 53 ', '7335 DH', 'APELDOORN', '55', ' http://www.a-vision.nu ', 'Mw. M. (Marjan) van Kleef ', '55', ' mvankleef@a-vision.nuÂ ', 'Mw. H. (Hermien) Lubbers-Jurrien ', '55', '', '', 'tulp kop', '1', '', '', '', '', '', '', 1423695600, 1431640800, 0, '', '', '', 3),
-(41, 11, '2 Monkeys', 'Laboratoriumplein 43 ', '7411 CH', 'DEVENTER', '6', '  ', '', '0', '', '', '0', '', '', 'test kaas', '123', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
-(42, 1, 'Aannemingsmaatschappij van Gelder B.V.', 'J.P. Broekhovenstraat 36 ', '8081 HC', 'ELBURG', '0525-659888', ' http://www.gelder.com ', 'Mw. M. (Mariet) de Jonghe ', 'Â ', ' m.dejonghe@gelder.comÂ ', 'Mw. J. (Jelly) Oost ', 'Â ', '', '', 'jonas ', 'IT13A', '', '', '', '', '', '', 1423695600, 1431640800, 0, '', '', '', 3);
+INSERT INTO `pokaanvraag` (`id`, `leerlingnummer`, `bedrijfNaam`, `bedrijfAdres`, `bedrijfPostcode`, `bedrijfPlaats`, `bedrijfTelefoon`, `bedrijfWebsite`, `bedrijfContactPersoon`, `bedrijfContactPersoonTelefoon`, `bedrijfContactPersoonEmail`, `bedrijfPraktijkBegeleider`, `bedrijfPraktijkBegeleiderTelefoon`, `bedrijfKennisCentrum`, `bedrijfCode`, `studentNaam`, `studentKlas`, `studentOpleiding`, `studentCreboNummerOpleiding`, `studentRichting`, `studentInleverdatum`, `onderwijsBegeleider`, `vertegenwoordigerLandstede`, `bpvPeriodeBegin`, `bpvPeriodeEind`, `bpvSbu`, `werkprocessen`, `begeleidingTeam`, `begeleidingBedrijf`, `pokStatus`) VALUES
+(33, 6, '12Build', 'Nijverdalseweg 143 ', '7461 AG', 'RIJSSEN', '548', ' http://www.12build.com ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', ' r.vanbloem@12build.comÂ ', 'Dhr. R.G.J. (Robert) van Bloem ', '548', '', '', 'Jonas Muilwijk', 'IT13A', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(36, 4, '2Complex B.V.', 'K J Blokstraat 49 ', '8384 EV', 'WILHELMINAOORD', '521', '  ', 'Dhr. C. Hilbrink ', '521', ' cor@hilbrink.nlÂ ', 'Dhr. C. Hilbrink ', '521', '', '', 'kaas test', '321', '', '', '', '', '', '', 0, 0, 0, '', '', '', 1),
+(37, 8, '2G BV', 'Essenkamp 2 ', '3888 LL', 'UDDEL', '577', ' http://www.2g.it.nl ', 'Dhr. J.C. (Joost) Geuze ', '577', ' jcgeuze@2g-it.nlÂ ', 'Dhr. J.C. (Joost) Geuze ', '577', '', '', 'kees gup', '1', '', '', '', '', '', '', 1423695600, 1531640800, 0, '', '', '', 3),
+(38, 3, '4ITpoint', 'Dokter van Deenweg 13 ', '8025 BP', 'ZWOLLE', '38', ' http://www.4itpoint.nl ', 'Dhr. E. (Eric) Eller ', '38', ' eeller@4itpoint.nlÂ ', 'Dhr. E. (Eric) Eller ', '38', '', '', 'Lubbert Kramer', 'IT13A', '', '', '', '', 'test', 'test', 0, 0, 0, 'test', 'test', 'test', 0),
+(39, 5, '8internet', 'Schweitzerstraat 31 ', '7909 AV', 'HOOGEVEEN', '528', ' http://8internet.nl/ ', 'Dhr. R.C. (Ramon) Mol ', '528', ' info@8internet.nlÂ ', 'Dhr. R.C. (Ramon) Mol ', '528', '', '', 'kop tulp', '1', '', '', '', '', '', '', 0, 0, 0, '', '', '', 0),
+(40, 7, 'A-Vision', 'IJzerweg 53 ', '7335 DH', 'APELDOORN', '55', ' http://www.a-vision.nu ', 'Mw. M. (Marjan) van Kleef ', '55', ' mvankleef@a-vision.nuÂ ', 'Mw. H. (Hermien) Lubbers-Jurrien ', '55', '', '', 'tulp kop', '1', '', '', '', '', '', '', 1423695600, 1531640800, 0, '', '', '', 3),
+(41, 2, '2 Monkeys', 'Laboratoriumplein 43 ', '7411 CH', 'DEVENTER', '6', '  ', '', '0', '', '', '0', '', '', 'Stefan Koekdeeg', 'IT13A', '', '', '', '', '', '', -3600, -3600, 0, '', '', '', 0),
+(42, 9, 'input bedrijf naam hier', 'J.P. Broekhovenstraat 36 ', '8081 HC', 'ELBURG', '0525-659888', ' http://www.gelder.com ', 'Mw. M. (Mariet) de Jonghe ', 'Â ', ' m.dejonghe@gelder.comÂ ', 'Mw. J. (Jelly) Oost ', 'Â ', '', '', 'Jonas Muilwijk', 'IT13A', '', '', '', '', '', '', 1423695600, 1531640800, 0, '', '', '', 3),
+(43, 1, '!CL Web', 'Winthontlaan 200 ', '3526 KV', 'UTRECHT', '+31308506080', '  ', 'Dhr. C. (Cyril) Loosjes ', '+31308506080Â ', ' info@clweb.nlÂ ', 'Dhr. C. (Cyril) Loosjes ', '+31308506080Â ', '', '', 'Jonas Muilwijk', 'IT13A', '', '', '', '', '', '', 0, 0, 0, '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -223,15 +231,15 @@ CREATE TABLE IF NOT EXISTS `studenten` (
 --
 
 INSERT INTO `studenten` (`leerlingnummer`, `voornaam`, `achternaam`, `wachtwoord`, `email`, `geboortedatum`, `telefoonnummer`, `klas`, `leraar_id`) VALUES
-(1, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', '', '2015-04-08 08:44:56', 0, 'IT13A', 1),
-(2, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', '', '2015-03-18 10:36:55', 0, 'IT13A', 1),
-(5, 'Lubbert', 'Kramer', '098f6bcd4621d373cade4e832627b4f6', 'test@test.test', '2015-04-08 08:45:11', 123, 'IT13A', 1),
-(11, 'test', 'kaas', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:01', 1234, 'IT13A', 1),
-(22, 'kaas', 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:05', 4321, 'IT13A', 1),
-(33, 'kees', 'gup', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:07', 66, 'IT13A', 1),
-(44, 'gup', 'kees', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:09', 55, 'IT13A', 1),
-(55, 'kop', 'tulp', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:12', 99, 'IT13A', 1),
-(66, 'tulp', 'kop', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-01 12:28:15', 77, 'IT13A', 1);
+(1, 'Jonas', 'Muilwijk', '098f6bcd4621d373cade4e832627b4f6', 'test@test.test', '2015-04-10 07:14:17', 632443, 'IT13A', 1),
+(2, 'Stefan', 'Koekdeeg', '098f6bcd4621d373cade4e832627b4f6', 'test@test.test', '2015-04-10 07:14:20', 65436435, 'IT13A', 1),
+(3, 'Lubbert', 'Kramer', '098f6bcd4621d373cade4e832627b4f6', 'test@test.test', '2015-04-10 07:16:12', 123, 'IT13A', 1),
+(4, 'test', 'kaas', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-10 07:16:18', 1234, 'IT13A', 1),
+(5, 'kaas', 'test', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-10 07:16:23', 4321, 'IT13A', 1),
+(6, 'kees', 'gup', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-10 07:16:25', 66, 'IT13A', 1),
+(7, 'gup', 'kees', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-10 07:16:28', 55, 'IT13A', 1),
+(8, 'kop', 'tulp', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-10 07:16:31', 99, 'IT13A', 1),
+(9, 'tulp', 'kop', '098f6bcd4621d373cade4e832627b4f6', 'test@test', '2015-04-10 07:16:34', 77, 'IT13A', 1);
 
 -- --------------------------------------------------------
 

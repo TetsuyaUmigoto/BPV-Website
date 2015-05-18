@@ -61,7 +61,7 @@
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     <input type='hidden' class='form-control' name='leerlingnummer' value='<?php echo $this->student[0]['leerlingnummer'] ?>'>
     <p class="formulier">Afspraak:</p><input type='text' class='form-control' name='afspraak'>
-    <p class="formulier">Tijd:</p><input type='text' class='form-control' name='tijd'>
+    <p class="formulier">Datum:</p><input type='text' class='form-control' name='tijd'>
     <input type='submit' class='btn btn-primary' value='Create!'>
 </form>
 <div id="klassen">
@@ -141,14 +141,17 @@
 	</tr>
     </table>
     <h4>
-		Afspraken (<?php echo $this->afspraken[0] ?>)
+		Afspraken (<?php if(isset($this->afspraken)){echo $this->afspraken[0];}else{echo '0';} ?>)
 	    </h4>
 	    <?php
+	    if(isset($this->afspraken)){
 		foreach($this->afspraken as $afspraak){
 		    for($i = 0; $i < count($afspraak); $i++){
 			echo $afspraak[$i]['afspraak']." ".$afspraak[$i]['timestamp']."<br>";
 		    }
 		}
+	    }else{
+	    }
 	    ?>
 </div>
 <div id="stage">
