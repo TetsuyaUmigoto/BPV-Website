@@ -105,6 +105,7 @@
                         <tbody>
                             <?php
                                 foreach ($this->leerlingen as $leerling) {
+                                    $progress = ($leerling['pokStatus'] * 25) + 25;
                                     echo "
                                     <tr>
                                         <td>
@@ -120,11 +121,11 @@
                                             " . $leerling['klas'] . "
                                         </td>
                                         <td>
-                                                                            <div class='demo-wrapper html5-progress-bar'>
-                                                                                    <div class='progress-bar-wrapper'>
-                                                                                            <progress id='progressbar' value='" . (($leerling['pokStatus'] * 25) + 25) . "' max='100'></progress>
-                                                                                    </div>
-                                                                            </div>
+                                            <div class='demo-wrapper html5-progress-bar'>
+                                                <div class='progress-bar-wrapper'>
+                                                    <progress id='progressbar' class='i" . $progress . "' value='" . $progress . "' max='100'></progress>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>";
                                 }
