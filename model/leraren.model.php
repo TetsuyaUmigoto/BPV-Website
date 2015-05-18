@@ -31,7 +31,7 @@ class Leraren_Model extends Model{
     public function getKlasLeerlingen($klas){
 	$sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer, pokaanvraag.bedrijfNaam, pokaanvraag.bedrijfPlaats"
 		. " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
-		. " WHERE studenten.klas = :klas AND pokaanvraag.bpvPeriodeEind > '" . time() . "' ORDER BY studenten.achternaam ASC");
+		. " WHERE studenten.klas = :klas ORDER BY studenten.achternaam ASC");
 	$sth->execute(array(
 	    ':klas' => $klas
 	));
