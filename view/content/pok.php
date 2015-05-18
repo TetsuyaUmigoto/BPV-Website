@@ -11,8 +11,8 @@ if(isset($this->studentData)){
 }
 if(isset($this->ecabo)){
 	echo
-	"<div class='formpokhead'> <h3>Voer je ecabo nummer in.</h3></div>
-	<div  id='pokform1'>
+	"<div class='formpokhead'><h3>Voer je ecabo nummer in.</h3></div>
+	<div id='pokform1'>
 	    Test nummer: 9812355<br>
 	    <form action='" . URL . "pok/crawl' method='post'>
 		Ecabo relatie nummer: <input id='input-tekst' type='text' name='number'>

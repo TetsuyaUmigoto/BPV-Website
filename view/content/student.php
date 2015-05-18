@@ -183,15 +183,15 @@
 		    <tr><td>Crebonummer Opleiding:</td><td>".$this->student[0]['studentCreboNummerOpleiding']."</td></tr>
 		    <tr><td>BOL/BBL:</td><td>".$this->student[0]['studentRichting']."</td></tr>
 		    <tr><td>Inleverdatum:</td><td>".$this->student[0]['studentInleverdatum']."</td></tr>
-
-		    <tr><td>BPV-Coördinator:</td><td>".$this->student[0]['bpvCoordinator']."</td></tr>
-		    <tr><td>Stagebegeleider Landstede:</td><td>".$this->student[0]['bpvBegeleider']."</td></tr>
+		    <tr><td><b>In te vullen door BPV-coördinator van team/opleiding:</b></td></tr>
+		    <tr><td>Onderwijsbegeleider:</td><td>".$this->student[0]['onderwijsBegeleider']."</td></tr>
+		    <tr><td>Rechtsgeldig vertegenwoordiger Landstede/ teken bevoegd:</td><td>".$this->student[0]['vertegenwoordigerLandstede']."</td></tr>
 		    <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td>".date("Y-m-d", $this->student[0]['bpvPeriodeBegin'])."</td></tr>
 		    <tr><td>BPV-periode-eind (Bijv: yyyy-mm-dd):</td><td>".date("Y-m-d", $this->student[0]['bpvPeriodeEind'])."</td></tr>
 		    <tr><td>Aantal sbu’s:</td><td>".$this->student[0]['bpvSbu']."</td></tr>
-		    <tr><td>Brinnummer:</td><td>".$this->student[0]['bpvBrin']."</td></tr>
-		    <tr><td>Crebonummer:</td><td>".$this->student[0]['bpvCrebo']."</td></tr>
-		    <tr><td>Opmerkingen:</td><td>".$this->student[0]['bpvOpmerking']."</td></tr>
+		    <tr><td>Welke kerntaken/werkprocessen gaan in deze BPV-periode beoordeeld worden:</td><td>".$this->student[0]['werkprocessen']."</td></tr>
+		    <tr><td>Hoe vindt de begeleiding door de team plaats:</td><td>".$this->student[0]['begeleidingTeam']."</td></tr>
+		    <tr><td>Hoe vindt de begeleiding door het bedrijf plaats:</td><td>".$this->student[0]['begeleidingBedrijf']."</td></tr>
                 </table>
                 <a href='" . URL . "leraren/editPok/" . $this->student[0]['leerlingnummer'] . "'>Edit</a>
 		<a href='" . URL . "leraren/pokGoed/" . $this->student[0]['id'] . "'>Klopt</a>";
