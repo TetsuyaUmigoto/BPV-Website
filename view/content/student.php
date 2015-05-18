@@ -1,8 +1,6 @@
-<!--
-<div id="map" style="width: 500px; height: 400px;">
+<div id="map" class='kutmap' style="width: 500px; height: 400px;">
 
 </div>
--->
 <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGBByvGgOTRGqO-ZB1hVoAeVZGjm6UoTM">
 </script>

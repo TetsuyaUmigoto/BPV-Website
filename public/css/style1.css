@@ -191,6 +191,9 @@ float: right;
   color: white;
   height: 56px;
 }
+.kutmap{
+    top: 570px !important;
+}
 #zoek{
     margin-top:50px;
     display: inline-block;
