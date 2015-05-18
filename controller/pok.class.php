@@ -85,16 +85,7 @@ class Pok extends Controller {
     }
     
     function pokAanvraag(){
-	$beginStage = strtotime($_POST['bpvPeriodeBegin']);
-	$eindStage = strtotime($_POST['bpvPeriodeEind']);
-	if($beginStage == '1970-01-01' || $eindStage == '1970-01-01'){
-	    //echo "<script>alert('wrong date format')</script>";
-	    print_r($beginStageDatum);
-	    print_r($beginStage);
-	    //$this->view->render('pok');
-	}else{
 	   $this->model->pokAanvraag(); 
-	}
     }
 
 }
