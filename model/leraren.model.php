@@ -88,9 +88,9 @@ class Leraren_Model extends Model{
                                     bedrijfTelefoon = :bedrijfTelefoon, bedrijfWebsite = :bedrijfWebsite, bedrijfContactPersoon = :bedrijfContactPersoon, bedrijfContactPersoonTelefoon = :bedrijfContactPersoonTelefoon,
                                     bedrijfContactPersoonEmail = :bedrijfContactPersoonEmail, bedrijfPraktijkBegeleider = :bedrijfPraktijkBegeleider, bedrijfPraktijkBegeleiderTelefoon = :bedrijfPraktijkBegeleiderTelefoon,
                                     bedrijfKennisCentrum = :bedrijfKennisCentrum, bedrijfCode = :bedrijfCode, studentNaam = :studentNaam, studentKlas = :studentKlas, studentOpleiding = :studentOpleiding,
-                                    studentCreboNummerOpleiding = :studentCreboNummerOpleiding, studentRichting = :studentRichting, studentInleverdatum = :studentInleverdatum, bpvCoordinator = :bpvCoordinator,
-                                    bpvBegeleider = :bpvBegeleider, bpvPeriodeBegin = :bpvPeriodeBegin, bpvPeriodeEind = :bpvPeriodeEind, bpvSbu = :bpvSbu, bpvBrin = :bpvBrin, bpvCrebo = :bpvCrebo,
-                                    bpvOpmerking = :bpvOpmerking WHERE leerlingnummer = :leerlingnummer ORDER BY id DESC LIMIT 1");
+                                    studentCreboNummerOpleiding = :studentCreboNummerOpleiding, studentRichting = :studentRichting, studentInleverdatum = :studentInleverdatum, onderwijsBegeleider = :onderwijsBegeleider,
+                                    vertegenwoordigerLandstede = :vertegenwoordigerLandstede, bpvPeriodeBegin = :bpvPeriodeBegin, bpvPeriodeEind = :bpvPeriodeEind, bpvSbu = :bpvSbu, werkprocessen = :werkprocessen, begeleidingTeam = :begeleidingTeam,
+                                    begeleidingBedrijf = :begeleidingBedrijf WHERE leerlingnummer = :leerlingnummer ORDER BY id DESC LIMIT 1");
         $sth->execute(array(
             ':leerlingnummer' => $_POST['studentNummer'], ':bedrijfNaam' => $_POST['bedrijfNaam'],
             ':bedrijfAdres' => $_POST['bedrijfAdres'], ':bedrijfPostcode' => $_POST['bedrijfPostcode'],
@@ -102,10 +102,10 @@ class Leraren_Model extends Model{
             ':studentNaam' => $_POST['studentNaam'], ':studentKlas' => $_POST['studentKlas'],
             ':studentOpleiding' => $_POST['studentOpleiding'], ':studentCreboNummerOpleiding' => $_POST['studentCrebonummerOpleiding'],
             ':studentRichting' => $_POST['studentRichting'], ':studentInleverdatum' => $_POST['studentInleverdatum'],
-            ':bpvCoordinator' => $_POST['bpvCoordinator'], ':bpvBegeleider' => $_POST['bpvBegeleider'],
+            ':vertegenwoordigerLandstede' => $_POST['vertegenwoordigerLandstede'], ':onderwijsBegeleider' => $_POST['onderwijsBegeleider'],
             ':bpvPeriodeBegin' => $beginStage, ':bpvPeriodeEind' => $eindStage,
-            ':bpvBrin' => $_POST['bpvBrin'], ':bpvCrebo' => $_POST['bpvCrebo'],
-            ':bpvSbu' => $_POST['bpvSbu'], ':bpvOpmerking' => $_POST['bpvOpmerking']
+            ':werkprocessen' => $_POST['werkprocessen'], ':begeleidingTeam' => $_POST['begeleidingTeam'],
+            ':bpvSbu' => $_POST['bpvSbu'], ':begeleidingBedrijf' => $_POST['begeleidingBedrijf']
         ));
         header("location: " . URL . "leraren");
     }
