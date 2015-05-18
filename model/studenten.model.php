@@ -16,7 +16,8 @@ class Studenten_Model extends Model{
     }
 
     public function getPokInfo($id){
-	$sth = $this->dbh->prepare('SELECT * FROM pokaanvraag WHERE leerlingnummer = "' . $id . '" AND pokstatus != "4" ORDER BY id DESC LIMIT 1');
+        echo time();
+	$sth = $this->dbh->prepare('SELECT * FROM pokaanvraag WHERE leerlingnummer = "' . $id . '" AND pokstatus != "4" AND bpvPeriodeEind > "' . time() . '" ORDER BY id DESC LIMIT 1');
 	$sth->execute();
 	return $sth->fetchall();
     }
