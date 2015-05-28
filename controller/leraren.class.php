@@ -72,7 +72,7 @@ class Leraren extends Controller{
 
     function editPok($leerlingNummer){
 	$student = $this->model->getStudent($leerlingNummer);
-	
+	$lastPok = $this->model->getLastPok();
 	$locations = "[";
 	foreach($student as $mapsLocation){
 	    $locations .= "'" . $mapsLocation['bedrijfPostcode'] . "'" . ", ";
@@ -85,6 +85,7 @@ class Leraren extends Controller{
 	}
 	$names = substr($names, 0, strlen($names) - 2) . "]";
 	
+        $this->view->lastPok = $lastPok;
 	$this->view->names = $names;
 	$this->view->locations = $locations;
 	$this->view->student = $student;

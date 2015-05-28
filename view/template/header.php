@@ -47,9 +47,6 @@
 				    <option value='1'>
 					Leraar
 				    </option>
-				    <option value='2'>
-					Bedrijf
-				    </option>
 				</select><br>
 				<input type='password' name='password'>
 				<input id='login' type='submit' value='Login' />

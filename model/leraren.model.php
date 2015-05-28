@@ -28,6 +28,12 @@ class Leraren_Model extends Model{
 	return $sth->fetchall();
     }
 
+    public function getLastPok(){
+        $sth = $this->dbh->prepare("SELECT * FROM pokaanvraag ORDER BY id DESC LIMIT 1");
+	$sth->execute();
+	return $sth->fetchall();
+    }
+    
     public function getKlasLeerlingen($klas){
 	$sth = $this->dbh->prepare("SELECT studenten.*, pokaanvraag.id, pokaanvraag.pokStatus, pokaanvraag.leerlingnummer, pokaanvraag.bedrijfNaam, pokaanvraag.bedrijfPlaats"
 		. " FROM studenten LEFT OUTER JOIN pokaanvraag ON studenten.leerlingnummer = pokaanvraag.leerlingnummer"
