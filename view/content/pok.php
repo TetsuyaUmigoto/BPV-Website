@@ -11,8 +11,8 @@ if(isset($this->studentData)){
 }
 if(isset($this->ecabo)){
 	echo
-	"<div class='formpokhead'> <h3>Voer je ecabo nummer in.</h3></div>
-	<div  id='pokform1'>
+	"<div class='formpokhead'><h3>Voer je ecabo nummer in.</h3></div>
+	<div id='pokform1'>
 	    Test nummer: 9812355<br>
 	    <form action='" . URL . "pok/crawl' method='post'>
 		Ecabo relatie nummer: <input id='input-tekst' type='text' name='number'>
@@ -84,15 +84,6 @@ if(isset($this->ecabo)){
 		    <tr><td>Crebonummer Opleiding:</td><td><input class='form-control' type='text' name='studentCrebonummerOpleiding'></td></tr>
 		    <tr><td>BOL/BBL:</td><td><input class='form-control' type='text' name='studentRichting'></td></tr>
 		    <tr><td>Inleverdatum:</td><td><input class='form-control' type='text' name='studentInleverdatum'></td></tr>
-
-		    <tr><td>BPV-Coördinator:</td><td><input class='form-control' type='text' name='bpvCoordinator'></td></tr>
-		    <tr><td>Stagebegeleider Landstede:</td><td><input class='form-control' type='text' name='bpvBegeleider'></td></tr>
-		    <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='date' name='bpvPeriodeBegin'></td></tr>
-		    <tr><td>BPV-periode-eind (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='date' name='bpvPeriodeEind'></td></tr>
-		    <tr><td>Aantal sbu’s:</td><td><input class='form-control' type='text' name='bpvSbu'></td></tr>
-		    <tr><td>Brinnummer:</td><td><input class='form-control' type='text' name='bpvBrin'></td></tr>
-		    <tr><td>Crebonummer:</td><td><input class='form-control' type='text' name='bpvCrebo'></td></tr>
-		    <tr><td>Opmerkingen:</td><td><input class='form-control' type='text' name='bpvOpmerking'></td></tr>
 		    <input type='hidden' name='nummer' value='".$_POST['number']."'>
 		    <input type='hidden' name='soort' value='0'>
                     <tr><td><input class='form-control' type='submit' name='pokAanvraag' value='Pok Aanvraag'></td></tr>

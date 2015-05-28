@@ -1,8 +1,6 @@
-<!--
-<div id="map" style="width: 500px; height: 400px;">
+<div id="map" class='kutmap' style="width: 500px; height: 400px;">
 
 </div>
--->
 <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGBByvGgOTRGqO-ZB1hVoAeVZGjm6UoTM">
 </script>
@@ -63,7 +61,7 @@
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     <input type='hidden' class='form-control' name='leerlingnummer' value='<?php echo $this->student[0]['leerlingnummer'] ?>'>
     <p class="formulier">Afspraak:</p><input type='text' class='form-control' name='afspraak'>
-    <p class="formulier">Tijd:</p><input type='text' class='form-control' name='tijd'>
+    <p class="formulier">Datum:</p><input type='text' class='form-control' name='tijd'>
     <input type='submit' class='btn btn-primary' value='Create!'>
 </form>
 <div id="klassen">
@@ -143,14 +141,17 @@
 	</tr>
     </table>
     <h4>
-		Afspraken (<?php echo $this->afspraken[0] ?>)
+		Afspraken (<?php if(isset($this->afspraken)){echo $this->afspraken[0];}else{echo '0';} ?>)
 	    </h4>
 	    <?php
+	    if(isset($this->afspraken)){
 		foreach($this->afspraken as $afspraak){
 		    for($i = 0; $i < count($afspraak); $i++){
 			echo $afspraak[$i]['afspraak']." ".$afspraak[$i]['timestamp']."<br>";
 		    }
 		}
+	    }else{
+	    }
 	    ?>
 </div>
 <div id="stage">
@@ -185,15 +186,15 @@
 		    <tr><td>Crebonummer Opleiding:</td><td>".$this->student[0]['studentCreboNummerOpleiding']."</td></tr>
 		    <tr><td>BOL/BBL:</td><td>".$this->student[0]['studentRichting']."</td></tr>
 		    <tr><td>Inleverdatum:</td><td>".$this->student[0]['studentInleverdatum']."</td></tr>
-
-		    <tr><td>BPV-Coördinator:</td><td>".$this->student[0]['bpvCoordinator']."</td></tr>
-		    <tr><td>Stagebegeleider Landstede:</td><td>".$this->student[0]['bpvBegeleider']."</td></tr>
+		    <tr><td><b>In te vullen door BPV-coördinator van team/opleiding:</b></td></tr>
+		    <tr><td>Onderwijsbegeleider:</td><td>".$this->student[0]['onderwijsBegeleider']."</td></tr>
+		    <tr><td>Rechtsgeldig vertegenwoordiger Landstede/ teken bevoegd:</td><td>".$this->student[0]['vertegenwoordigerLandstede']."</td></tr>
 		    <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td>".date("Y-m-d", $this->student[0]['bpvPeriodeBegin'])."</td></tr>
 		    <tr><td>BPV-periode-eind (Bijv: yyyy-mm-dd):</td><td>".date("Y-m-d", $this->student[0]['bpvPeriodeEind'])."</td></tr>
 		    <tr><td>Aantal sbu’s:</td><td>".$this->student[0]['bpvSbu']."</td></tr>
-		    <tr><td>Brinnummer:</td><td>".$this->student[0]['bpvBrin']."</td></tr>
-		    <tr><td>Crebonummer:</td><td>".$this->student[0]['bpvCrebo']."</td></tr>
-		    <tr><td>Opmerkingen:</td><td>".$this->student[0]['bpvOpmerking']."</td></tr>
+		    <tr><td>Welke kerntaken/werkprocessen gaan in deze BPV-periode beoordeeld worden:</td><td>".$this->student[0]['werkprocessen']."</td></tr>
+		    <tr><td>Hoe vindt de begeleiding door de team plaats:</td><td>".$this->student[0]['begeleidingTeam']."</td></tr>
+		    <tr><td>Hoe vindt de begeleiding door het bedrijf plaats:</td><td>".$this->student[0]['begeleidingBedrijf']."</td></tr>
                 </table>
                 <a href='" . URL . "leraren/editPok/" . $this->student[0]['leerlingnummer'] . "'>Edit</a>
 		<a href='" . URL . "leraren/pokGoed/" . $this->student[0]['id'] . "'>Klopt</a>";
@@ -223,16 +224,15 @@
                         <tr><td>Crebonummer Opleiding:</td><td><input class='form-control' type='text' name='studentCrebonummerOpleiding' value='".$this->student[0]['studentCreboNummerOpleiding']."'</td></tr>
                         <tr><td>BOL/BBL:</td><td><input class='form-control' type='text' name='studentRichting' value='".$this->student[0]['studentRichting']."'</td></tr>
                         <tr><td>Inleverdatum:</td><td><input class='form-control' type='text' name='studentInleverdatum' value='".$this->student[0]['studentInleverdatum']."'</td></tr>
-
-                        <tr><td>BPV-Coördinator:</td><td><input class='form-control' type='text' name='bpvCoordinator' value='".$this->student[0]['bpvCoordinator']."'</td></tr>
-                        <tr><td>Stagebegeleider Landstede:</td><td><input class='form-control' type='text' name='bpvBegeleider' value='".$this->student[0]['bpvBegeleider']."'</td></tr>
-                        <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='text' name='bpvPeriodeBegin' value='".date("Y-m-d", $this->student[0]['bpvPeriodeBegin'])."'</td></tr>
-                        <tr><td>BPV-periode-eind (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='text' name='bpvPeriodeEind' value='".date("Y-m-d", $this->student[0]['bpvPeriodeEind'])."'</td></tr>
-                        <tr><td>Aantal sbu’s:</td><td><input class='form-control' type='text' name='bpvSbu' value='".$this->student[0]['bpvSbu']."'</td></tr>
-                        <tr><td>Brinnummer:</td><td><input class='form-control' type='text' name='bpvBrin' value='".$this->student[0]['bpvBrin']."'</td></tr>
-                        <tr><td>Crebonummer:</td><td><input class='form-control' type='text' name='bpvCrebo' value='".$this->student[0]['bpvCrebo']."'</td></tr>
-                        <tr><td>Opmerkingen:</td><td><input class='form-control' type='text' name='bpvOpmerking' value='".$this->student[0]['bpvOpmerking']."'</td></tr>
-                        <input type='hidden' name=''>
+			<tr><td><b>In te vullen door BPV-coördinator van team/opleiding:</b></td></tr>
+                        <tr><td>Onderwijsbegeleider:</td><td><input class='form-control' type='text' name='onderwijsBegeleider'</td></tr>
+                        <tr><td>Rechtsgeldig vertegenwoordiger Landstede/ teken bevoegd:</td><td><input class='form-control' type='text' name='vertegenwoordigerLandstede'</td></tr>
+                        <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='text' name='bpvPeriodeBegin'</td></tr>
+                        <tr><td>BPV-periode-eind (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='text' name='bpvPeriodeEind'</td></tr>
+                        <tr><td>Aantal sbu’s:</td><td><input class='form-control' type='text' name='bpvSbu'</td></tr>
+                        <tr><td>Welke kerntaken/werkprocessen gaan in deze BPV-periode beoordeeld worden:</td><td><input class='form-control' type='text' name='werkprocessen'</td></tr>
+                        <tr><td>Hoe vindt de begeleiding door de team plaats:</td><td><input class='form-control' type='text' name='begeleidingTeam'</td></tr>
+                        <tr><td>Hoe vindt de begeleiding door het bedrijf plaats:</td><td><input class='form-control' type='text' name='begeleidingBedrijf'</td></tr>
                         <tr><td><input class='form-control' type='submit' value='Opslaan'></td></tr>
                     </form>
                 </table>";

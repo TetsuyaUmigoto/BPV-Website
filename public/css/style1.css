@@ -191,6 +191,9 @@ float: right;
   color: white;
   height: 56px;
 }
+.kutmap{
+    top: 570px !important;
+}
 #zoek{
     margin-top:50px;
     display: inline-block;
@@ -357,25 +360,9 @@ bedrijfInform {
 /*er moet nog javascript bij als je de kleur wilt veranderen als je verder bent met de aanvraag.
 de kleur is gwn een gradient effect die je kan aanpassen met 0%=bovenste helft en %100=onderste helft. */
 .html5-progress-bar progress::-webkit-progress-value {
-	background: #cdeb8e;
-	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
-	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
 	border-radius: 9px;
 }
 .html5-progress-bar progress::-moz-progress-bar {
-	background: #cdeb8e;
-	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
-	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
 	border-radius: 9px;
 }
 .html5-progress-bar .progress-value {
@@ -393,3 +380,30 @@ de kleur is gwn een gradient effect die je kan aanpassen met 0%=bovenste helft e
 }
 
 #map-canvas { height: 100%; margin: 0; padding: 0;}
+
+    progress.i25::-moz-progress-bar {
+        background-color: red; 
+    }
+    progress.i25::-webkit-progress-value {
+	background: red;
+    }
+    progress.i50::-moz-progress-bar {
+        background-color: orange; 
+    }
+    progress.i50::-webkit-progress-value {
+	background: orange;
+    }
+    progress.i75::-moz-progress-bar {
+        background-color: orange; 
+    }
+    progress.i75::-webkit-progress-value {
+	background: orange;
+    }
+    progress.i100::-moz-progress-bar {
+        background-color: #cdeb8e; 
+    }
+    progress.i100::-webkit-progress-value {
+	background: #cdeb8e;
+    }
+    
+    //#cdeb8e
