@@ -97,6 +97,7 @@ tr{
 /* leraren pagina */
 
 #klassen{
+  display: inline-block;
   margin: 10px 5% 5px 5%;
   background-color: white;
   color: black;
@@ -105,10 +106,10 @@ tr{
   float: left;
 }
 #map {
-    position: absolute;
-    top: 350px;
-    left: 5%;
-    margin-bottom: 25px;
+    display: inline-block;
+    position: relative;
+    margin-left: 67px;
+    margin-top: -380px;
 }
 
 #maps1{
@@ -342,7 +343,7 @@ bedrijfInform {
 }
 /* progress bar */
 .demo-wrapper {
-	width: 250px;
+	width: 100px;
 	margin: 30px auto 0;
 }
 
