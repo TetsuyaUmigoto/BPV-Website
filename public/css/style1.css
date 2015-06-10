@@ -106,7 +106,7 @@ tr{
 }
 #map {
     position: relative;
-    margin-left: 67px;
+    margin-left: 25px;
 }
 .map-wrap {
     position: relative;
@@ -303,9 +303,9 @@ bedrijfInform {
 }
 #gegevens{
     width: 48%;
-    height: 400px;
     display: inline-block;
     background-color: white;
+    overflow: auto;
 }
 #link{
     background-color: hotpink;
