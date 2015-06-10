@@ -107,7 +107,7 @@
             <input type='submit' class='btn btn-primary' value='Create!'>
         </form>
     </div>
-    <div id="studentMap" class='kutmap' style="width: 500px; height: 400px;">
+    <div id="studentMap" style="width: 500px; height: 400px;">
 
     </div>
 </div>

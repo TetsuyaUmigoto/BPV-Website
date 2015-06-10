@@ -1,6 +1,5 @@
 #wrap{
     margin: 0 auto;
-    margin-top: 50px;
     max-width: 1200px;
     height: 500px;
     font-family: Arial;
@@ -9,6 +8,9 @@
 body{
     font-family: Arial;
     background: url(../img/Header-3.jpg);
+}
+.nav-header{
+    margin-bottom: 20px;
 }
 #loginForm {
     width: 500px;
@@ -99,14 +101,14 @@ tr{
 #klassen{
     position: relative;
     display: block;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     background-color: white;
     color: black;
     min-height: 169px;
 }
 #map {
     position: relative;
-    margin-left: 25px;
+    margin-left: 10px;
 }
 .map-wrap {
     position: relative;
@@ -124,6 +126,9 @@ tr{
     top: -215px;
     right: 650px;
 
+}
+#studentMap{
+    margin-left: 10px;
 }
 #knoppok{
     margin-top: 20px;
@@ -199,7 +204,6 @@ tr{
     height: 56px;
 }
 #zoek{
-    margin-top:50px;
     display: inline-block;
     float: left;
     background-color: white;
@@ -213,7 +217,6 @@ tr{
     height: 56px;
 }
 #bedrijf{
-    margin-top: 50px;
     display: inline-block;
     width: 60%;
     min-height: 500px;
