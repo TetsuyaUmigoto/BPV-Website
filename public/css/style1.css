@@ -4,8 +4,8 @@
     max-width: 1200px;
     height: 500px;
     font-family: Arial;
-      
-  }
+
+}
 body{
     font-family: Arial;
     background: url(../img/Header-3.jpg);
@@ -28,7 +28,7 @@ body{
 }
 .btnComment {
     margin-bottom: 10px;
-    
+
 }
 .leerlingnummer {
     border-top: 1px solid black;
@@ -37,13 +37,13 @@ body{
     padding-top: 20px;
 }
 .rating {
-    
+
 }
 .comment {
     border-bottom: 1px solid black;
     width: 555px;
     padding-bottom: 20px;
-    
+
 }
 h1{
     font-size: 32px;
@@ -58,16 +58,16 @@ h3{
 }
 
 #button{
-  height:50px;
-  width: 50px;
-  background-color: red;
+    height:50px;
+    width: 50px;
+    background-color: red;
 }
 
 #pokka{
-  padding-left: 25px;
+    padding-left: 25px;
 }
 .formulier {
-   margin-left: 25px;
+    margin-left: 25px;
 }
 form {
     padding-left: 25px;
@@ -77,10 +77,10 @@ form {
     height: 45px;
 }
 td{
-  padding:0 5px 0 25px;
+    padding:0 5px 0 25px;
 }
 tr{
-  padding-left: 25
+    padding-left: 25
 }
 /* voorpagina */
 #doel{
@@ -97,12 +97,12 @@ tr{
 /* leraren pagina */
 
 #klassen{
-  position: relative;
-  display: block;
-  margin: 10px 5% 5px 5%;
-  background-color: white;
-  color: black;
-  min-height: 169px;
+    position: relative;
+    display: block;
+    margin: 10px;
+    background-color: white;
+    color: black;
+    min-height: 169px;
 }
 #map {
     position: relative;
@@ -115,40 +115,44 @@ tr{
     width: 500px;
 }
 #maps1{
-  margin-left: 5%;
+    margin-left: 5%;
 }
 .map2{
-  display: inline-block;
-  margin-right: -25px;
-  position: absolute;
-  top: -215px;
-  right: 650px;
+    display: inline-block;
+    margin-right: -25px;
+    position: absolute;
+    top: -215px;
+    right: 650px;
 
 }
 #knoppok{
-  margin-top: 20px;
-  margin-left: 85px;
-  background-color: red;
-  border-radius: 3px;
-  font-size: 20px;
-  color: white;
-  width: 50px;
-  height: 30px;
-  text-align: center;
-  display: inline-block;
+    margin-top: 20px;
+    margin-left: 85px;
+    background-color: red;
+    border-radius: 3px;
+    font-size: 20px;
+    color: white;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
 }
 #stage{
-  width:49% ;
-  margin:10px 5% 0 5%;
-  background-color: white;
-  color: black;
-float: right;
+    width:49%;
+    background-color: white;
+    color: black;
+    float: right;
 }
-#stage1, #klassen1{
-  background-color: black;
-  color: white;
-  height: 56px;
+#stage1, #klassen1, #afspraakMaken h3{
+    background-color: black;
+    color: white;
+    height: 56px;
 }
+#afspraakMaken{
+    background: white;
+    margin: 10px;
+}
+
 #leerlingen {
     margin-top: 10px;
     text-align: center;
@@ -157,7 +161,7 @@ float: right;
     background-color: white;
     width: 100%;  
     text-align: center;
-    
+
 }
 #leerlingTable{
     text-align: left;
@@ -168,34 +172,31 @@ float: right;
     border: 2px solid white;
     background-color: white;
     width: 100%;
-    
+
 }
 #pokform{
-  color: white;
-  background-color:   rgba(0,0,0,0.5);
-  margin: 50px auto 0 auto;
-  min-height: 300px;
-  max-width: 1000px;
+    color: white;
+    background-color:   rgba(0,0,0,0.5);
+    margin: 50px auto 0 auto;
+    min-height: 300px;
+    max-width: 1000px;
 }
 #pokform1{
-  color: black;
-  background-color: white; 
-  min-height: 300px;
-  max-width: 1000px;
+    color: black;
+    background-color: white; 
+    min-height: 300px;
+    max-width: 1000px;
 }
 .formpokhead{
-  color: white;
-  background-color: black;
+    color: white;
+    background-color: black;
 
 }
 /* overzicht pagina, zoek pagina*/
 #zoek2{
-  background-color: black;
-  color: white;
-  height: 56px;
-}
-.kutmap{
-    top: 570px !important;
+    background-color: black;
+    color: white;
+    height: 56px;
 }
 #zoek{
     margin-top:50px;
@@ -207,9 +208,9 @@ float: right;
     margin-left: 35px;
 }
 #bedrijven{
-  background-color: black;
-  color: white;
-  height: 56px;
+    background-color: black;
+    color: white;
+    height: 56px;
 }
 #bedrijf{
     margin-top: 50px;
@@ -224,12 +225,12 @@ float: right;
 #infoWrapper{
     display: inline-block;
     vertical-align: top;
-   background-color: white;
-   width: 600px;
-   height: 310px;
-   float: left;  
-   color: black;
-   overflow: scroll;
+    background-color: white;
+    width: 600px;
+    height: 310px;
+    float: left;  
+    color: black;
+    overflow: scroll;
 }
 #Gsterren {
     margin: 0px;
@@ -242,22 +243,22 @@ float: right;
     vertical-align: top;
 }
 #info{
-  background-color: black;
-  color: white;
-  width: 600px;
-  
+    background-color: black;
+    color: white;
+    width: 600px;
+
 }
 #comments{
-  padding: 10px;
-  
+    padding: 10px;
+
 }
 .bedrijfInfo{
-  padding-left:10px;
-  margin: 0px;
+    padding-left:10px;
+    margin: 0px;
 }
 bedrijfInform {
     overflow: scroll;
-    
+
 }
 .sterren{
     background-color: yellow;
@@ -265,28 +266,28 @@ bedrijfInform {
     height: 200px ;
     display: inline-block;
 }
-      .rating {
-          overflow: hidden;
-          display: inline-block;
-      }
-      .rating-input {
-          position: absolute;
-          left: 0;
-          top: -50px;
-      }
-      .rating-star {        
-          display: block;
-          background-color: none;
-          float: right;        
-          width: 16px;
-          height: 16px;
-          background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
-      }
-      .rating-star:hover,
-      .rating-star:hover ~ .rating-star,
-      .rating-input:checked ~ .rating-star {
-          background-position: 0 0;
-      }
+.rating {
+    overflow: hidden;
+    display: inline-block;
+}
+.rating-input {
+    position: absolute;
+    left: 0;
+    top: -50px;
+}
+.rating-star {        
+    display: block;
+    background-color: none;
+    float: right;        
+    width: 16px;
+    height: 16px;
+    background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+}
+.rating-star:hover,
+.rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
+}
 /* studentenpagina*/
 #student{
     background-color: gray;
@@ -295,10 +296,10 @@ bedrijfInform {
     display: inline-block;
 }
 #kopje{
-  background-color: black;
-  color:white;
-  height: 56px;
-  text-align: center;
+    background-color: black;
+    color:white;
+    height: 56px;
+    text-align: center;
 }
 #gegevens{
     width: 48%;
@@ -326,56 +327,56 @@ bedrijfInform {
     width: 576px;
     height:400px ;
     display: inline-block;
-   float:right;
-   color:black;
+    float:right;
+    color:black;
 }
 #pok1{
-  background-color: black;
-  color:white;
-  top:0;
-  height: 56px ;
-  text-align: center;
+    background-color: black;
+    color:white;
+    top:0;
+    height: 56px ;
+    text-align: center;
 }
 #pok{
-  color:white;
+    color:white;
 }
 #input-tekst {
-  color:black;
-  
+    color:black;
+
 }
 /* progress bar */
 .demo-wrapper {
-	width: 100px;
-	margin: 30px auto 0;
+    width: 100px;
+    margin: 30px auto 0;
 }
 
 .html5-progress-bar progress {
-	background-color: #f3f3f3;
-	border: 0;
-	width: 100%;
-	height: 18px;
-	border-radius: 9px;
+    background-color: #f3f3f3;
+    border: 0;
+    width: 100%;
+    height: 18px;
+    border-radius: 9px;
 }
 .html5-progress-bar progress::-webkit-progress-bar {
-	background-color: #f3f3f3;
-	border-radius: 9px;
+    background-color: #f3f3f3;
+    border-radius: 9px;
 }
 /*er moet nog javascript bij als je de kleur wilt veranderen als je verder bent met de aanvraag.
 de kleur is gwn een gradient effect die je kan aanpassen met 0%=bovenste helft en %100=onderste helft. */
 .html5-progress-bar progress::-webkit-progress-value {
-	border-radius: 9px;
+    border-radius: 9px;
 }
 .html5-progress-bar progress::-moz-progress-bar {
-	border-radius: 9px;
+    border-radius: 9px;
 }
 .html5-progress-bar .progress-value {
-	padding: 0px 5px;
-	line-height: 20px;
-	margin-left: 5px;
-	font-size: .8em;
-	color: #555;
-	height: 18px;
-	float: right;
+    padding: 0px 5px;
+    line-height: 20px;
+    margin-left: 5px;
+    font-size: .8em;
+    color: #555;
+    height: 18px;
+    float: right;
 }
 /*footer*/
 #footer{
@@ -384,29 +385,29 @@ de kleur is gwn een gradient effect die je kan aanpassen met 0%=bovenste helft e
 
 #map-canvas { height: 100%; margin: 0; padding: 0;}
 
-    progress.i25::-moz-progress-bar {
-        background-color: red; 
-    }
-    progress.i25::-webkit-progress-value {
-	background: red;
-    }
-    progress.i50::-moz-progress-bar {
-        background-color: orange; 
-    }
-    progress.i50::-webkit-progress-value {
-	background: orange;
-    }
-    progress.i75::-moz-progress-bar {
-        background-color: orange; 
-    }
-    progress.i75::-webkit-progress-value {
-	background: orange;
-    }
-    progress.i100::-moz-progress-bar {
-        background-color: #cdeb8e; 
-    }
-    progress.i100::-webkit-progress-value {
-	background: #cdeb8e;
-    }
-    
-    //#cdeb8e
+progress.i25::-moz-progress-bar {
+    background-color: red; 
+}
+progress.i25::-webkit-progress-value {
+    background: red;
+}
+progress.i50::-moz-progress-bar {
+    background-color: orange; 
+}
+progress.i50::-webkit-progress-value {
+    background: orange;
+}
+progress.i75::-moz-progress-bar {
+    background-color: orange; 
+}
+progress.i75::-webkit-progress-value {
+    background: orange;
+}
+progress.i100::-moz-progress-bar {
+    background-color: #cdeb8e; 
+}
+progress.i100::-webkit-progress-value {
+    background: #cdeb8e;
+}
+
+//#cdeb8e
