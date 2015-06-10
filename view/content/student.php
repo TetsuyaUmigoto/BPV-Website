@@ -61,7 +61,7 @@
 <form action='<?php echo URL ?>leraren/caldav' method='post'>
     <input type='hidden' class='form-control' name='leerlingnummer' value='<?php echo $this->student[0]['leerlingnummer'] ?>'>
     <p class="formulier">Afspraak:</p><input type='text' class='form-control' name='afspraak'>
-    <p class="formulier">Datum:</p><input type='text' class='form-control' name='tijd'>
+    <p class="formulier">Datum:</p><input type='date' class='form-control' name='tijd'>
     <input type='submit' class='btn btn-primary' value='Create!'>
 </form>
 <div id="klassen">

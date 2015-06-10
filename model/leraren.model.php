@@ -47,22 +47,16 @@ class Leraren_Model extends Model{
     }
 
     public function caldav(){
+	$date = strtotime($_POST['tijd']);
 	$sth = $this->dbh->prepare("INSERT INTO calender (id, timestamp, afspraak, leerlingnummer, leraren_id)
 		VALUES (NULL, :timestamp, :afspraak, :leerlingnummer, :leraren_id)");
 	$sth->execute(array(
 	    ':leerlingnummer' => $_POST['leerlingnummer'],
 	    ':afspraak' => $_POST['afspraak'],
-	    ':timestamp' => $_POST['tijd'],
+	    ':timestamp' => $date + 7200,
 	    ':leraren_id' => $_SESSION['user_id']
 	));
 	header("location: " . URL . "leraren");
-    }
-
-    public function showCaldav(){
-	$sth = $this->dbh->prepare("SELECT calender.*, studenten.voornaam, studenten.achternaam FROM calender LEFT 
-        OUTER JOIN studenten on calender.leerlingnummer = studenten.leerlingnummer");
-	$sth->execute();
-	return $sth->fetchall();
     }
 
     public function getStudent($leerlingNummer){
