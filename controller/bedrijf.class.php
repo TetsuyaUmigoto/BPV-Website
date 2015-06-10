@@ -34,7 +34,13 @@ class Bedrijf extends Controller {
         $this->view->comments = $comments;
     }
     function postComment() {
-        $this->model->postComment();
+        if(strlen($_POST['comment']) > 0 && strlen($_POST['rating'])){
+            $this->model->postComment();
+        }
+        else{
+            echo "U heeft niet alles ingevuld";
+            header('Refresh: 3; URL=' . URL . 'overzicht'); 
+        }
     }
 
 }
