@@ -89,7 +89,8 @@
 	</h4>
 	<?php
 	foreach($this->studentInfo as $comment){
-	    echo 'Rating: ' . $comment['rating'] .
+	    echo 'Bedrijf: ' . $comment['bedrijf_naam'] .
+	    '<br>Rating: ' . $comment['rating'] .
 	    '<br />' . $comment['comment'] . '<br /><br />';
 	}
 	?>

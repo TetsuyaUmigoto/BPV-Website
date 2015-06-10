@@ -24,7 +24,7 @@
 	    if(isset($this->comments)){
 		foreach($this->comments as $row){
 		    echo
-		    "<div class='leerlingnummer'>" . "LeerlingNr: " . $row['leerlingnummer'] . "</div>"
+		    "<div class='leerlingnummer'>" . "Student: " . $row['voornaam'] . " " . $row['achternaam'] . "</div>"
 		    . " <div class='rating'>" . "Rating: " . $row['rating'] . "</div>"
 		    . "<div class='comment'>" . "Reactie: <br>" . $row['comment'] . "</div>" . "<br>";
 		}

@@ -10,6 +10,7 @@ class Studenten_Model extends Model{
 	$sth = $this->dbh->prepare('SELECT * FROM studenten 
 									JOIN leraren ON studenten.leraar_id = leraren.id 
 									JOIN comments ON comments.leerlingnummer = studenten.leerlingnummer
+									JOIN bedrijven ON comments.bedrijf_id = bedrijven.bedrijf_id
 									WHERE studenten.leerlingnummer = "' . $id . '"');
 	$sth->execute();
 	return $sth->fetchall();

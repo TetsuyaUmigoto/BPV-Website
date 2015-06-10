@@ -308,9 +308,9 @@ bedrijfInform {
 }
 #gegevens{
     width: 48%;
-    height: 400px;
     display: inline-block;
     background-color: white;
+    overflow: auto;
 }
 #link{
     background-color: hotpink;
