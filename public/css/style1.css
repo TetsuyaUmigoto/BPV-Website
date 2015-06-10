@@ -98,27 +98,21 @@ tr{
 
 #klassen{
   position: relative;
-  //display: block;
+  display: block;
   margin: 10px 5% 5px 5%;
   background-color: white;
   color: black;
-  width: 30%  ;
   min-height: 169px;
-  float: left;
-  z-index: 1;
 }
 #map {
     position: relative;
     margin-left: 67px;
-    margin-top: -380px;
-    float: left;
-    z-index: 2;
 }
 .map-wrap {
     position: relative;
-   // display: block;
-    z-index: 2;
-    float: left;
+    display: block;
+    height: 400px;
+    width: 500px;
 }
 #maps1{
   margin-left: 5%;
