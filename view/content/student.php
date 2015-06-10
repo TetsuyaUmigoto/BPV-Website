@@ -226,8 +226,8 @@
                         <tr><td>Inleverdatum:</td><td><input class='form-control' type='text' name='studentInleverdatum' value='".$this->student[0]['studentInleverdatum']."'</td></tr>
 			<tr><td><b>In te vullen door BPV-coördinator van team/opleiding:</b></td></tr>
                         <tr><td>Onderwijsbegeleider:</td><td><input class='form-control' type='text' name='onderwijsBegeleider' value='" . $this->lastPok[0]['onderwijsBegeleider'] . "'></td></tr>
-                        <tr><td>Rechtsgeldig vertegenwoordiger Landstede/ teken bevoegd:</td><td><input class='form-control' type='text' name='vertegenwoordigerLandstede' value='" . $this->lastPok[0]['verteginwoordigerLandstede'] . "'></td></tr>
-                        <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='text' name='bpvPeriodeBegin' value='" . $this->lastPok[0]['verteginwoordigerLandstede'] . "'></td></tr>
+                        <tr><td>Rechtsgeldig vertegenwoordiger Landstede/ teken bevoegd:</td><td><input class='form-control' type='text' name='vertegenwoordigerLandstede' value='" . $this->lastPok[0]['vertegenwoordigerLandstede'] . "'></td></tr>
+                        <tr><td>BPV-periode-begin (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='text' name='bpvPeriodeBegin' value='" . $this->lastPok[0]['vertegenwoordigerLandstede'] . "'></td></tr>
                         <tr><td>BPV-periode-eind (Bijv: yyyy-mm-dd):</td><td><input class='form-control' type='text' name='bpvPeriodeEind' value='" . $this->lastPok[0]['bpvPeriodeBegin'] . "'></td></tr>
                         <tr><td>Aantal sbu’s:</td><td><input class='form-control' type='text' name='bpvSbu' value='" . $this->lastPok[0]['bpvSbu'] . "'></td></tr>
                         <tr><td>Welke kerntaken/werkprocessen gaan in deze BPV-periode beoordeeld worden:</td><td><input class='form-control' type='text' name='werkprocessen' value='" . $this->lastPok[0]['werkprocessen'] . "'></td></tr>

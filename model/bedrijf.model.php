@@ -19,7 +19,9 @@ class Bedrijf_Model extends Model {
     }
     
     function showComment($id) {
-        $sth = $this->dbh->prepare("SELECT * FROM comments WHERE bedrijf_id = '" . $id . "'");
+        $sth = $this->dbh->prepare("SELECT * FROM comments"
+                . " INNER JOIN studenten ON comments.leerlingnummer = studenten.leerlingnummer"
+                 ." WHERE comments.bedrijf_id = '" . $id . "'");
         $sth->execute();
         return $sth->fetchall();
     }
