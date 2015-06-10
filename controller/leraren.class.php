@@ -21,7 +21,6 @@ class Leraren extends Controller{
 	$leerlingen = $this->model->getKlasLeerlingen($klasNaam);
 	$mapsLocations = $this->model->getMapsLocations($klasNaam);
 	$klassen = $this->model->getKlassen();
-	$agenda = $this->model->showCaldav();
 	$leraar = $this->model->getLeraar();
 
 	$locations = "[";
@@ -42,7 +41,6 @@ class Leraren extends Controller{
 	$this->view->leraar = $leraar;
 	$this->view->klassen = $klassen;
 	$this->view->leerlingen = $leerlingen;
-	$this->view->agenda = $agenda;
 	$this->view->render('leraren');
     }
 
