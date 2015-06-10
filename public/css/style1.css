@@ -121,10 +121,7 @@ tr{
 }
 .map2{
     display: inline-block;
-    margin-right: -25px;
-    position: absolute;
-    top: -215px;
-    right: 650px;
+    float: right;
 
 }
 #studentMap{
