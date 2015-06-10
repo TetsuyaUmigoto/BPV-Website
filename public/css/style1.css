@@ -97,20 +97,29 @@ tr{
 /* leraren pagina */
 
 #klassen{
+  position: relative;
+  //display: block;
   margin: 10px 5% 5px 5%;
   background-color: white;
   color: black;
   width: 30%  ;
   min-height: 169px;
   float: left;
+  z-index: 1;
 }
 #map {
-    position: absolute;
-    top: 350px;
-    left: 5%;
-    margin-bottom: 25px;
+    position: relative;
+    margin-left: 67px;
+    margin-top: -380px;
+    float: left;
+    z-index: 2;
 }
-
+.map-wrap {
+    position: relative;
+   // display: block;
+    z-index: 2;
+    float: left;
+}
 #maps1{
   margin-left: 5%;
 }
@@ -342,7 +351,7 @@ bedrijfInform {
 }
 /* progress bar */
 .demo-wrapper {
-	width: 250px;
+	width: 100px;
 	margin: 30px auto 0;
 }
 
@@ -357,6 +366,8 @@ bedrijfInform {
 	background-color: #f3f3f3;
 	border-radius: 9px;
 }
+/*er moet nog javascript bij als je de kleur wilt veranderen als je verder bent met de aanvraag.
+de kleur is gwn een gradient effect die je kan aanpassen met 0%=bovenste helft en %100=onderste helft. */
 .html5-progress-bar progress::-webkit-progress-value {
 	border-radius: 9px;
 }
