@@ -1,40 +1,41 @@
 <div id="wrap">
-    <div id="info"><h3>
-            <?php
-            if (isset($this->info)) {
-                foreach ($this->info as $info) {
-                    ?>
-                    <div class="bedrijfInfo"><p><?php echo $info['bedrijf_naam'] ?></p></div>
-                    <div class="bedrijfInfo"><p id="Gsterren"><?php echo $this->gemiddelde ?> Sterren</p></div>
-                    <div class="bedrijfInfo"></div>
-                </h3> </div>
-            <div id="infoWrapper">
-
-                <div id="comments">
-
-                    <div class="bedrijfInform"><p>Reactie's:</p></div>
-                </div>    
+    <div id="leftBlock">
+        <div id="info"><h3>
                 <?php
-            }
-        }
-        ?>
+                if (isset($this->info)) {
+                    foreach ($this->info as $info) {
+                        ?>
+                        <div class="bedrijfInfo"><p><?php echo $info['bedrijf_naam'] ?></p></div>
+                        <div class="bedrijfInfo"><p id="Gsterren"><?php echo $this->gemiddelde ?> Sterren</p></div>
+                        <div class="bedrijfInfo"></div>
+                    </h3> </div>
+                <div id="infoWrapper">
 
-        <div id="gebruikerComments">
-            <?php
-            if (isset($this->comments)) {
-                foreach ($this->comments as $row) {
-                    echo
-                    "<div class='leerlingnummer'>" . "Student: " . $row['voornaam'] . " " . $row['achternaam'] . "</div>"
-                    . " <div class='rating'>" . "Rating: " . $row['rating'] . "</div>"
-                    . "<div class='comment'>" . "Reactie: <br>" . $row['comment'] . "</div>" . "<br>";
+                    <div id="comments">
+
+                        <div class="bedrijfInform"><p>Reactie's:</p></div>
+                    </div>    
+                    <?php
                 }
             }
             ?>
-        </div></div>
-    <?php
-    if ($_SESSION['role'] == 0) {
-        echo
-        "<div class='bedrijf-comments-test'>
+
+            <div id="gebruikerComments">
+                <?php
+                if (isset($this->comments)) {
+                    foreach ($this->comments as $row) {
+                        echo
+                        "<div class='leerlingnummer'>" . "Student: " . $row['voornaam'] . " " . $row['achternaam'] . "</div>"
+                        . " <div class='rating'>" . "Rating: " . $row['rating'] . "</div>"
+                        . "<div class='comment'>" . "Reactie: <br>" . $row['comment'] . "</div>" . "<br>";
+                    }
+                }
+                ?>
+            </div></div>
+        <?php
+        if ($_SESSION['role'] == 0) {
+            echo
+            "<div class='bedrijf-comments-test'>
 		    <form class='form2' action='" . URL . "bedrijf/postComment' method='post'>
 		    <input type='hidden' name='leerlingnummer' value=" . $_SESSION['user_id'] . ">
 			<input type='hidden' name='bedrijf_id' value=" . $this->bedrijfId . " />
@@ -60,10 +61,11 @@
 			<input type='submit' class='btnComment' value='Comment!'>
 		    </form>
 		</div>";
-    } else {
-        
-    }
-    ?>
+        } else {
+            
+        }
+        ?>
+    </div>
     <div class="map2"><div id="map"  style="width: 500px; height: 400px;">
         </div></div>
 </div>

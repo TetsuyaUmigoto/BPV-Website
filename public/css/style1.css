@@ -12,9 +12,6 @@ body{
 .nav-header{
     margin-bottom: 20px;
 }
-#loginForm {
-    width: 500px;
-}
 .bedrijf-comments-test{
     width: 601px;
     margin-top: 20px;
@@ -120,7 +117,7 @@ tr{
 }
 .map2{
     display: inline-block;
-    float: right;
+    float: right
 }
 #studentMap{
     margin-left: 10px;
@@ -136,6 +133,10 @@ tr{
     height: 30px;
     text-align: center;
     display: inline-block;
+}
+#leftBlock{
+    display: inline-block;
+    width: 49%;
 }
 #stage{
     width:49%;
