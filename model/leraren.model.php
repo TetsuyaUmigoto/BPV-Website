@@ -123,12 +123,8 @@ class Leraren_Model extends Model{
 	$sth->execute(array(
 	    ':leerlingnummer' => $leerlingNummer
 	));
-
-	$aantalAfspraken = $sth->rowCount();
-	$afsprakenData = $sth->fetchall();
-	$afspraken = array();
-	array_push($afspraken, $aantalAfspraken, $afsprakenData);
-	return $afspraken;
+	
+	return $sth->fetchall();
     }
 
 }

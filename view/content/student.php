@@ -78,7 +78,7 @@
         <h4>
             Afspraken (<?php
             if (isset($this->afspraken)) {
-                echo $this->afspraken[0];
+                echo count($this->afspraken);
             } else {
                 echo '0';
             }
@@ -87,9 +87,7 @@
         <?php
         if (isset($this->afspraken)) {
             foreach ($this->afspraken as $afspraak) {
-                for ($i = 0; $i < count($afspraak); $i++) {
-                    echo $afspraak[$i]['afspraak'] . " " . $afspraak[$i]['timestamp'] . "<br>";
-                }
+                echo $afspraak['afspraak'] . " " . date('Y-m-d', strtotime($afspraak['timestamp'])) . "<br>";
             }
         } else {
             
