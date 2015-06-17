@@ -79,7 +79,7 @@
 	</h4>
 	<?php
 	foreach($this->afspraak as $afspraak){
-	    echo date('Y-m-d', strtotime($afspraak['timestamp'])) . "<br>";
+	    echo date('Y-m-d', $afspraak['timestamp']) . "<br>";
 	    echo $afspraak['afspraak'];
 	}
 	?>

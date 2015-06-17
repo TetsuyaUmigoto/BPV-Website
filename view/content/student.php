@@ -87,7 +87,7 @@
         <?php
         if (isset($this->afspraken)) {
             foreach ($this->afspraken as $afspraak) {
-                echo $afspraak['afspraak'] . " " . date('Y-m-d', strtotime($afspraak['timestamp'])) . "<br>";
+                echo $afspraak['afspraak'] . " " . date('Y-m-d', $afspraak['timestamp']) . "<br>";
             }
         } else {
             
