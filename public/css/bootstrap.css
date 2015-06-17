@@ -1792,6 +1792,7 @@ pre code {
         display: inline-block;
         position: absolute;
         left: 80%;
+        top: 0px;
     }
     .head-link {
         display: block;

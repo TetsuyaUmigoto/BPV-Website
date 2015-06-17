@@ -74,6 +74,10 @@ form {
     width: 136px;
     height: 45px;
 }
+#loguit{
+    margin-left: 190px;
+}
+
 td{
     padding:0 5px 0 25px;
 }

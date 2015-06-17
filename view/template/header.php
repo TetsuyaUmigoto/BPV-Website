@@ -47,7 +47,7 @@
 		    <input id='login' type='submit' value='Login' />
 		    </form>";
 		}else{
-		    echo "<br /><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";
+		    echo "<br /><br /><div></div><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";
 		}
 		?>
 	    </div>
