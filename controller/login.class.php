@@ -8,22 +8,17 @@ class Login extends Controller{
         $this->view->style = 'bootstrap';
         $this->view->altStyle = 'style1';
     }
-    
-    
+
     public function index() {
         $this->view->render('login');
     }
-
 
     public function userLogin(){
 	// get input from users
 	$username = str_replace(' ', '', $_POST['username']);
 	$password = $_POST['password'];
-        
-
 	// check input for empty fields
 	if(empty($username) || empty($password)){ // check input fields
-            echo $username . $password;
 	    echo '&nbsp All fields are required, acces denied!<br>';
 	}else{
 	    // send user input to model
