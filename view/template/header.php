@@ -11,7 +11,7 @@
 	    <?php echo $this->title; ?>
         </title>
     </head>
-    <body
+    <body>
         <div class='container'>
             <div class='nav-header'>
                 <!-- knopjes -->
@@ -33,18 +33,19 @@
 		    echo "<div class='andere'>";
 		}
 		if(!isset($_SESSION['user_id'])){
-		    echo"<form id='loginForm' method='post' action='" . URL . "login/userLogin'>
-		    <input type='text' name='username' />
-		    <select id='keuze' name='type'>
-			<option value='0'>
-			    Leerling
-			</option>
-			<option value='1'>
-			    Leraar
-			</option>
-		    </select><br>
-		    <input type='password' name='password'>
-		    <input id='login' type='submit' value='Login' />
+		    echo
+		    "<form action='" . URL . "login/userLogin' method='post'>
+			<input type='text' name='studentnummer'>
+			<select id='keuze' name='type'>
+			    <option value='0'>
+				Leerling
+			    </option>
+			    <option value='1'>
+				Leraar
+			    </option>
+			</select><br>
+			<input type='password' name='password'>
+			<input id='login' type='submit' value='Login' />
 		    </form>";
 		}else{
 		    echo "<br /><br /><div></div><a id='loguit' href='" . URL . "login/UserLogout'>Log Uit</a>";

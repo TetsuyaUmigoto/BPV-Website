@@ -4,18 +4,18 @@ class Login extends Controller{
 
     public function __construct(){
 	parent::__construct();
-        $this->view->title = 'Login';
-        $this->view->style = 'bootstrap';
-        $this->view->altStyle = 'style1';
+	$this->view->title = 'Login';
+	$this->view->style = 'bootstrap';
+	$this->view->altStyle = 'style1';
     }
 
-    public function index() {
-        $this->view->render('login');
+    public function index(){
+	$this->view->render('login');
     }
 
     public function userLogin(){
-	// get input from users
-	$username = str_replace(' ', '', $_POST['username']);
+	//get input from users
+	$username = str_replace(' ', '', $_POST['studentnummer']);
 	$password = $_POST['password'];
 	// check input for empty fields
 	if(empty($username) || empty($password)){ // check input fields
@@ -23,6 +23,7 @@ class Login extends Controller{
 	}else{
 	    // send user input to model
 	    $this->model->userLogin();
+	    //}
 	}
     }
 
